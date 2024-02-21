@@ -38,6 +38,20 @@
       </tags>
   </entry>
   <entry>
+    <title>for语句</title>
+    <url>/2024/02/21/for%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<p><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215544745.png" alt="image-20240221215544745"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215550340.png" alt="image-20240221215550340"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215556410.png" alt="image-20240221215556410"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215600726.png" alt="image-20240221215600726"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215605214.png" alt="image-20240221215605214"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215609988.png" alt="image-20240221215609988"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215616048.png" alt="image-20240221215616048"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215623189.png" alt="image-20240221215623189"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215629195.png" alt="image-20240221215629195"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215634954.png" alt="image-20240221215634954"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215641036.png" alt="image-20240221215641036"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>循环结构</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python输入输出</title>
     <url>/2024/02/21/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
     <content><![CDATA[<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213902685.png" alt="image-20240221213902685"></p>
@@ -55,23 +69,23 @@
       </tags>
   </entry>
   <entry>
-    <title>for语句</title>
-    <url>/2024/02/21/for%E8%AF%AD%E5%8F%A5/</url>
-    <content><![CDATA[<p><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215544745.png" alt="image-20240221215544745"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215550340.png" alt="image-20240221215550340"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215556410.png" alt="image-20240221215556410"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215600726.png" alt="image-20240221215600726"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215605214.png" alt="image-20240221215605214"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215609988.png" alt="image-20240221215609988"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215616048.png" alt="image-20240221215616048"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215623189.png" alt="image-20240221215623189"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215629195.png" alt="image-20240221215629195"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215634954.png" alt="image-20240221215634954"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215641036.png" alt="image-20240221215641036"></p>
+    <title>heapq</title>
+    <url>/2024/02/21/heapq/</url>
+    <content><![CDATA[<p><img src="/./../imgs/heapq/image-20240221223705829.png" alt="image-20240221223705829"><img src="/./../imgs/heapq/image-20240221223714290.png" alt="image-20240221223714290"><img src="/./../imgs/heapq/image-20240221223718197.png" alt="image-20240221223718197"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
         <category>语言基础</category>
-        <category>循环结构</category>
+        <category>函数</category>
       </categories>
       <tags>
         <tag>蓝桥杯备赛</tag>
       </tags>
   </entry>
   <entry>
-    <title>heapq</title>
-    <url>/2024/02/21/heapq/</url>
-    <content><![CDATA[<p><img src="/./../imgs/heapq/image-20240221223705829.png" alt="image-20240221223705829"><img src="/./../imgs/heapq/image-20240221223714290.png" alt="image-20240221223714290"><img src="/./../imgs/heapq/image-20240221223718197.png" alt="image-20240221223718197"></p>
+    <title>functool</title>
+    <url>/2024/02/21/functool/</url>
+    <content><![CDATA[<p><img src="/./../imgs/functool/image-20240221223812753.png" alt="image-20240221223812753"><img src="/./../imgs/functool/image-20240221223816838.png" alt="image-20240221223816838"><img src="/./../imgs/functool/image-20240221223821443.png" alt="image-20240221223821443"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
@@ -107,9 +121,27 @@
       </tags>
   </entry>
   <entry>
-    <title>functool</title>
-    <url>/2024/02/21/functool/</url>
-    <content><![CDATA[<p><img src="/./../imgs/functool/image-20240221223812753.png" alt="image-20240221223812753"><img src="/./../imgs/functool/image-20240221223816838.png" alt="image-20240221223816838"><img src="/./../imgs/functool/image-20240221223821443.png" alt="image-20240221223821443"></p>
+    <title>Hello World</title>
+    <url>/2024/02/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>math</title>
+    <url>/2024/02/21/math/</url>
+    <content><![CDATA[<p><img src="/./../imgs/math/image-20240221223402991.png" alt="image-20240221223402991"><img src="/./../imgs/math/image-20240221223407450.png" alt="image-20240221223407450"><img src="/./../imgs/math/image-20240221223412809.png" alt="image-20240221223412809"><img src="/./../imgs/math/image-20240221223416965.png" alt="image-20240221223416965"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
@@ -135,22 +167,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/02/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>while语句</title>
+    <url>/2024/02/21/while%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<p><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220037419.png" alt="image-20240221220037419"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220042444.png" alt="image-20240221220042444"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220046800.png" alt="image-20240221220046800"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220052301.png" alt="image-20240221220052301"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220057306.png" alt="image-20240221220057306"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220102132.png" alt="image-20240221220102132"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220107177.png" alt="image-20240221220107177"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220111657.png" alt="image-20240221220111657"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220132922.png" alt="image-20240221220132922"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220139888.png" alt="image-20240221220139888"></p>
 ]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>循环结构</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
   </entry>
   <entry>
     <title>二分查找</title>
@@ -167,14 +195,14 @@
       </tags>
   </entry>
   <entry>
-    <title>math</title>
-    <url>/2024/02/21/math/</url>
-    <content><![CDATA[<p><img src="/./../imgs/math/image-20240221223402991.png" alt="image-20240221223402991"><img src="/./../imgs/math/image-20240221223407450.png" alt="image-20240221223407450"><img src="/./../imgs/math/image-20240221223412809.png" alt="image-20240221223412809"><img src="/./../imgs/math/image-20240221223416965.png" alt="image-20240221223416965"></p>
+    <title>冒泡排序</title>
+    <url>/2024/02/21/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<p><img src="/./../imgs/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/image-20240221224844137.png" alt="image-20240221224844137"><img src="/./../imgs/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/image-20240221224848717.png" alt="image-20240221224848717"><img src="/./../imgs/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/image-20240221224852578.png" alt="image-20240221224852578"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
-        <category>语言基础</category>
-        <category>函数</category>
+        <category>基础算法</category>
+        <category>排序</category>
       </categories>
       <tags>
         <tag>蓝桥杯备赛</tag>
@@ -209,20 +237,6 @@
       </tags>
   </entry>
   <entry>
-    <title>字典</title>
-    <url>/2024/02/21/%E5%AD%97%E5%85%B8/</url>
-    <content><![CDATA[<p><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222346041.png" alt="image-20240221222346041"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222351366.png" alt="image-20240221222351366"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222355064.png" alt="image-20240221222355064"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222358745.png" alt="image-20240221222358745"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222402204.png" alt="image-20240221222402204"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222405543.png" alt="image-20240221222405543"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222409359.png" alt="image-20240221222409359"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222413703.png" alt="image-20240221222413703"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222418496.png" alt="image-20240221222418496"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222423129.png" alt="image-20240221222423129"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222426868.png" alt="image-20240221222426868">	<img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222432037.png" alt="image-20240221222432037"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222436082.png" alt="image-20240221222436082"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222439828.png" alt="image-20240221222439828"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222443437.png" alt="image-20240221222443437"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222446914.png" alt="image-20240221222446914"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222451805.png" alt="image-20240221222451805"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222455280.png" alt="image-20240221222455280"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222500308.png" alt="image-20240221222500308"></p>
-]]></content>
-      <categories>
-        <category>蓝桥杯</category>
-        <category>语言基础</category>
-        <category>基础数据结构</category>
-      </categories>
-      <tags>
-        <tag>蓝桥杯备赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用库函数</title>
     <url>/2024/02/21/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224152255.png" alt="image-20240221224152255"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224157569.png" alt="image-20240221224157569"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224205814.png" alt="image-20240221224205814"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224211031.png" alt="image-20240221224211031"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224216505.png" alt="image-20240221224216505"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224220419.png" alt="image-20240221224220419"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224224447.png" alt="image-20240221224224447"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224230648.png" alt="image-20240221224230648"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224237627.png" alt="image-20240221224237627"><img src="/./../imgs/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/image-20240221224242810.png" alt="image-20240221224242810"></p>
@@ -237,14 +251,14 @@
       </tags>
   </entry>
   <entry>
-    <title>冒泡排序</title>
-    <url>/2024/02/21/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<p><img src="/./../imgs/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/image-20240221224844137.png" alt="image-20240221224844137"><img src="/./../imgs/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/image-20240221224848717.png" alt="image-20240221224848717"><img src="/./../imgs/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/image-20240221224852578.png" alt="image-20240221224852578"></p>
+    <title>字典</title>
+    <url>/2024/02/21/%E5%AD%97%E5%85%B8/</url>
+    <content><![CDATA[<p><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222346041.png" alt="image-20240221222346041"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222351366.png" alt="image-20240221222351366"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222355064.png" alt="image-20240221222355064"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222358745.png" alt="image-20240221222358745"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222402204.png" alt="image-20240221222402204"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222405543.png" alt="image-20240221222405543"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222409359.png" alt="image-20240221222409359"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222413703.png" alt="image-20240221222413703"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222418496.png" alt="image-20240221222418496"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222423129.png" alt="image-20240221222423129"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222426868.png" alt="image-20240221222426868">	<img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222432037.png" alt="image-20240221222432037"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222436082.png" alt="image-20240221222436082"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222439828.png" alt="image-20240221222439828"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222443437.png" alt="image-20240221222443437"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222446914.png" alt="image-20240221222446914"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222451805.png" alt="image-20240221222451805"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222455280.png" alt="image-20240221222455280"><img src="/./../imgs/%E5%AD%97%E5%85%B8/image-20240221222500308.png" alt="image-20240221222500308"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
-        <category>基础算法</category>
-        <category>排序</category>
+        <category>语言基础</category>
+        <category>基础数据结构</category>
       </categories>
       <tags>
         <tag>蓝桥杯备赛</tag>
@@ -286,20 +300,6 @@
       </tags>
   </entry>
   <entry>
-    <title>循环嵌套</title>
-    <url>/2024/02/21/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/</url>
-    <content><![CDATA[<p><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220238457.png" alt="image-20240221220238457"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220245943.png" alt="image-20240221220245943"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220250308.png" alt="image-20240221220250308"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220254228.png" alt="image-20240221220254228"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220259111.png" alt="image-20240221220259111"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220303143.png" alt="image-20240221220303143"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220307403.png" alt="image-20240221220307403"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220311467.png" alt="image-20240221220311467"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220326367.png" alt="image-20240221220326367"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220332012.png" alt="image-20240221220332012"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220336543.png" alt="image-20240221220336543"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220340486.png" alt="image-20240221220340486"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220344459.png" alt="image-20240221220344459"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220348968.png" alt="image-20240221220348968"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220353388.png" alt="image-20240221220353388"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220357488.png" alt="image-20240221220357488"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220401435.png" alt="image-20240221220401435"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220405574.png" alt="image-20240221220405574"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220408987.png" alt="image-20240221220408987"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220412797.png" alt="image-20240221220412797"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220416120.png" alt="image-20240221220416120"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220420419.png" alt="image-20240221220420419"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220423689.png" alt="image-20240221220423689"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220427069.png" alt="image-20240221220427069"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220432954.png" alt="image-20240221220432954"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220436736.png" alt="image-20240221220436736"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220440869.png" alt="image-20240221220440869"></p>
-]]></content>
-      <categories>
-        <category>蓝桥杯</category>
-        <category>语言基础</category>
-        <category>循环结构</category>
-      </categories>
-      <tags>
-        <tag>蓝桥杯备赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>归并排序</title>
     <url>/2024/02/21/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<p><img src="/./../imgs/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/image-20240221225209102.png" alt="image-20240221225209102"><img src="/./../imgs/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/image-20240221225213139.png" alt="image-20240221225213139"><img src="/./../imgs/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/image-20240221225217288.png" alt="image-20240221225217288"><img src="/./../imgs/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/image-20240221225225147.png" alt="image-20240221225225147"><img src="/./../imgs/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/image-20240221225229209.png" alt="image-20240221225229209"></p>
@@ -308,6 +308,20 @@
         <category>蓝桥杯</category>
         <category>基础算法</category>
         <category>排序</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>循环嵌套</title>
+    <url>/2024/02/21/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/</url>
+    <content><![CDATA[<p><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220238457.png" alt="image-20240221220238457"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220245943.png" alt="image-20240221220245943"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220250308.png" alt="image-20240221220250308"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220254228.png" alt="image-20240221220254228"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220259111.png" alt="image-20240221220259111"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220303143.png" alt="image-20240221220303143"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220307403.png" alt="image-20240221220307403"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220311467.png" alt="image-20240221220311467"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220326367.png" alt="image-20240221220326367"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220332012.png" alt="image-20240221220332012"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220336543.png" alt="image-20240221220336543"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220340486.png" alt="image-20240221220340486"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220344459.png" alt="image-20240221220344459"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220348968.png" alt="image-20240221220348968"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220353388.png" alt="image-20240221220353388"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220357488.png" alt="image-20240221220357488"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220401435.png" alt="image-20240221220401435"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220405574.png" alt="image-20240221220405574"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220408987.png" alt="image-20240221220408987"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220412797.png" alt="image-20240221220412797"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220416120.png" alt="image-20240221220416120"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220420419.png" alt="image-20240221220420419"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220423689.png" alt="image-20240221220423689"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220427069.png" alt="image-20240221220427069"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220432954.png" alt="image-20240221220432954"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220436736.png" alt="image-20240221220436736"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220440869.png" alt="image-20240221220440869"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>循环结构</category>
       </categories>
       <tags>
         <tag>蓝桥杯备赛</tag>
@@ -328,20 +342,6 @@
       </tags>
   </entry>
   <entry>
-    <title>日期和时间</title>
-    <url>/2024/02/21/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/</url>
-    <content><![CDATA[<p><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222711369.png" alt="image-20240221222711369"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222720228.png" alt="image-20240221222720228"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222727434.png" alt="image-20240221222727434"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222731177.png" alt="image-20240221222731177"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222735426.png" alt="image-20240221222735426"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222740641.png" alt="image-20240221222740641"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222744448.png" alt="image-20240221222744448"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222748410.png" alt="image-20240221222748410"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222752150.png" alt="image-20240221222752150"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222755872.png" alt="image-20240221222755872"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222807738.png" alt="image-20240221222807738"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222811801.png" alt="image-20240221222811801"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222816005.png" alt="image-20240221222816005"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222821439.png" alt="image-20240221222821439"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222825105.png" alt="image-20240221222825105"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222828542.png" alt="image-20240221222828542"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222832686.png" alt="image-20240221222832686"></p>
-]]></content>
-      <categories>
-        <category>蓝桥杯</category>
-        <category>语言基础</category>
-        <category>基础数据结构</category>
-      </categories>
-      <tags>
-        <tag>蓝桥杯备赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>插入排序</title>
     <url>/2024/02/21/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<p><img src="/./../imgs/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240221225024861.png" alt="image-20240221225024861"><img src="/./../imgs/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240221225028438.png" alt="image-20240221225028438"><img src="/./../imgs/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240221225032032.png" alt="image-20240221225032032"><img src="/./../imgs/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240221225036107.png" alt="image-20240221225036107"></p>
@@ -350,6 +350,20 @@
         <category>蓝桥杯</category>
         <category>基础算法</category>
         <category>排序</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日期和时间</title>
+    <url>/2024/02/21/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/</url>
+    <content><![CDATA[<p><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222711369.png" alt="image-20240221222711369"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222720228.png" alt="image-20240221222720228"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222727434.png" alt="image-20240221222727434"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222731177.png" alt="image-20240221222731177"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222735426.png" alt="image-20240221222735426"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222740641.png" alt="image-20240221222740641"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222744448.png" alt="image-20240221222744448"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222748410.png" alt="image-20240221222748410"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222752150.png" alt="image-20240221222752150"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222755872.png" alt="image-20240221222755872"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222807738.png" alt="image-20240221222807738"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222811801.png" alt="image-20240221222811801"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222816005.png" alt="image-20240221222816005"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222821439.png" alt="image-20240221222821439"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222825105.png" alt="image-20240221222825105"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222828542.png" alt="image-20240221222828542"><img src="/./../imgs/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/image-20240221222832686.png" alt="image-20240221222832686"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>基础数据结构</category>
       </categories>
       <tags>
         <tag>蓝桥杯备赛</tag>
@@ -413,43 +427,16 @@
       </tags>
   </entry>
   <entry>
-    <title>while语句</title>
-    <url>/2024/02/21/while%E8%AF%AD%E5%8F%A5/</url>
-    <content><![CDATA[<p><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220037419.png" alt="image-20240221220037419"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220042444.png" alt="image-20240221220042444"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220046800.png" alt="image-20240221220046800"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220052301.png" alt="image-20240221220052301"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220057306.png" alt="image-20240221220057306"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220102132.png" alt="image-20240221220102132"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220107177.png" alt="image-20240221220107177"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220111657.png" alt="image-20240221220111657"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220132922.png" alt="image-20240221220132922"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220139888.png" alt="image-20240221220139888"></p>
-]]></content>
-      <categories>
-        <category>蓝桥杯</category>
-        <category>语言基础</category>
-        <category>循环结构</category>
-      </categories>
-      <tags>
-        <tag>蓝桥杯备赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>蓝桥杯知识记录</title>
     <url>/2024/02/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p><img src="/./../imgs/$%7Bfiilename%7D/image-20240221204217791-1708519354510-1.png" alt="image-20240221204217791"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
+        <category>A学习路线</category>
       </categories>
       <tags>
         <tag>蓝桥杯学习路线</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>选择排序</title>
-    <url>/2024/02/21/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<p><img src="/./../imgs/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/image-20240221224930479.png" alt="image-20240221224930479"><img src="/./../imgs/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/image-20240221224934777.png" alt="image-20240221224934777"><img src="/./../imgs/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/image-20240221224938744.png" alt="image-20240221224938744"></p>
-]]></content>
-      <categories>
-        <category>蓝桥杯</category>
-        <category>基础算法</category>
-        <category>排序</category>
-      </categories>
-      <tags>
-        <tag>蓝桥杯备赛</tag>
       </tags>
   </entry>
   <entry>
@@ -461,6 +448,20 @@
         <category>蓝桥杯</category>
         <category>语言基础</category>
         <category>基础数据结构</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>选择排序</title>
+    <url>/2024/02/21/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<p><img src="/./../imgs/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/image-20240221224930479.png" alt="image-20240221224930479"><img src="/./../imgs/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/image-20240221224934777.png" alt="image-20240221224934777"><img src="/./../imgs/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/image-20240221224938744.png" alt="image-20240221224938744"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>基础算法</category>
+        <category>排序</category>
       </categories>
       <tags>
         <tag>蓝桥杯备赛</tag>
