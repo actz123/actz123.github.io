@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python开发环境与基础知识</title>
+    <url>/2024/02/21/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212645001.png" alt="image-20240221212645001"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212703666.png" alt="image-20240221212703666"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212715849.png" alt="image-20240221212715849"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212728371.png" alt="image-20240221212728371"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212739932.png" alt="image-20240221212739932"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212759396.png" alt="image-20240221212759396"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212810735.png" alt="image-20240221212810735"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212824944.png" alt="image-20240221212824944"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221213119364.png" alt="image-20240221213119364"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221213130189.png" alt="image-20240221213130189"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>编程基础</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>蓝桥杯知识记录</title>
+    <url>/2024/02/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img src="/./../imgs/$%7Bfiilename%7D/image-20240221204217791-1708519354510-1.png" alt="image-20240221204217791"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯学习路线</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2024/02/20/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -16,13 +51,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>蓝桥杯知识记录</title>
-    <url>/2024/02/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><a href="https://hexo.io/plugins/">https://hexo.io/plugins/</a></p>
-<p><img src="/./../imgs/$%7Bfiilename%7D/image-20240221204217791-1708519354510-1.png" alt="image-20240221204217791"></p>
 ]]></content>
   </entry>
 </search>
