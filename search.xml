@@ -24,15 +24,20 @@
       </tags>
   </entry>
   <entry>
-    <title>蓝桥杯知识记录</title>
-    <url>/2024/02/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p><img src="/./../imgs/$%7Bfiilename%7D/image-20240221204217791-1708519354510-1.png" alt="image-20240221204217791"></p>
+    <title>Python输入输出</title>
+    <url>/2024/02/21/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213902685.png" alt="image-20240221213902685"></p>
+<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213915397.png" alt="image-20240221213915397"><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213925703.png" alt="image-20240221213925703"></p>
+<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213937602.png" alt="image-20240221213937602"><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213947577.png" alt="image-20240221213947577"><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213957381.png" alt="image-20240221213957381"></p>
+<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221214008221.png" alt="image-20240221214008221"></p>
 ]]></content>
       <categories>
         <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>编程基础</category>
       </categories>
       <tags>
-        <tag>蓝桥杯学习路线</tag>
+        <tag>蓝桥杯备赛</tag>
       </tags>
   </entry>
   <entry>
@@ -52,5 +57,38 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>常量、变量与运算符</title>
+    <url>/2024/02/21/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214110296.png" alt="image-20240221214110296"><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214126383.png" alt="image-20240221214126383"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214134728.png" alt="image-20240221214134728"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214200076.png" alt="image-20240221214200076"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214210558.png" alt="image-20240221214210558"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214219520.png" alt="image-20240221214219520"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214229793.png" alt="image-20240221214229793"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214237176.png" alt="image-20240221214237176"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214246396.png" alt="image-20240221214246396"><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214254820.png" alt="image-20240221214254820"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+        <category>语言基础</category>
+        <category>编程基础</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯备赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>蓝桥杯知识记录</title>
+    <url>/2024/02/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><img src="/./../imgs/$%7Bfiilename%7D/image-20240221204217791-1708519354510-1.png" alt="image-20240221204217791"></p>
+]]></content>
+      <categories>
+        <category>蓝桥杯</category>
+      </categories>
+      <tags>
+        <tag>蓝桥杯学习路线</tag>
+      </tags>
   </entry>
 </search>
