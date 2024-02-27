@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>工具函数模板 | Actz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+  
+  <meta name="description" content="内置模板我们前面讲了很多数据结构相关的知识，本节课程，我们主要讲解怎么不自己定义，而是使用我们所使用的编程语言中，已经定义好的数据结构。 之前我们在栈那一节已经讲过栈的内置数据结构的使用，我们本章就不再进行讲解，我们这节课仍然采用那种方式进行讲解。 知识点 迭代器讲解 线性表的使用 队列的使用 集合（set）的使用 映射（map）的使用  迭代器（Iterator）首先，明确一点迭代器是 C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工具函数模板">
+<meta property="og:url" content="https://actz123.github.io/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:site_name" content="Actz">
+<meta property="og:description" content="内置模板我们前面讲了很多数据结构相关的知识，本节课程，我们主要讲解怎么不自己定义，而是使用我们所使用的编程语言中，已经定义好的数据结构。 之前我们在栈那一节已经讲过栈的内置数据结构的使用，我们本章就不再进行讲解，我们这节课仍然采用那种方式进行讲解。 知识点 迭代器讲解 线性表的使用 队列的使用 集合（set）的使用 映射（map）的使用  迭代器（Iterator）首先，明确一点迭代器是 C++">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-02-22T09:36:51.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:37:57.482Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯备赛">
+<meta name="twitter:card" content="summary"><meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+  <h1 id="title">
+    <a href="/">Actz</a>
+  </h1>
+  <nav>
+    
+    
+      
+      <a class="nav-link" href="/">Home</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="/archives">Archives</a>
+    
+    
+  </nav>
+</header>
+
+    <div id="content">
+      <article id="post-工具函数模板" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="headline name">
+      工具函数模板
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2024-02-22T09:36:51.000Z" itemprop="datePublished">February 22, 2024, 5:36 PM</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h1 id="内置模板"><a href="#内置模板" class="headerlink" title="内置模板"></a>内置模板</h1><p>我们前面讲了很多数据结构相关的知识，本节课程，我们主要讲解怎么不自己定义，而是使用我们所使用的编程语言中，已经定义好的数据结构。</p>
+<p>之前我们在栈那一节已经讲过栈的内置数据结构的使用，我们本章就不再进行讲解，我们这节课仍然采用那种方式进行讲解。</p>
+<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>迭代器讲解</li>
+<li>线性表的使用</li>
+<li>队列的使用</li>
+<li>集合（set）的使用</li>
+<li>映射（map）的使用</li>
+</ul>
+<h3 id="迭代器（Iterator）"><a href="#迭代器（Iterator）" class="headerlink" title="迭代器（Iterator）"></a>迭代器（Iterator）</h3><p>首先，明确一点迭代器是 <code>C++</code> 的知识，并不适用于 <code>Java</code> 和 <code>Python</code> 这两种语言，但是下面讲容器就要用到这一点，所以我们必须要提前讲一下。迭代器的知识点很复杂，了解即可，当然有余力可以深究，了解就能做题，实现方式看容器讲解。</p>
+<p>对于数组我们可以采用指针进行访问，但是对于其他的存储空间连续的数据结构或者说是存储单元我们就需要找到另一种方式来替代指针的行为作用，从而达到对于非数组的数据结构的访问和遍历，于是我们定义了一种新的变量叫做迭代器。</p>
+<p><strong>定义：</strong></p>
+<p>迭代器是一种检查容器内元素并遍历元素的数据类型。</p>
+<p>迭代器提供对一个容器中的对象的访问方法，并且定义了容器中对象的范围。</p>
+<p><strong>迭代器和指针的区别：</strong></p>
+<p>容器和<code>string</code>有迭代器类型同时拥有返回迭代器的成员。</p>
+<p>如：容器有成员 <code>.begin()</code> 和 <code>.end()</code>，其中 <code>.begin()</code> 成员复制返回指向第一个元素的迭代器，即指向第一个元素的“地址”，而 <code>.end()</code> 成员返回指向容器尾元素的下一个位置的迭代器。</p>
+<p>即 <code>.begin()</code> 指向的是第一个合法元素的位置，<code>.end()</code> 指向是容器后第一个不合法元素的地址。</p>
+<p>相应的还有容器反向迭代器成员 <code>.rbegin()</code> <code>.rend()</code>，<code>.rbegin()</code> 返回容器的元素前最后一个不合法的地址，<code>rend()</code> 返回容器的最后一个合法地址。</p>
+<h4 id="容器迭代器的使用"><a href="#容器迭代器的使用" class="headerlink" title="容器迭代器的使用"></a>容器迭代器的使用</h4><p>每种容器类型都定义了自己的迭代器类型：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如 vector：vector&lt;int&gt;::iterator iter;//定义一个名为iter的变量</span><br></pre></td></tr></table></figure>
+
+<p>数据类型是由 <code>vector&lt;int&gt;</code> 定义的 <code>iterator</code> 类型。简单说就是容器类定义了自己的 <code>iterator</code> 类型，用于访问容器内的元素。每个容器定义了一种名为 <code>iterator</code> 的类型，这种类型支持迭代器的各种行为。</p>
+<p>我么们先讲一下各种迭代器的类型，在讲容器所用的迭代器类型，就可以明白怎么操作。</p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>写在前面，由于 <code>Python</code> 的语言的特点，所有的数据结构大部分都需要自己实现，但是其 <code>List</code> 功能较强，用起来比较简单，当然我们也会再说一遍怎么实现。</p>
+<p>在 <code>Java</code> 中各种数据结构都是继承于 <code>list</code>，所以 <code>Java</code> 的 <code>list</code> 功能也很强，它的功能有很多，由于篇幅原因我们会挑比较重要的讲解，其他的还需要同学们多去使用。</p>
+<h3 id="Vector-容器（类）"><a href="#Vector-容器（类）" class="headerlink" title="Vector 容器（类）"></a>Vector 容器（类）</h3><p>线性表中有 <code>Vector</code> 和 <code>list</code>，两者作用比较相似。</p>
+<p><code>Vector</code> 的主要作用就是可变长度的数组，就把他当成数组使用即可。</p>
+<p>至于为什么我们选择讲 <code>Vector</code> 而不是 <code>List</code>，因为 <code>Vector</code> 可以当作数组使用，用起来非常简单，也非常方便。</p>
+<p>我们先讲解一下 C++ 的 <code>Vector</code> 使用：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span>   <span class="comment">//头文件</span></span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; a;      <span class="comment">//定义了一个int类型的vector容器a</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; b[<span class="number">100</span>]; <span class="comment">//定义了一个int类型的vector容器b组</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">rec</span></span><br><span class="line">&#123;</span><br><span class="line">    ···</span><br><span class="line">&#125;;</span><br><span class="line">vector&lt;rec&gt; c;            <span class="comment">//定义了一个rec类型的vector容器c</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator it; <span class="comment">//vector的迭代器，与指针类似</span></span><br></pre></td></tr></table></figure>
+
+<p>具体操作如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a.<span class="built_in">size</span>()           <span class="comment">//返回实际长度（元素个数），O(1)复杂度</span></span><br><span class="line">a.<span class="built_in">empty</span>()      <span class="comment">//容器为空返回1，否则返回0，O(1)复杂度</span></span><br><span class="line">a.<span class="built_in">clear</span>()      <span class="comment">//把vector清空</span></span><br><span class="line">a.<span class="built_in">begin</span>()      <span class="comment">//返回指向第一个元素的迭代器，*a.begin()与a[0]作用相同</span></span><br><span class="line">a.<span class="built_in">end</span>()        <span class="comment">//越界访问，指向vector尾部，指向第n个元素再往后的边界</span></span><br><span class="line">a.<span class="built_in">front</span>()      <span class="comment">//返回第一个元素的值，等价于*a.begin和a[0]</span></span><br><span class="line">a.<span class="built_in">back</span>()       <span class="comment">//返回最后一个元素的值，等价于*--a.end()和a[size()-1]</span></span><br><span class="line">a.<span class="built_in">push_back</span>(x) <span class="comment">//把元素x插入vector尾部</span></span><br><span class="line">a.<span class="built_in">pop_back</span>()   <span class="comment">//删除vector中最后一个元素</span></span><br></pre></td></tr></table></figure>
+
+<p>遍历的方式有两种：</p>
+<ol>
+<li>迭代器使用与指针类似，可如下遍历整个容器。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( vector&lt;<span class="type">int</span>&gt;::iterator it=a.<span class="built_in">begin</span>() ; it!=a.<span class="built_in">end</span>() ; it++ )</span><br><span class="line">cout&lt;&lt;*iterator&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>当成数组使用。</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( <span class="type">int</span> i=<span class="number">0</span>;i&lt;a.size();i++) <span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Java 中我们一般使用 List，相信大家已经非常熟悉了，我们这里给大家补充一下 Vector 的用法，与 List 的使用方式非常的类似。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种构造方法创建一个默认的向量，默认大小为 10：</span></span><br><span class="line">Vector()</span><br><span class="line"><span class="comment">//第二种构造方法创建指定大小的向量。</span></span><br><span class="line">Vector(<span class="type">int</span> size)</span><br><span class="line"><span class="comment">//第三种构造方法创建指定大小的向量，并且增量用 incr 指定。增量表示向量每次增加的元素数目。</span></span><br><span class="line">Vector(<span class="type">int</span> size,<span class="type">int</span> incr)</span><br><span class="line"><span class="comment">//第四种构造方法创建一个包含集合 c 元素的向量：</span></span><br><span class="line">Vector(Collection c)</span><br></pre></td></tr></table></figure>
+
+<p>以下为 <code>Java Vector</code> 的 <code>Api</code>。</p>
+<table>
+<thead>
+<tr>
+<th><strong>修饰符和类型</strong></th>
+<th><strong>方法和说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>boolean</td>
+<td>add(E e)将指定的元素附加到此 Vector 的末尾。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>add(int index, E element)在此 Vector 的指定位置插入指定元素。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>addAll(Collection&lt;? extends E&gt; c)将指定集合中的所有元素追加到末尾 这个向量，按照它们由指定的返回的顺序 集合的迭代器。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>addAll(int index, Collection&lt;? extends E&gt; c)将指定 Collection 中的所有元素插入到此 指定位置的向量。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>addElement(E obj)将指定的组件添加到此向量的末尾， 将其大小增加一。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>capacity()返回此向量的当前容量。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>clear()从此 Vector 中删除所有元素。</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>clone()返回此向量的克隆。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>contains(Object o)退货 true 如果此向量包含指定的元素。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>containsAll(Collection&lt;?&gt; c)如果此 Vector 包含所有元素，则返回 true 指定的集合。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>copyInto ������<em>O<strong>b</strong>j<strong>e</strong>c**t</em> [ ] �������<em>a<strong>n</strong>A<strong>r</strong>r<strong>a</strong>y</em>将此向量的分量复制到指定的数组中。</td>
+</tr>
+<tr>
+<td>E</td>
+<td>elementAt(int index)返回指定索引处的组件。</td>
+</tr>
+<tr>
+<td>Enumeration</td>
+<td>elements()返回此向量的组件的枚举。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>ensureCapacity(int minCapacity)如有必要，增加此向量的容量，以确保它至少可以容纳由指定的组件数量最小容量参数。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>equals(Object o)比较指定的 Object 与此 Vector 是否相等。</td>
+</tr>
+<tr>
+<td>E</td>
+<td>firstElement()返回第一个组件（索引处的项目 0） 的这个向量。</td>
+</tr>
+<tr>
+<td>E</td>
+<td>get(int index)返回此 Vector 中指定位置的元素。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>hashCode()返回此 Vector 的哈希码值。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>indexOf(Object o)返回指定元素第一次出现的索引 在此向量中，如果此向量不包含该元素，则为 -1。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>indexOf(Object o,int index)返回指定元素第一次出现的索引这个向量，从 index, 或返回 -1 如果 未找到该元素。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>insertElementAt(E obj, int index)将指定对象作为组件插入此向量中的 指定的 index.</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>isEmpty()测试此向量是否没有组件。</td>
+</tr>
+<tr>
+<td>Iterator</td>
+<td>iterator()以适当的顺序返回此列表中元素的迭代器</td>
+</tr>
+<tr>
+<td>E</td>
+<td>lastElement()返回向量的最后一个组件。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>lastIndexOf(Object o)返回指定元素最后一次出现的索引在此向量中，如果此向量不包含该元素，则为 -1。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>lastIndexOf(Object o, int index)返回指定元素最后一次出现的索引这个向量，从 index, 或返回 -1 如果 未找到该元素。</td>
+</tr>
+<tr>
+<td>ListIterator</td>
+<td>listIterator()返回此列表中元素的列表迭代器（在适当的顺序）。</td>
+</tr>
+<tr>
+<td>ListIterator</td>
+<td>listIterator(int index)返回此列表中元素的列表迭代器（在适当的序列），从列表中的指定位置开始。</td>
+</tr>
+<tr>
+<td>E</td>
+<td>remove(int index)移除此 Vector 中指定位置的元素。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>remove(Object o)移除此 Vector 中第一次出现的指定元素如果 Vector 不包含该元素，则它保持不变。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>removeAll(Collection&lt;?&gt; c)从此 Vector 中删除其包含在指定的集合。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>removeAllElements()从此向量中删除所有组件并将其大小设置为零。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>removeElement(Object obj)删除参数的第一个（最低索引）出现从这个向量。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>removeElementAt(int index)删除指定索引处的组件。</td>
+</tr>
+<tr>
+<td>protected void</td>
+<td>removeRange(int fromIndex, int toIndex)从此列表中删除索引介于两者之间的所有元素 fromIndex，包括在内，和 toIndex， 独家的。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>retainAll(Collection&lt;?&gt; c)仅保留此 Vector 中包含在指定的集合。</td>
+</tr>
+<tr>
+<td>E</td>
+<td>set(int index, E element)将此 Vector 中指定位置的元素替换为指定的元素。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setElementAt(E obj,int index)将组件设置在指定的位置 index 这个的向量是指定的对象。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setSize(int newSize)设置此向量的大小。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>size()返回此向量中的组件数。</td>
+</tr>
+<tr>
+<td>List</td>
+<td>subList(int fromIndex,int toIndex)返回此列表中 fromIndex 之间的部分的视图</td>
+</tr>
+<tr>
+<td>Object[]</td>
+<td>toArray()返回一个包含此 Vector 中所有元素的数组以正确的顺序。</td>
+</tr>
+<tr>
+<td>T[]</td>
+<td>������� �<em>t<strong>o</strong>A<strong>r</strong>r<strong>a</strong>y</em> <em>T</em>[] 返回一个包含此 Vector 中所有元素的数组正确的顺序; 返回数组的运行时类型指定数组。</td>
+</tr>
+<tr>
+<td>String</td>
+<td>toString()返回此 Vector 的字符串表示形式，包含 每个元素的字符串表示。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>trimToSize()将此向量的容量修剪为向量的电流 尺寸。</td>
+</tr>
+</tbody></table>
+<p>遍历 Vector</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Enumeration</span> <span class="variable">vEnum</span> <span class="operator">=</span> v.elements();</span><br><span class="line"><span class="keyword">while</span> (vEnum.hasMoreElements())</span><br><span class="line">    System.out.print(vEnum.nextElement() + <span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python 中，我们直接使用 list 即可来实现。</strong></p>
+<h2 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h2><p>快递员需要对快递进行分拣，现在小李是一名快递员，他想要你帮他设计一个程序用于快递的分拣，按城市分开。</p>
+<p>现在有以下输入：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">单号 省份</span><br><span class="line"></span><br><span class="line">请你将单号按照城市分开，并输出。</span><br><span class="line"></span><br><span class="line">城市按照输入顺序排序</span><br><span class="line"></span><br><span class="line">单号按照输入顺序排序</span><br></pre></td></tr></table></figure>
+
+<p>样例如下：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">输入</span><br><span class="line"></span><br><span class="line">10</span><br><span class="line"></span><br><span class="line">10124214 北京</span><br><span class="line">12421565  上海</span><br><span class="line">sdafasdg213 天津</span><br><span class="line">fasdfga124 北京</span><br><span class="line">145252  上海</span><br><span class="line">235wtdfsg 济南</span><br><span class="line">3242356fgdfsg 成都</span><br><span class="line">23423 武汉</span><br><span class="line">23423565f 沈阳</span><br><span class="line">1245dfwfs 成都</span><br><span class="line"></span><br><span class="line">输出</span><br><span class="line"></span><br><span class="line">北京 2</span><br><span class="line">10124214</span><br><span class="line">fasdfga124</span><br><span class="line">上海 2</span><br><span class="line">12421565</span><br><span class="line">145252</span><br><span class="line">天津 1</span><br><span class="line">sdafasdg213</span><br><span class="line">济南 1</span><br><span class="line">235wtdfsg</span><br><span class="line">成都 2</span><br><span class="line">3242356fgdfsg</span><br><span class="line">1245dfwfs</span><br><span class="line">武汉 1</span><br><span class="line">23423</span><br><span class="line">沈阳 1</span><br><span class="line">23423565f</span><br></pre></td></tr></table></figure>
+
+<p>下面我们来分析一下解题思路。</p>
+<p>首先我们要知道中国城市肯定在 10001000 个以内，但是单号我们不确定，我们不可能每个数组开 1000010000 个，那样内存不够，所以这时候我们就用到了我们的 ������<em>v<strong>e</strong>c<strong>t</strong>o**r</em>，他的容量是动态申请的，在比赛中我们可以理解为无限制。</p>
+<ul>
+<li>第一步：我们创建一个 ������<em>v<strong>e</strong>c<strong>t</strong>o**r</em> 用于保存地址</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;string&gt; city;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二步：我们创建一个 ������<em>v<strong>e</strong>c<strong>t</strong>o**r</em> 组用于存放单号</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;string&gt; dig[<span class="number">1000</span>];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第三步：我们定义一个映射函数，因为你的城市可能会再次出现，你需要知道之前有没有。</li>
+<li>第四步：我们开始读入操作并按照顺序进行存放</li>
+</ul>
+<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><p>C++ 解题代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">vector&lt;string&gt; city;</span><br><span class="line">vector&lt;string&gt; dig[<span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Myfind</span><span class="params">(string s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;city.<span class="built_in">size</span>();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(city[i]==s) <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        string d,c;</span><br><span class="line">        cin&gt;&gt;d&gt;&gt;c;</span><br><span class="line">        <span class="type">int</span> flag=<span class="built_in">Myfind</span>(c);</span><br><span class="line">        <span class="keyword">if</span>(flag==<span class="number">-1</span>)&#123;</span><br><span class="line">            city.<span class="built_in">push_back</span>(c);</span><br><span class="line">            dig[city.<span class="built_in">size</span>()<span class="number">-1</span>].<span class="built_in">push_back</span>(d);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>  dig[flag].<span class="built_in">push_back</span>(d);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;city.<span class="built_in">size</span>();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt;city[i]&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;dig[i].<span class="built_in">size</span>()&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;dig[i].<span class="built_in">size</span>();j++)</span><br><span class="line">            cout&lt;&lt;dig[i][j]&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Java 解题代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Vector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> Vector city=<span class="keyword">new</span> <span class="title class_">Vector</span>&lt;String&gt;();</span><br><span class="line">  <span class="keyword">static</span> Vector &lt;Vector&lt;String&gt;&gt; dig= <span class="keyword">new</span> <span class="title class_">Vector</span> &lt;Vector&lt;String&gt;&gt;();</span><br><span class="line">  <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">Myfind</span><span class="params">(String s)</span></span><br><span class="line">  &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;city.size();i++)</span><br><span class="line">      &#123;</span><br><span class="line">          <span class="keyword">if</span>(city.get(i).equals(s)) &#123;</span><br><span class="line">              <span class="keyword">return</span> i;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">      <span class="type">int</span> n;</span><br><span class="line">      Scanner in=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">      n=in.nextInt();</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">      &#123;</span><br><span class="line">          String d,c;</span><br><span class="line">          d=in.next();</span><br><span class="line">          c=in.next();</span><br><span class="line">          <span class="type">int</span> flag=Myfind(c);</span><br><span class="line">          <span class="keyword">if</span>(flag==-<span class="number">1</span>)&#123;</span><br><span class="line">              city.addElement(c);</span><br><span class="line">              dig.addElement(<span class="keyword">new</span> <span class="title class_">Vector</span>&lt;String&gt;());</span><br><span class="line">              dig.get(city.size()-<span class="number">1</span>).addElement(d);</span><br><span class="line"></span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span>   dig.get(flag).addElement(d);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;city.size();i++)</span><br><span class="line">      &#123;</span><br><span class="line">          System.out.println(city.get(i)+<span class="string">&quot; &quot;</span>+dig.get(i).size());</span><br><span class="line">          <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j&lt; dig.get(i).size(); j++)</span><br><span class="line">              System.out.println(dig.get(i).get(j));</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python 实现方式:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">city=[]</span><br><span class="line">dig = [[] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">find</span>(<span class="params">s</span>):</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(city)):</span><br><span class="line">       <span class="keyword">if</span> (city[i]==s):</span><br><span class="line">           <span class="keyword">return</span> i</span><br><span class="line">   <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   n=<span class="built_in">int</span> (<span class="built_in">input</span>())</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,n):</span><br><span class="line">       d=<span class="built_in">input</span>().split()</span><br><span class="line">       <span class="comment">#print(d[1]        )</span></span><br><span class="line">       flag=find(d[<span class="number">1</span>])</span><br><span class="line">       <span class="keyword">if</span>(flag==-<span class="number">1</span>):</span><br><span class="line">           city.append(d[<span class="number">1</span>])</span><br><span class="line">           dig[<span class="built_in">len</span>(city)-<span class="number">1</span>].append(d[<span class="number">0</span>])</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           dig[flag].append(d[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(city)):</span><br><span class="line">       <span class="built_in">print</span>(city[i],<span class="built_in">len</span>(dig[i]))</span><br><span class="line">       <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(dig[i])):</span><br><span class="line">           <span class="built_in">print</span>(dig[i][j])</span><br></pre></td></tr></table></figure>
+
+<h3 id="队列-Queue"><a href="#队列-Queue" class="headerlink" title="队列 Queue"></a>队列 Queue</h3><p>队列的讲解在之前的课程中已经讲过了，忘记的快回去复习。</p>
+<p>我们直接开始看操作吧。</p>
+<h4 id="C-中的队列"><a href="#C-中的队列" class="headerlink" title="C++ 中的队列"></a>C++ 中的队列</h4><p>定义方式：在 C++ 里所有容器的定义方式基本一致。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">queue&lt;string&gt; myqueue;</span><br><span class="line">queue&lt;<span class="type">int</span>&gt; myqueue_int;</span><br></pre></td></tr></table></figure>
+
+<p>成员函数:</p>
+<ul>
+<li><code>front()</code>：返回 <code>queue</code> 中第一个元素的引用。</li>
+<li><code>back()</code>：返回 <code>queue </code>中最后一个元素的引用。</li>
+<li><code>push(const T&amp; obj)</code>：在 <code>queue</code> 的尾部添加一个元素的副本。</li>
+<li><code>pop()</code>：删除 <code>queue</code> 中的第一个元素。</li>
+<li><code>size()</code>：返回 <code>queue</code> 中元素的个数。</li>
+<li><code>empty()</code>：如果 <code>queue</code> 中没有元素的话，返回 true。</li>
+</ul>
+<p><strong>Java 中的队列:</strong></p>
+<p>定义方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Queue&lt;String&gt; queue = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;String&gt;();</span><br></pre></td></tr></table></figure>
+
+<p>部分成员函数（包括继承的）：</p>
+<ul>
+<li><code>add()</code>: 增加一个元索,如果队列已满，则抛出一个异常</li>
+<li><code>remove()</code>:移除并返回队列头部的元素，如果队列为空，则抛出一个异常</li>
+<li><code>element()</code>:返回队列头部的元素，如果队列为空，则抛出一个异常</li>
+<li><code>offer()</code>:添加一个元素并返回 <code>true</code>，如果队列已满，则返回 <code>false</code></li>
+<li><code>poll()</code>: 移除并返问队列头部的元素，如果队列为空，则返回 <code>null</code></li>
+<li><code>peek()</code>: 返回队列头部的元素，如果队列为空，则返回 <code>null</code></li>
+<li><code>put()</code>: 添加一个元素， 如果队列满，则阻塞</li>
+<li><code>take()</code>: 移除并返回队列头部的元素，如果队列为空，则阻塞</li>
+<li><code>size()</code>: 返回队列长度。</li>
+</ul>
+<p><strong>Python 中的队列</strong></p>
+<p>定义方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> Queue</span><br><span class="line"></span><br><span class="line"><span class="comment">## maxsize设置队列中，数据上限，小于或等于0则不限制，容器中大于这个数则阻塞，直到队列中的数据被消掉</span></span><br><span class="line">q = Queue(maxsize=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>成员函数：</p>
+<ul>
+<li><code>Queue.qsize()</code> 返回队列的大致大小。</li>
+<li><code>Queue.empty()</code> 如果队列为空，返回 <code>True</code> 否则返回 <code>False</code></li>
+<li><code>Queue.full()</code> 如果队列是满的返回 <code>True</code> ，否则返回 <code>False</code></li>
+<li><code>Queue.put(item, block=True, timeout=None)</code><ul>
+<li>常用时忽略默认参数，即使用 <code>Queue.put(item)</code>。</li>
+<li>将 <code>item</code> 放入队列，如果可选参数 <code>block</code> 是 <code>true</code> 并且 <code>timeout</code> 是 <code>None</code> (默认)，则在必要时阻塞至有空闲插槽可用。</li>
+<li>如果 <code>timeout</code> 是个正数，将最多阻塞 <code>timeout</code> 秒，如果在这段时间没有可用的空闲插槽，将引发 <code>Full</code> 异常。</li>
+<li>反之 (<code>block</code> 是 <code>false</code>)，如果空闲插槽立即可用，则把 <code>item</code> 放入队列，否则引发 <code>Full</code> 异常 ( 在这种情况下，<code>timeout</code> 将被忽略)。</li>
+</ul>
+</li>
+<li><code>Queue.get(block=True, timeout=None)</code><ul>
+<li>常用时忽略默认参数，即使用 <code>Queue.get()</code>。</li>
+<li>从队列中移除并返回一个项目。如果可选参数 <code>block</code> 是 <code>true</code> 并且 <code>timeout</code> 是 <code>None</code> (默认值)，则在必要时阻塞至项目可得到。</li>
+<li>如果 <code>timeout</code> 是个正数，将最多阻塞 <code>timeout</code> 秒，如果在这段时间内项目不能得到，将引发 <code>Empty</code> 异常。反之 (<code>block</code> 是 <code>false</code>)，如果一个项目立即可得到，则返回一个项目，否则引发 <code>Empty</code> 异常 (这种情况下，<code>timeout</code> 将被忽略)。</li>
+</ul>
+</li>
+</ul>
+<h4 id="题目回顾"><a href="#题目回顾" class="headerlink" title="题目回顾"></a>题目回顾</h4><blockquote>
+<p>CLZ 的银行。</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">第一行 M 次操作（M&lt;1000）</span><br><span class="line"></span><br><span class="line">第二行 到 第M+1行 输入操作</span><br><span class="line"></span><br><span class="line">格式：   IN name V</span><br><span class="line">        OUT V</span><br><span class="line">        IN name2 N</span><br><span class="line">        OUT N</span><br><span class="line">        即 第一个字符串为操作 是IN进入排队和OUT 出队</span><br><span class="line">            IN 排队 跟着两个字符串为姓名和权限V或N</span><br><span class="line">            OUT 为出队即完成操作，V和N代表那个窗口完成了操作</span><br><span class="line"></span><br><span class="line">输出：M次操作后V队列和N队列中姓名，先输出V队列后输出N队列。</span><br><span class="line"></span><br><span class="line">样例：</span><br><span class="line"></span><br><span class="line">输入：</span><br><span class="line"></span><br><span class="line">5</span><br><span class="line">IN xiaoming N</span><br><span class="line">IN Adel V</span><br><span class="line">IN laozhao N</span><br><span class="line">OUT N</span><br><span class="line">IN CLZ V</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line">Adel</span><br><span class="line">CLZ</span><br><span class="line">laozhao</span><br></pre></td></tr></table></figure>
+
+<p>具体的题目讲解，我们之前就已经讲解过了，这里我们主要是来看一下预置代码的方便性。</p>
+<h4 id="完整代码-1"><a href="#完整代码-1" class="headerlink" title="完整代码"></a>完整代码</h4><p>C++实现：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">queue&lt;string&gt; V;</span><br><span class="line">queue&lt;string&gt; N;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> M;</span><br><span class="line">    cin&gt;&gt;M;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(M--) <span class="comment">//</span></span><br><span class="line">    &#123;</span><br><span class="line">        string op,name,type;</span><br><span class="line">        cin&gt;&gt;op;</span><br><span class="line">        <span class="keyword">if</span>(op==<span class="string">&quot;IN&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;name&gt;&gt;type;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(type==<span class="string">&quot;V&quot;</span>)</span><br><span class="line">                V.<span class="built_in">push</span>(name);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                N.<span class="built_in">push</span>(name);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;type;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(type==<span class="string">&quot;V&quot;</span>)</span><br><span class="line">                V.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                N.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(V.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt;V.<span class="built_in">front</span>()&lt;&lt;endl;</span><br><span class="line">        V.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(N.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt;N.<span class="built_in">front</span>()&lt;&lt;endl;</span><br><span class="line">        N.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Java 实现</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> Queue&lt;String&gt; V=<span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> Queue&lt;String&gt; N=<span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> M;</span><br><span class="line">        Scanner in=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        M=in.nextInt();</span><br><span class="line">        <span class="keyword">while</span>(M&gt;<span class="number">0</span>) <span class="comment">//</span></span><br><span class="line">        &#123;</span><br><span class="line">            M--;</span><br><span class="line">            String op,name,type;</span><br><span class="line">            op=in.next();</span><br><span class="line">            <span class="comment">// System.out.println(&quot;op&quot;+op);</span></span><br><span class="line">            <span class="keyword">if</span>(op.contains(<span class="string">&quot;IN&quot;</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                name=in.next();</span><br><span class="line">                type=in.next();</span><br><span class="line">                <span class="keyword">if</span>(type.contains(<span class="string">&quot;V&quot;</span>)) &#123;</span><br><span class="line">                    V.offer(name);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    N.offer(name);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// System.out.println(&quot;name:&quot;+name+&quot;type:&quot;+type);</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">// System.out.println(Vqueue);</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                type=in.next();</span><br><span class="line">                <span class="keyword">if</span>(type.contains(<span class="string">&quot;V&quot;</span>))&#123;</span><br><span class="line">                    V.poll();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    N.poll();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// System.out.println(&quot;type&quot;+type);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(V.size()!=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(V.poll());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(N.size()!=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(N.poll());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python 实现</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> queue</span><br><span class="line"></span><br><span class="line">V = queue.Queue()</span><br><span class="line">N = queue.Queue()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">  M = <span class="number">0</span></span><br><span class="line">  M = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">  <span class="keyword">while</span> M &gt; <span class="number">0</span>:</span><br><span class="line">      M -= <span class="number">1</span></span><br><span class="line">      op = <span class="built_in">input</span>().split()</span><br><span class="line"></span><br><span class="line">      <span class="comment"># print(op[0])</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> op[<span class="number">0</span>] == <span class="string">&#x27;IN&#x27;</span>:</span><br><span class="line">          <span class="keyword">if</span> op[<span class="number">2</span>] == <span class="string">&quot;V&quot;</span>:</span><br><span class="line">              V.put(op[<span class="number">1</span>])</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              N.put(op[<span class="number">1</span>])</span><br><span class="line">      <span class="keyword">else</span>:</span><br><span class="line">          <span class="keyword">if</span> op[<span class="number">1</span>] == <span class="string">&quot;V&quot;</span>:</span><br><span class="line">              V.get()</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              N.get()</span><br><span class="line">          <span class="comment"># print(&#x27;out&#x27;)</span></span><br><span class="line">      <span class="comment"># print(&quot;VVVVV&quot;,Vqueue)</span></span><br><span class="line">      <span class="comment"># print(&quot;NNNN&quot;,Nqueue)</span></span><br><span class="line">      <span class="comment"># print(M)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> <span class="keyword">not</span> (V.empty()):</span><br><span class="line">      <span class="built_in">print</span>(V.get())</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> <span class="keyword">not</span> (N.empty()):</span><br><span class="line">      <span class="built_in">print</span>(N.get())</span><br></pre></td></tr></table></figure>
+
+<h3 id="Map-映射"><a href="#Map-映射" class="headerlink" title="Map 映射"></a>Map 映射</h3><p>在之前我们学习散列表的时候我们就接触过了映射，这里我们要讲的是一种类似的数据结构。</p>
+<p><code>map</code> 是一个关联容器，它提供一对一的 <code>hash</code>。</p>
+<ul>
+<li>第一个可以称为关键字(<code>key</code>)，每个关键字只能在 <code>map</code> 中出现一次</li>
+<li>第二个可能称为该关键字的值(<code>value</code>)</li>
+</ul>
+<p><code>map</code> 以模板（泛型）方式实现，可以存储任意类型的数据，包括使用者自定义的数据类型。<code>Map</code> 主要用于资料一对一映射（<code>one-to-one</code>）的情況，<code>map</code> 在 <code>C++</code> 的內部的实现自建一颗红黑树，这颗树具有对数据自动排序的功能。在 <code>map</code> 内部所有的数据都是有序的。</p>
+<p>比如，像是管理班级内的学生，<code>Key</code> 值为学号，<code>Value</code> 放其他信息的结构体或者类。</p>
+<h4 id="C-中的-map"><a href="#C-中的-map" class="headerlink" title="C++ 中的 map"></a>C++ 中的 map</h4><p>定义方式：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map&lt;<span class="type">char</span>, <span class="type">int</span>&gt; mymap1;</span><br><span class="line">map&lt;string, <span class="type">int</span>&gt; mymap2;</span><br></pre></td></tr></table></figure>
+
+<p>一般用法：</p>
+<ol>
+<li>看容量。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> map.<span class="built_in">size</span>();<span class="comment">//查询map中有多少对元素</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">empty</span><span class="params">()</span></span>;<span class="comment">// 查询map是否为空</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>插入。</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>.insert(<span class="built_in">make_pair</span>(key,value));</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line"><span class="built_in">map</span>.insert(<span class="built_in">pair</span>&lt;<span class="type">char</span>, <span class="type">int</span>&gt;(key, value))</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line"><span class="built_in">map</span>[key]=value</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>取值。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">map&lt;<span class="type">int</span>, string&gt; map;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果map中没有关键字2233，使用[]取值会导致插入</span></span><br><span class="line"><span class="comment">//因此，下面语句不会报错，但会使得输出结果结果为空</span></span><br><span class="line">cout&lt;&lt;map[<span class="number">2233</span>]&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">//但是使用使用at会进行关键字检查，因此下面语句会报错</span></span><br><span class="line">map.<span class="built_in">at</span>(<span class="number">2016</span>) = <span class="string">&quot;Bob&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>遍历操作</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string, string&gt;::iterator it;</span><br><span class="line"><span class="keyword">for</span> (it = mapSet.<span class="built_in">begin</span>(); it != mapSet.<span class="built_in">end</span>(); ++it)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;key&quot;</span> &lt;&lt; it-&gt;first &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;value&quot;</span> &lt;&lt; it-&gt;second &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>查找操作</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m.<span class="built_in">count</span>(key)：<span class="comment">//由于map不包含重复的key，因此m.count(key)取值为0，或者1，表示是否包含。</span></span><br><span class="line">m.<span class="built_in">find</span>(key)：<span class="comment">//返回迭代器，判断是否存在。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Java 中的 map</strong></p>
+<p>定义方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Map</span> <span class="variable">m1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TreeMap</span>();</span><br></pre></td></tr></table></figure>
+
+<p>这里我们讲的是排序的 <code>map</code> 还有不排序的 <code>map</code>，<code>java</code> 里面叫 <code>hashmap</code>，<code>C++</code> 里叫 <code>unordered_map</code>，除了不排序，用法和功能都一样。</p>
+<p>二者相差无几，大家如果不需要排序可以直接使用。</p>
+<p>成员方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>方法描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void clear( )</td>
+<td>从此映射中移除所有映射关系（可选操作）。</td>
+</tr>
+<tr>
+<td>boolean containsKey(Object k)</td>
+<td>如果此映射包含指定键的映射关系，则返回 true。</td>
+</tr>
+<tr>
+<td>boolean containsValue(Object v)</td>
+<td>如果此映射将一个或多个键映射到指定值，则返回 true。</td>
+</tr>
+<tr>
+<td>boolean equals(Object obj)</td>
+<td>比较指定的对象与此映射是否相等。</td>
+</tr>
+<tr>
+<td>Object get(Object k)</td>
+<td>返回指定键所映射的值；如果此映射不包含该键的映射关系，则返回 null。</td>
+</tr>
+<tr>
+<td>int hashCode( )</td>
+<td>返回此映射的哈希码值。</td>
+</tr>
+<tr>
+<td>boolean isEmpty( )</td>
+<td>如果此映射未包含键-值映射关系，则返回 true。</td>
+</tr>
+<tr>
+<td>Set keySet( )</td>
+<td>返回此映射中包含的键的 Set 视图。</td>
+</tr>
+<tr>
+<td>Object put(Object k, Object v)</td>
+<td>将指定的值与此映射中的指定键关联</td>
+</tr>
+<tr>
+<td>Object remove(Object k)</td>
+<td>如果存在一个键的映射关系，则将其从此映射中移除（可选操作）。</td>
+</tr>
+<tr>
+<td>int size( )</td>
+<td>返回此映射中的键-值映射关系数。</td>
+</tr>
+<tr>
+<td>Collection values( )</td>
+<td>返回此映射中包含的值的 Collection 视图。</td>
+</tr>
+</tbody></table>
+<p><strong>Python 字典</strong></p>
+<p>在 <code>Python</code> 中我们不叫映射，也不叫 <code>map</code>，我们称作字典。用法跟 <code>Java</code> 和 <code>c++</code> 都是有一定区别的。</p>
+<ol>
+<li>字典的创建。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">massege=&#123;<span class="string">&#x27;小李&#x27;</span>:<span class="string">&#x27;123124543643&#x27;</span>,<span class="string">&#x27;xiaohua&#x27;</span>:<span class="string">&#x27;17855666&#x27;</span>,<span class="string">&#x27;LiMing&#x27;</span>:<span class="string">&#x27;1249699859456&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#或者创建空的字典</span></span><br><span class="line">empty_dict = &#123;&#125;</span><br><span class="line"><span class="comment">#或者使用元组作为key</span></span><br><span class="line">group_dict = &#123;(<span class="number">60</span>, <span class="number">99</span>):<span class="string">&#x27;good&#x27;</span>, <span class="number">100</span>:<span class="string">&#x27;nice&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>字典的添加。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果字典内不含有相应的Key值，则会执行添加操作</span></span><br><span class="line"><span class="built_in">dict</span>[key]=value</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>字典的修改。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果字典内含有相应的Key值，则会执行更新操作</span></span><br><span class="line"><span class="built_in">dict</span>[key]=new_value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用update()修改</span></span><br><span class="line"><span class="comment"># update() 方法可使用一个字典所包含的 key-value 对来更新己有的字典。如果有就修改，没有就添加。</span></span><br><span class="line"><span class="built_in">dict</span>.update(&#123;<span class="string">&#x27;key&#x27;</span>:<span class="number">123</span>,<span class="string">&#x27;key2&#x27;</span>:<span class="number">234</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>字典的删除。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> <span class="built_in">dict</span>[<span class="string">&#x27;key&#x27;</span>]  <span class="comment"># 删除键是&#x27;key&#x27;的条目</span></span><br><span class="line"><span class="built_in">dict</span>.clear()      <span class="comment"># 清空字典所有条目</span></span><br><span class="line"><span class="keyword">del</span> <span class="built_in">dict</span>          <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>字典的访问。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dict</span> = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Zara&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="string">&#x27;7&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">dict</span>[<span class="string">&#x27;Name&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#当然如果key值不存在，将会抛出异常</span></span><br><span class="line"><span class="comment">#也可以是用get()方法,不存在会返回None，但不会抛出异常</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dict</span>.get(<span class="string">&#x27;Name&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="题目演练"><a href="#题目演练" class="headerlink" title="题目演练"></a>题目演练</h3><blockquote>
+<p>《弗里石的的语言》</p>
+<p>小发明家弗里想创造一种新的语言，众所周知，发明一门语言是非常困难的，首先你就要克服一个困难就是，有大量的单词需要处理，现在弗里求助你帮他写一款程序，判断是否出现重复的两个单词。</p>
+<p>有重复就输出重复单词，重复就输出 <code>NO</code>，多个重复输出最先出现的哪一个。</p>
+</blockquote>
+<p>输入：</p>
+<p>第 11 行，输入 �<em>N</em>，代表共计创造了多少个单词 第 22 行至第 �+1<em>N</em>+1 行，输入 �<em>N</em> 个单词</p>
+<p>格式：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fjsdfgdfsg</span><br><span class="line">fdfsgsdfg</span><br><span class="line">bcvxbxfyres</span><br></pre></td></tr></table></figure>
+
+<p>现在有以下样例输入：</p>
+<p>样例 1</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line"></span><br><span class="line">6</span><br><span class="line">1fagas</span><br><span class="line">dsafa32j</span><br><span class="line">lkiuopybncv</span><br><span class="line">hfgdjytr</span><br><span class="line">cncxfg</span><br><span class="line">sdhrest</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line">NO</span><br></pre></td></tr></table></figure>
+
+<p>样例 2</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line"></span><br><span class="line">5</span><br><span class="line">sdfggfds</span><br><span class="line">fgsdhsdf</span><br><span class="line">dsfhsdhr</span><br><span class="line">sdfhdfh</span><br><span class="line">sdfggfds</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"></span><br><span class="line">sdfggfds</span><br></pre></td></tr></table></figure>
+
+<p>这个题的思路在前面我们已经讲过了，这里我们换一种方式解题。</p>
+<p>使用映射和字典解题，是的原来的代码减少了超过一半，但是思路还是一样，可以说是非常的巧妙且省力。</p>
+<h4 id="C-解法"><a href="#C-解法" class="headerlink" title="C++ 解法"></a>C++ 解法</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"> <span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">map&lt;string,<span class="type">bool</span>&gt; mp;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    string ans=<span class="string">&quot;NO&quot;</span>;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        string word;</span><br><span class="line">        cin&gt;&gt;word;</span><br><span class="line">        <span class="keyword">if</span>(mp.<span class="built_in">count</span>(word))&#123;</span><br><span class="line">            ans=word;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> mp[word]=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Java 解法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.TreeMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> Map mp=<span class="keyword">new</span> <span class="title class_">TreeMap</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">      <span class="type">int</span> n;</span><br><span class="line">      <span class="type">boolean</span> flag=<span class="literal">false</span>;</span><br><span class="line">      Scanner in=<span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">      String ans=<span class="string">&quot;NO&quot;</span>;</span><br><span class="line">      n=in.nextInt();</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">      &#123;</span><br><span class="line">          String word;</span><br><span class="line">          word=in.next();</span><br><span class="line">          <span class="comment">// System.out.println(Hx(word));</span></span><br><span class="line">          <span class="keyword">if</span>(flag) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span>(mp.containsKey(word))&#123;</span><br><span class="line">              flag=<span class="literal">true</span>;</span><br><span class="line">              ans=word;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span> &#123;</span><br><span class="line">              mp.put(word,<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      System.out.println(ans);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Python 解法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dict</span>=&#123;&#125;</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  N=<span class="built_in">int</span> (<span class="built_in">input</span>())</span><br><span class="line">  ans = <span class="string">&#x27;NO&#x27;</span></span><br><span class="line">  flag = <span class="literal">False</span></span><br><span class="line">  <span class="keyword">while</span> N&gt;<span class="number">0</span>:</span><br><span class="line">      N-=<span class="number">1</span></span><br><span class="line">      word=<span class="built_in">input</span>()</span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">not</span>(flag)) :</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span>(<span class="built_in">dict</span>.get(word)!=<span class="literal">None</span>):</span><br><span class="line">              flag=<span class="literal">True</span></span><br><span class="line">              ans=word</span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              <span class="built_in">dict</span>[word]=<span class="literal">True</span></span><br><span class="line">  <span class="built_in">print</span>(ans)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    <div class="article-category">
+      
+        <b>Categories:</b>
+        <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">蓝桥杯冲刺营</a>, <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/8-%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/">8.工具函数模板</a>
+      
+      
+        <br/>
+      
+      
+        <b>Tags:</b>
+        <a class="article-tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a>
+      
+    </div>
+    
+    
+  </div>
+</article>
+
+  
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          贪心算法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/22/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          二分算法
+        
+      </div>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+    </div>
+  </div>
+  
+
+
+
+
+<div id="settings-container">
+  <div id="dark-mode">dark</div>
+  <div id="sans-font">sans</div>
+</div>
+<script type="text/javascript">
+let d=document,r=d.documentElement.style,f=r.setProperty.bind(r),l=localStorage,s=l.getItem('s')||(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches),n=l.getItem('n'),m=d.getElementById("dark-mode"),b=()=>{f('--bg-color','#fafafa');f('--code-bg-color','#f4f4f4');f('--text-color','#212121');f('--secondary-color','#808080');f('--tertiary-color','#b0b0b0');f('--link-color','#b5c8cf');f('--link-hover-color','#618794');f('--link-bg-color','#dae4e7');f('--selection-color','#dae4e7');m.innerHTML="dark"},c=()=>{f('--bg-color','#212121');f('--code-bg-color','#292929');f('--text-color','#fff');f('--secondary-color','#c0c0c0');f('--tertiary-color','#6e6e6e');f('--link-color','#4d6b75');f('--link-hover-color','#96b1bb');f('--link-bg-color','#5d828e');f('--selection-color','#acc1c9');m.innerHTML="light"},o=d.getElementById("sans-font"),e=()=>{f('--body-stack','"Lora", "Georgia", "Times New Roman", serif');o.innerHTML="sans"},g=()=>{f('--body-stack','"Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif');o.innerHTML="serif"};m.onclick=()=>{if(s==2){s=1;l.setItem('s',s);c()}else{s=2;l.setItem('s',s);b()}};o.onclick=()=>{if(n==2){n=1;l.setItem('n',n);g()}else{n=2;l.setItem('n',n);e()}};if(!s){s=2;l.setItem('s',2)};if(s==1){c()};if(!n){n=2;l.setItem('n',2)};if(n==1){g()};
+</script>
+
+
+
+
+</body>
+</html>

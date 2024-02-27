@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>DFS-基础 | Actz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+  
+  <meta property="og:type" content="article">
+<meta property="og:title" content="DFS-基础">
+<meta property="og:url" content="https://actz123.github.io/2024/02/22/DFS-%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Actz">
+<meta property="og:locale">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112707429.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112712615.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112718179.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112723680.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112729079.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112733382.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112737718.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112741922.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112748095.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112805799.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112810974.png">
+<meta property="og:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112815688.png">
+<meta property="article:published_time" content="2024-02-22T03:26:05.000Z">
+<meta property="article:modified_time" content="2024-02-22T06:03:16.647Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯备赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://actz123.github.io/imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112707429.png"><meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+  <h1 id="title">
+    <a href="/">Actz</a>
+  </h1>
+  <nav>
+    
+    
+      
+      <a class="nav-link" href="/">Home</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="/archives">Archives</a>
+    
+    
+  </nav>
+</header>
+
+    <div id="content">
+      <article id="post-DFS-基础" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="headline name">
+      DFS-基础
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2024-02-22T03:26:05.000Z" itemprop="datePublished">February 22, 2024, 11:26 AM</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <p><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112707429.png" alt="image-20240222112707429"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112712615.png" alt="image-20240222112712615"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112718179.png" alt="image-20240222112718179"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112723680.png" alt="image-20240222112723680"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112729079.png" alt="image-20240222112729079"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112733382.png" alt="image-20240222112733382"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112737718.png" alt="image-20240222112737718"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112741922.png" alt="image-20240222112741922"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112748095.png" alt="image-20240222112748095"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112805799.png" alt="image-20240222112805799"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112810974.png" alt="image-20240222112810974"><img src="/./../imgs/DFS-%E5%9F%BA%E7%A1%80/image-20240222112815688.png" alt="image-20240222112815688"></p>
+
+      
+    </div>
+    
+    
+    <div class="article-category">
+      
+        <b>Categories:</b>
+        <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a>, <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%90%9C%E7%B4%A2/">第三章：搜索</a>
+      
+      
+        <br/>
+      
+      
+        <b>Tags:</b>
+        <a class="article-tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a>
+      
+    </div>
+    
+    
+  </div>
+</article>
+
+  
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2024/02/22/DFS-%E5%9B%9E%E6%BA%AF/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DFS-回溯
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/21/%E4%BD%8D%E8%BF%90%E7%AE%97/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          位运算
+        
+      </div>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+    </div>
+  </div>
+  
+
+
+
+
+<div id="settings-container">
+  <div id="dark-mode">dark</div>
+  <div id="sans-font">sans</div>
+</div>
+<script type="text/javascript">
+let d=document,r=d.documentElement.style,f=r.setProperty.bind(r),l=localStorage,s=l.getItem('s')||(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches),n=l.getItem('n'),m=d.getElementById("dark-mode"),b=()=>{f('--bg-color','#fafafa');f('--code-bg-color','#f4f4f4');f('--text-color','#212121');f('--secondary-color','#808080');f('--tertiary-color','#b0b0b0');f('--link-color','#b5c8cf');f('--link-hover-color','#618794');f('--link-bg-color','#dae4e7');f('--selection-color','#dae4e7');m.innerHTML="dark"},c=()=>{f('--bg-color','#212121');f('--code-bg-color','#292929');f('--text-color','#fff');f('--secondary-color','#c0c0c0');f('--tertiary-color','#6e6e6e');f('--link-color','#4d6b75');f('--link-hover-color','#96b1bb');f('--link-bg-color','#5d828e');f('--selection-color','#acc1c9');m.innerHTML="light"},o=d.getElementById("sans-font"),e=()=>{f('--body-stack','"Lora", "Georgia", "Times New Roman", serif');o.innerHTML="sans"},g=()=>{f('--body-stack','"Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif');o.innerHTML="serif"};m.onclick=()=>{if(s==2){s=1;l.setItem('s',s);c()}else{s=2;l.setItem('s',s);b()}};o.onclick=()=>{if(n==2){n=1;l.setItem('n',n);g()}else{n=2;l.setItem('n',n);e()}};if(!s){s=2;l.setItem('s',2)};if(s==1){c()};if(!n){n=2;l.setItem('n',2)};if(n==1){g()};
+</script>
+
+
+
+
+</body>
+</html>

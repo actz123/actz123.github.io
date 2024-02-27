@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>组合数学 | Actz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+  
+  <meta name="description" content="组合数学计数原理：加法原理 加法原理： 集合 (S) 被分成两两不相交的部分 (S_1, S_2, S_3, …, S_m)，那么 (S) 的对象数目等于：(|S| &#x3D; |S_1| + |S_2| + |S_3| + … + |S_m|) 例： 一个学生想学一门数学课，一门文化课，但不能同时选，现在从 44 门数学课和 44 门文化课中选，一共有 (4 + 4 &#x3D; 8) 种方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="组合数学">
+<meta property="og:url" content="https://actz123.github.io/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/index.html">
+<meta property="og:site_name" content="Actz">
+<meta property="og:description" content="组合数学计数原理：加法原理 加法原理： 集合 (S) 被分成两两不相交的部分 (S_1, S_2, S_3, …, S_m)，那么 (S) 的对象数目等于：(|S| &#x3D; |S_1| + |S_2| + |S_3| + … + |S_m|) 例： 一个学生想学一门数学课，一门文化课，但不能同时选，现在从 44 门数学课和 44 门文化课中选，一共有 (4 + 4 &#x3D; 8) 种方法">
+<meta property="og:locale">
+<meta property="og:image" content="https://actz123.github.io/imgs/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/163bed9e512b94d13ac8e09f824ca2ad-0.png">
+<meta property="article:published_time" content="2024-02-22T09:42:43.000Z">
+<meta property="article:modified_time" content="2024-02-22T09:43:58.700Z">
+<meta property="article:author" content="zdx">
+<meta property="article:tag" content="蓝桥杯备赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://actz123.github.io/imgs/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/163bed9e512b94d13ac8e09f824ca2ad-0.png"><meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+  <h1 id="title">
+    <a href="/">Actz</a>
+  </h1>
+  <nav>
+    
+    
+      
+      <a class="nav-link" href="/">Home</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="/archives">Archives</a>
+    
+    
+  </nav>
+</header>
+
+    <div id="content">
+      <article id="post-组合数学" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="headline name">
+      组合数学
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2024-02-22T09:42:43.000Z" itemprop="datePublished">February 22, 2024, 5:42 PM</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h1 id="组合数学"><a href="#组合数学" class="headerlink" title="组合数学"></a>组合数学</h1><h2 id="计数原理：加法原理"><a href="#计数原理：加法原理" class="headerlink" title="计数原理：加法原理"></a>计数原理：加法原理</h2><ul>
+<li>加法原理： 集合 (S) 被分成两两不相交的部分 (S_1, S_2, S_3, …, S_m)，那么 (S) 的对象数目等于：(|S| &#x3D; |S_1| + |S_2| + |S_3| + … + |S_m|)</li>
+<li>例： 一个学生想学一门数学课，一门文化课，但不能同时选，现在从 44 门数学课和 44 门文化课中选，一共有 (4 + 4 &#x3D; 8) 种方法选一门课。</li>
+<li>加法原理的关键是将计数分解为若干个独立（不相容）的部分，保证既不重复也不遗漏地进行计数。 加法原理是利用完备事件组的一个体现，我们可以利用一个集合的补记做题。</li>
+</ul>
+<h3 id="例题：分割立方体-lanqiaoOJ-题号-1620"><a href="#例题：分割立方体-lanqiaoOJ-题号-1620" class="headerlink" title="例题：分割立方体 lanqiaoOJ 题号 1620"></a>例题：分割立方体 lanqiaoOJ 题号 1620</h3><p><strong>题目描述：</strong> 一个立方体，边长为 �<em>n</em>，分割成 �×�×�<em>n</em>×<em>n</em>×<em>n</em> 个单位立方体。任意两个单位立方体，或者有 22 个公共点，或者有 44 个公共点，或者没有公共点。请问，没有公共点和有 22 个公共点的立方体，共有多少对？</p>
+<p><strong>输入描述：</strong> 一个整数�，1&lt;&#x3D;�&lt;&#x3D;30一个整数<em>n</em>，1&lt;&#x3D;<em>n</em>&lt;&#x3D;30</p>
+<p><strong>思路：</strong> 反过来计算，先算出有 44 个公共点的立方体有多少对，然后用总对数减去。分几种情况讨论：</p>
+<ol>
+<li>正方体和周围 33 个正方体相邻，这种情况共有 88 个，就是顶角上的 88 个，总个数 3×83×8；</li>
+<li>正方体和周围 44 个正方体相邻，这种情况共有 (�−2)×12(<em>n</em>−2)×12 个 （棱）总个数 4×(�−2)×124×(<em>n</em>−2)×12；</li>
+<li>正方体和周围 55 个正方体相邻，这种情况共有 6×(�×�−4×�+4)6×(<em>n</em>×<em>n</em>−4×<em>n</em>+4) 个，总个数 5×6×(�×�−4×�+4)5×6×(<em>n</em>×<em>n</em>−4×<em>n</em>+4)；</li>
+<li>正方体和周围 66 个正方体相邻，这种情况共有 (�×�×�−�×�×6+�×12−8)(<em>n</em>×<em>n</em>×<em>n</em>−<em>n</em>×<em>n</em>×6+<em>n</em>×12−8) 个，总个数 6×(�×�×�−�×�×6+�×12−8)6×(<em>n</em>×<em>n</em>×<em>n</em>−<em>n</em>×<em>n</em>×6+<em>n</em>×12−8)； 最后把这 44 个情况求和再除以 22。</li>
+</ol>
+<p>正方体一共 �3<em>n</em>3 个，共有 �3(�3−1)22<em>n</em>3(<em>n</em>3−1) 种关系</p>
+<ol>
+<li>正方体和周围 33 个正方体相邻，总个数 3×83×8；</li>
+<li>正方体和周围 44 个正方体相邻，总个数 4×(�−2)×124×(<em>n</em>−2)×12；</li>
+<li>正方体和周围 55 个正方体相邻，总个数 5×6×(�×�−4×�+4)5×6×(<em>n</em>×<em>n</em>−4×<em>n</em>+4)；</li>
+<li>正方体和周围 66 个正方体相邻，总个数 6×(�×�×�−�×�×6+�×12−8)6×(<em>n</em>×<em>n</em>×<em>n</em>−<em>n</em>×<em>n</em>×6+<em>n</em>×12−8)；</li>
+<li>最后把这 44 个情况求和再除以 22。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> n; cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;             <span class="comment">// 边长为 1 时特判</span></span><br><span class="line">        cout &lt;&lt; <span class="number">0</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> sum = n * n * n * (n * n * n - <span class="number">1</span>) / <span class="number">2</span>;     <span class="comment">//总数</span></span><br><span class="line">    <span class="type">int</span> edge3 = <span class="number">8</span>;</span><br><span class="line">    <span class="type">int</span> ans3 = <span class="number">3</span> * edge3;</span><br><span class="line">    <span class="type">int</span> edge4 = (n - <span class="number">2</span>) * <span class="number">12</span>;</span><br><span class="line">    <span class="type">int</span> ans4 = <span class="number">4</span> * edge4;</span><br><span class="line">    <span class="type">int</span> edge5 = n * n - <span class="number">4</span> * n + <span class="number">4</span>;</span><br><span class="line">    <span class="type">int</span> ans5 = <span class="number">5</span> * <span class="number">6</span> * edge5;</span><br><span class="line">    <span class="type">int</span> edge6 = n * n * n - n * n * <span class="number">6</span> + n * <span class="number">12</span> - <span class="number">8</span>;</span><br><span class="line">    <span class="type">int</span> ans6 = <span class="number">6</span> * edge6;</span><br><span class="line">    cout &lt;&lt; sum - (ans3 + ans4 + ans5 + ans6) / <span class="number">2</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">1</span>: # 边长为 <span class="number">1</span> 时特判</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    sum = n * n * n * (n * n * n - <span class="number">1</span>) <span class="comment">// 2 # 总数</span></span><br><span class="line">    edge3 = <span class="number">8</span></span><br><span class="line">    ans3 = <span class="number">3</span> * edge3</span><br><span class="line">    edge4 = (n - <span class="number">2</span>) * <span class="number">12</span></span><br><span class="line">    ans4 = <span class="number">4</span> * edge4</span><br><span class="line">    edge5 = n * n - <span class="number">4</span> * n + <span class="number">4</span></span><br><span class="line">    ans5 = <span class="number">5</span> * <span class="number">6</span> * edge5</span><br><span class="line">    edge6 = n * n * n - n * n * <span class="number">6</span> + n * <span class="number">12</span> - <span class="number">8</span></span><br><span class="line">    ans6 = <span class="number">6</span> * edge6</span><br><span class="line">    <span class="built_in">print</span>(sum - (ans3 + ans4 + ans5 + ans6) <span class="comment">// 2)</span></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> Main &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">static</span> <span class="type">void</span> <span class="built_in">main</span>(String[] args) &#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> <span class="built_in">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> n = sc.<span class="built_in">nextInt</span>();</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123; <span class="comment">// 边长为 1 时特判</span></span><br><span class="line">            System.out.<span class="built_in">println</span>(<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">long</span> sum = (<span class="type">long</span>) n * n * n * (n * n * n - <span class="number">1</span>) / <span class="number">2</span>; <span class="comment">// 总数</span></span><br><span class="line">        <span class="type">int</span> edge3 = <span class="number">8</span>;</span><br><span class="line">        <span class="type">int</span> ans3 = <span class="number">3</span> * edge3;</span><br><span class="line">        <span class="type">int</span> edge4 = (n - <span class="number">2</span>) * <span class="number">12</span>;</span><br><span class="line">        <span class="type">int</span> ans4 = <span class="number">4</span> * edge4;</span><br><span class="line">        <span class="type">int</span> edge5 = n * n - <span class="number">4</span> * n + <span class="number">4</span>;</span><br><span class="line">        <span class="type">int</span> ans5 = <span class="number">5</span> * <span class="number">6</span> * edge5;</span><br><span class="line">        <span class="type">int</span> edge6 = n * n * n - n * n * <span class="number">6</span> + n * <span class="number">12</span> - <span class="number">8</span>;</span><br><span class="line">        <span class="type">int</span> ans6 = <span class="number">6</span> * edge6;</span><br><span class="line">        System.out.<span class="built_in">println</span>(sum - (ans3 + ans4 + ans5 + ans6) / <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="计数原理：乘法原理"><a href="#计数原理：乘法原理" class="headerlink" title="计数原理：乘法原理"></a><strong>计数原理：乘法原理</strong></h2><p>令 (S) 是对象的有序对 ((a, b)) 的集合，其中第一个对象 (a) 来自大小为 (p) 的一个集合，对于对象 (a) 的每个选择，对象 (b) 有 (q) 个选择，那么 (S) 的大小：(|S| &#x3D; p \times q)</p>
+<p>例：中性笔的长度有 33 种，颜色有 44 种，直径有 55 种。不同种类的中性笔有：(3 \times 4 \times 5 &#x3D; 60) 种。</p>
+<p>例：(34 \times 55 \times 72 \times 113) 的正整数因子有多少？答：这是算数基本定理的概念。33 有 00 ~ 44 这 55 种选择，55 有 66 个选择，77 有 33 个选择，1111 有 44 个选择，因子总数是 (5 \times 6 \times 3 \times 4 &#x3D; 360) 种。</p>
+<h2 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h2><p>排列是有序的。</p>
+<p>不可重复排列数：从 (n) 个不同的物品中取出 (r) 个，排列数为：</p>
+<p>[\mathrm{P_{n}^{r}&#x3D;n(n-1)(n-2)…(n-r+1)&#x3D;\frac{n!}{(n-r)!}}]</p>
+<p>可重复排列数，从 (n) 个不同的物品中可重复地取出 (r) 个的排列数为：(n^r)。</p>
+<h2 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h2><p>排列是有序的，组合是无序的。</p>
+<p>如果 (S) 中的元素都不相同，组合数：</p>
+<p>[\mathrm{C*{n}^{r}&#x3D;{\binom{n}{k}}&#x3D;{\frac{P*{n}^{r}}{r!}}&#x3D;{\frac{n!}{r!(n-r)!}}}]</p>
+<h2 id="糊涂人寄信-lanqiaoOJ-题号-1622"><a href="#糊涂人寄信-lanqiaoOJ-题号-1622" class="headerlink" title="糊涂人寄信 lanqiaoOJ 题号 1622"></a>糊涂人寄信 lanqiaoOJ 题号 1622</h2><p><strong>题目描述：</strong> 有一个糊涂人，写了 (n) 封信和 (n) 个信封，到了邮寄的时候，把所有的信都装错了信封。求装错信封可能的种类数。</p>
+<p><strong>输入描述：</strong> 每行输入一个正整数 (n)，表示一种情况。((n \leq 20))</p>
+<p><strong>输出描述：</strong> 输出相应的答案。</p>
+<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>题目建模为：有 (1 \sim n) 个数字，分别放在 (n) 个位置，问都放错的情况有多少种。</p>
+<p>用 DP 来做。定义 (dp[])，(dp[i]) 表示数字 (1 \sim i) 都放错的种类数。(dp[n]) 是答案。</p>
+<p>下面考虑状态转移方程，从 (1 \sim i) 递推到 (i)。</p>
+<p>数字 (i) 如果放错，有 (i-1) 个位置可以放，假设其放在第 (k) 个位置。对于数字 (k)，可以放在 (i) 位置也可以不放在 (i) 位置。</p>
+<p>如果 (k) 放在 (i) 位置，那么对于剩下 (i-2) 个数字放的次数，就是 (i-2) 个数字都放错的方法数 (dp[i-2])。</p>
+<p>如果 (k) 不放在 (i) 位置，和 (i-1) 个数字放错的情况相同，为 (dp[i-1])。</p>
+<p>状态转移方程：(dp[i] &#x3D; (i-1) \times (dp[i-1] + dp[i-2]))</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll dp[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    dp[<span class="number">1</span>]= dp[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    dp[<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>;i&lt;=<span class="number">22</span>;i++) dp[i]=(i<span class="number">-1</span>)*(dp[i<span class="number">-1</span>]+dp[i<span class="number">-2</span>]);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;n) cout&lt;&lt;dp[n]&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">import</span> sys</span></span><br><span class="line"><span class="function">def <span class="title">f</span><span class="params">(n)</span>:</span></span><br><span class="line"><span class="function">    if n=</span>=<span class="number">0</span> <span class="keyword">or</span> n==<span class="number">1</span>: <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    elif n==<span class="number">2</span>:  <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:  <span class="built_in">return</span> (n<span class="number">-1</span>)*(<span class="built_in">f</span>(n<span class="number">-1</span>)+<span class="built_in">f</span>(n<span class="number">-2</span>))</span><br><span class="line"><span class="keyword">for</span> n in sys.stdin:   #读入n，和C++代码的<span class="keyword">while</span>(cin&gt;&gt;n)功能一样</span><br><span class="line">    n = <span class="built_in">int</span>(n)</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">f</span>(n))</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">long</span>[] dp = <span class="keyword">new</span> <span class="type">long</span>[<span class="number">30</span>];</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">static</span> <span class="type">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> <span class="built_in">Scanner</span>(System.in);</span><br><span class="line">        dp[<span class="number">1</span>] = dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">3</span>; i &lt;= <span class="number">22</span>; i++) &#123;</span><br><span class="line">            dp[i] = (i - <span class="number">1</span>) * (dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (sc.<span class="built_in">hasNext</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> n = sc.<span class="built_in">nextInt</span>();</span><br><span class="line">            System.out.<span class="built_in">println</span>(dp[n]);</span><br><span class="line">        &#125;</span><br><span class="line">        sc.<span class="built_in">close</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="鸽巢原理"><a href="#鸽巢原理" class="headerlink" title="鸽巢原理"></a>鸽巢原理</h2><p>鸽巢原理，又称抽屉原理。</p>
+<p><strong>鸽巢原理：</strong> 把 (n+1) 个物体放进 (n) 个盒子，至少有一个盒子包含 22 个或更多的物体。</p>
+<ul>
+<li>例：在 370370 人中，至少有 22 人生日相同；</li>
+<li>例：�<em>n</em> 个人互相握手，一定有 22 个人握手次数相同。</li>
+</ul>
+<p>例：�<em>n</em> 个人互相握手，一定有 22 个人握手次数相同。 每人跟其他人握手，最少可以是 00 次，最多可以是�−1<em>n</em>−1次。 如果握手最少的是 00 次，那么剩下的�−1<em>n</em>−1人中，握手最多的人不会超过�−2<em>n</em>−2次。0∼�−20∼<em>n</em>−2 共�−1<em>n</em>−1种情况。 如果握手最少的张三是 11 次，那么剩下的�−1<em>n</em>−1人中，握手最多的李四除了跟张三握手一次，跟其他�−2<em>n</em>−2人最多握手�−2<em>n</em>−2次，李四最多握手�−1<em>n</em>−1次。1∼�−11∼<em>n</em>−1 共�−1<em>n</em>−1种情况。 如果握手最少的张三是 22 次，那么剩下的�−1<em>n</em>−1人中，握手最多的李四除了跟张三握手一次，跟其他�−2<em>n</em>−2人最多握手�−2<em>n</em>−2次，李四最多握手�−1<em>n</em>−1次。2∼�−12∼<em>n</em>−1 共�−2<em>n</em>−2种情况。 …… 所以握手次数最多有�−1<em>n</em>−1种情况，最少只有 11 种情况。 把最多的�−1<em>n</em>−1种情况看成�−1<em>n</em>−1个抽屉，�<em>n</em>个人放进这�−1<em>n</em>−1个抽屉，至少有一个抽屉里面有 22 人。</p>
+<h2 id="例题：小蓝吃糖果-lanqiaoOJ-题号-1624"><a href="#例题：小蓝吃糖果-lanqiaoOJ-题号-1624" class="headerlink" title="例题：小蓝吃糖果 lanqiaoOJ 题号 1624"></a>例题：小蓝吃糖果 lanqiaoOJ 题号 1624</h2><p><strong>题目描述：</strong> Gardon 有 �<em>n</em> 种糖果，每种数量已知。Gardon 不喜欢连续 22 次吃同样的糖果。问有没有可行的吃糖方案。</p>
+<p><strong>输入：</strong> 第一行是整数 N，(0 &lt; n &lt; 1000000)，第二行是 (n) 个数，表示 (n) 种糖果的数量 (m_i)，(0 &lt; m_i &lt; 1000000)</p>
+<p><strong>输出：</strong> 输出一行，包含一个 “Yes” 或 “no”。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>继续处理格式，鸽巢原理，用“隔板法”求解。</p>
+<p>找出最多的一种糖果，把它的数量 (K) 看成 (K) 个隔板，隔成 (K) 个空间（把每个隔板的右边看成一个空间）；其它所有糖果的数量为 (S)。</p>
+<p>最多的一种糖果，把它的数量 (K) 看成 (K) 个隔板，隔成 (K) 个空间（把每个隔板的右边看成一个空间）；其它所有糖果的数量为 (S)。</p>
+<ul>
+<li>（1）如果 (S &lt; K-1)，把 (S) 个糖果放到隔板之间，这 (K) 个隔板不够放，必然至少有 2 个隔板之间没有糖果，由于这 2 个隔板是同一种糖果，所以无解。</li>
+<li>（2）(S \geq K-1) 时，肯定有解。其中一个解是：把 (S) 个糖果排成一个长队，其中同种类的糖果是挨在一起的，然后每次取 (K) 个糖果，按顺序一个一个地放进 (K) 个空间。由于隔板数量比每一种糖果的数量都多，所以不可能有 22 个同样的糖果被放进一个空间里。把 (S) 个糖果放完，就是一个解，一些隔板里面可能放好几种糖果。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> a[<span class="number">1005000</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> Max=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> n; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">        sum += a[i];              <span class="comment">//所有糖果数量</span></span><br><span class="line">        <span class="keyword">if</span>(a[i]&gt;Max)  Max=a[i];   <span class="comment">//最多的一种糖果</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(sum-Max+<span class="number">1</span>&gt;=Max) <span class="built_in">printf</span>(<span class="string">&quot;Yes\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span>               <span class="built_in">printf</span>(<span class="string">&quot;No\n&quot;</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">a=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="type">int</span>,<span class="built_in">input</span>().<span class="built_in">split</span>()))</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">sum</span>(a)-<span class="built_in">max</span>(a) &lt; <span class="built_in">max</span>(a)<span class="number">-1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;No&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Yes&quot;</span>)</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">static</span> <span class="type">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> <span class="built_in">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">long</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> n = input.<span class="built_in">nextInt</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="type">int</span> x = input.<span class="built_in">nextInt</span>();</span><br><span class="line">            sum += x;</span><br><span class="line">            <span class="keyword">if</span> (x &gt; max) &#123;</span><br><span class="line">                max = x;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sum - max + <span class="number">1</span> &gt;= max) &#123;</span><br><span class="line">            System.out.<span class="built_in">println</span>(<span class="string">&quot;Yes&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.<span class="built_in">println</span>(<span class="string">&quot;No&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二项式定理和杨辉三角"><a href="#二项式定理和杨辉三角" class="headerlink" title="二项式定理和杨辉三角"></a>二项式定理和杨辉三角</h2><p>杨辉三角：排列成如下三角形的数字</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      1</span><br><span class="line">    1   1</span><br><span class="line">   1  2  1</span><br><span class="line"> 1   3  3  1</span><br><span class="line">1  4   6  4  1</span><br></pre></td></tr></table></figure>
+
+<p>每个数是它上面 22 个数的和。</p>
+<p>求杨辉三角第 �<em>n</em> 行的数字，可以模拟这个推导过程，逐级递推，复杂度 �(�2)<em>O</em>(<em>n</em>2)。</p>
+<p>用数学公式计算，可以直接得到结果，这个公式是(1+�)�(1+<em>x</em>)<em>n</em>。</p>
+<p><img src="/./../imgs/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/163bed9e512b94d13ac8e09f824ca2ad-0.png" alt="图片描述"></p>
+<p>二项式系数就是(1+�)�(1+<em>x</em>)<em>n</em> 展开后第 �<em>r</em> 项的系数。</p>
+<p>Cnr&#x3D;(nr)&#x3D;n!r!(n−r)!Cnr&#x3D;(rn)&#x3D;r!(n−r)!n!</p>
+<p>对应杨辉三角的第 �<em>n</em> 行第 �<em>r</em> 个数是</p>
+<p>例：杨辉三角的第 44 行是“13311331”，</p>
+<p>Cn−1r−1&#x3D;C4−11−1&#x3D;C30&#x3D;1、C31&#x3D;3、C32&#x3D;3、C33&#x3D;1Cn−1r−1&#x3D;C4−11−1&#x3D;C30&#x3D;1、C31&#x3D;3、C32&#x3D;3、C33&#x3D;1</p>
+<p>理解：(1+�)�(1+<em>x</em>)<em>n</em> 的第 �<em>r</em> 项，就是从 �<em>n</em> 个 �<em>x</em> 中选出 �<em>r</em> 个，这就是组合数的定义</p>
+<p>当 n 较大，且需要取模时，二项式系数有两种计算方法：</p>
+<p>（1）递推公式：Cnr&#x3D;Cn−1r+Cn−1r−1Cnr&#x3D;Cn−1r+Cn−1r−1</p>
+<p>公式是杨辉三角的定义，即“每个数是它上面 22 个数的和”。计算复杂度是 �(�2)<em>O</em>(<em>n</em>2)。</p>
+<p>（2）用逆直接计算</p>
+<p>因为输出取模，那么不用递推公式，直接用公式计算更快。不过，由于除法不能直接取模，需要用到逆。用逆计算二项式系数，有：</p>
+<p>Cnr&#x3D;(nr)&#x3D;n!r!(n−r)!Cnr&#x3D;(rn)&#x3D;r!(n−r)!n!</p>
+<p>Crnmodm&#x3D;n!r!(n−r)!modm&#x3D;(n!modm)((r!)−1modm)(((n−r)!)−1modm)modmCrnmodm&#x3D;r!(n−r)!n!modm&#x3D;(n!modm)((r!)−1modm)(((n−r)!)−1modm)modm</p>
+<p>用逆计算二项式系数，复杂度是 �(�)<em>O</em>(<em>n</em>) 的。</p>
+
+      
+    </div>
+    
+    
+    <div class="article-category">
+      
+        <b>Categories:</b>
+        <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">蓝桥杯冲刺营</a>, <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/13-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">13.组合数学</a>
+      
+      
+        <br/>
+      
+      
+        <b>Tags:</b>
+        <a class="article-tag-none-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a>
+      
+    </div>
+    
+    
+  </div>
+</article>
+
+  
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          排序示例代码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          简单数论
+        
+      </div>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+    </div>
+  </div>
+  
+
+
+
+
+<div id="settings-container">
+  <div id="dark-mode">dark</div>
+  <div id="sans-font">sans</div>
+</div>
+<script type="text/javascript">
+let d=document,r=d.documentElement.style,f=r.setProperty.bind(r),l=localStorage,s=l.getItem('s')||(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches),n=l.getItem('n'),m=d.getElementById("dark-mode"),b=()=>{f('--bg-color','#fafafa');f('--code-bg-color','#f4f4f4');f('--text-color','#212121');f('--secondary-color','#808080');f('--tertiary-color','#b0b0b0');f('--link-color','#b5c8cf');f('--link-hover-color','#618794');f('--link-bg-color','#dae4e7');f('--selection-color','#dae4e7');m.innerHTML="dark"},c=()=>{f('--bg-color','#212121');f('--code-bg-color','#292929');f('--text-color','#fff');f('--secondary-color','#c0c0c0');f('--tertiary-color','#6e6e6e');f('--link-color','#4d6b75');f('--link-hover-color','#96b1bb');f('--link-bg-color','#5d828e');f('--selection-color','#acc1c9');m.innerHTML="light"},o=d.getElementById("sans-font"),e=()=>{f('--body-stack','"Lora", "Georgia", "Times New Roman", serif');o.innerHTML="sans"},g=()=>{f('--body-stack','"Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif');o.innerHTML="serif"};m.onclick=()=>{if(s==2){s=1;l.setItem('s',s);c()}else{s=2;l.setItem('s',s);b()}};o.onclick=()=>{if(n==2){n=1;l.setItem('n',n);g()}else{n=2;l.setItem('n',n);e()}};if(!s){s=2;l.setItem('s',2)};if(s==1){c()};if(!n){n=2;l.setItem('n',2)};if(n==1){g()};
+</script>
+
+
+
+
+</body>
+</html>
