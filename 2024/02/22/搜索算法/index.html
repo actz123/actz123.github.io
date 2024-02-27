@@ -44,8 +44,6 @@
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     
-    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
-    
     
 <link rel="stylesheet" type="text/css" href="/css/page.css">
 <link rel="stylesheet" type="text/css" href="/css/post.css">
@@ -635,92 +633,6 @@
 
           </div>
           
-          
-          
-<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
-  
-  <div class="search">
-    <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
-    </div>
-  </div>
-  <div class="search-result-box" id="search-result"></div>
-  
-  
-<div class="info sidebar-item" id="info">
-  
-  <img class="author-avatar" src="/images/avatar.png" alt="zdx">
-  
-  <h1 class="author-name">zdx</h1>
-  <h2 class="author-description"></h2>
-  <div class="site-count">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  </div>
-  
-  <div class="rss">
-    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
-  </div>
-  
-</div>
-
-
-  <div class="sidebar-sticky">
-    
-    
-    
-    
-    
-    <hr>
-    <div class="post-toc sidebar-item" id="toc-div">
-      <div><i class="fas fa-list-ol"></i>Table of Contents</div>
-      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="toc-text">深度优先搜索</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">深度优先搜索基本概念</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#DFS-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-text">DFS 的设计步骤</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#DFS-%E9%A2%98%E7%9B%AE%E8%AE%B2%E8%A7%A3"><span class="toc-text">DFS 题目讲解</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%8A%B6%E6%80%81%E6%90%9C%E7%B4%A2%E4%BB%A3%E8%A1%A8%EF%BC%9A-N-%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98"><span class="toc-text">状态搜索代表： N 皇后问题</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%9B%BE%E7%9A%84%E8%B7%AF%E5%BE%84%E6%90%9C%E7%B4%A2%E4%BB%A3%E8%A1%A8-%E8%B7%AF%E5%BE%84%E4%B9%8B%E8%B0%9C"><span class="toc-text">图的路径搜索代表-路径之谜</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97"><span class="toc-text">最大数字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-text">实验总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="list-group-item toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="toc-text">广度优先搜索</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-1"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">广度优先搜索基本概念</span></a></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-text">广度优先搜索算法的设计步骤</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E9%95%BF%E8%8D%89"><span class="toc-text">长草</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%B5%B0%E8%BF%B7%E5%AE%AB"><span class="toc-text">走迷宫</span></a></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E8%BF%B7%E5%AE%AB"><span class="toc-text">迷宫</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="list-group-item toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93-1"><span class="toc-text">实验总结</span></a></li></ol></li></ol></div>
-    </div>
-    
-    
-    
-    <hr>
-    <div class="social-link sidebar-item">
-      <div><i class="far fa-address-card"></i>Social Links</p></div>
-      <ul>
-        
-        <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
-        
-        <li><i class="fab fa-github"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
-        
-        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
-        
-      </ul>
-    </div>
-    
-    
-    <hr>
-    <div class="blogroll sidebar-item">
-      <div><i class="fas fa-link"></i>Blogroll</div>
-      <ul>
-        
-        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
-        
-        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
-        
-        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
-        
-      </ul>
-    </div>
-    
-  </div>
-</aside>
-
-
           
         </div>
       </div>
