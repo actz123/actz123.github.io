@@ -1,253 +1,1644 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html class="html-loading">
+		
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#3367D6"/>
-  <link rel="apple-touch-icon" href="/icons-192.png">
-  <link rel="manifest" href="/manifest.json">
-  
-  <meta name="generator" content="Hexo 7.1.1">
-
-  
-
-  
-
-  
-    <meta name="author" content="zdx">
-  
-
-  
-
-  
-
-  <title>Category: 代码集合 | Actz</title>
-
-  
-
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-
-  <!--mathjax latex数学公式显示支持-->
-  
-  
-
-  
-
-  
-
-  
-<link rel="stylesheet" href="/css/style.css">
-
-</head>
-<body>
-  <div class="root-container">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
     
-<!-- header container -->
-<header class="header-container">
-  
-    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
-  
-
-  <!-- navbar -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <!-- logo -->
-    <div class="navbar-logo">
-      <a href="/">
-        
-          Actz
-        
-      </a>
-    </div>
-    <!-- link -->
-    <div class="navbar-link">
-      <div class="navbar-btn">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul class="navbar-list">
-        
-          <li class="navbar-list-item"><a href="/">首页</a></li>
-        
-          <li class="navbar-list-item"><a href="/links">友链</a></li>
-        
-          <li class="navbar-list-item"><a href="/about">关于</a></li>
-        
-          <li class="navbar-list-item"><a href="/">主页</a></li>
-        
-          <li class="navbar-list-item"><a href="/archives">归档</a></li>
-        
-          <li class="navbar-list-item"><a href="/about">关于我</a></li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-  
-
-  
-  
-
-  
-  
+      category: 代码集合 | Actz
     
-    <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">代码集合</h1>
-        <h2 class="title-sub-wrap">当前分类下共有1篇文章</h2>
-      </div>
-    </div>
+  </title>
+  <meta name="author" content="zdx">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
   
+<link rel="stylesheet" href="/css/Annie.css">
 
   
-  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
 
-  
-  
 
-  
-  
-  
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
 </header>
 
-    <!-- 分类归档 -->
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
 
-<!-- post list container -->
-<div class="body-container">
-  <div class="content-container layout-block article-list">
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
 
-          <div class="card-text">
-            
-              <a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" itemprop="url">
-                <h2 class="card-text--title">排序示例代码</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-27T06:47:13.000Z" itemprop="datePublished">2024-02-27</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">📒 蓝桥杯</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/">📒 代码集合</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-  </div>
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			分类
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
 </div>
 
-<!-- page container -->
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
 
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
 
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-08
+	描述：The archive module refers to 'https://1984n.win/archives-post/' & 'http://1900.live/one-theme/', include js、css. Relevant rights reserved by them! 
+-->
+<div class="layout-archive">
+    <div class="i-container">
+        <i class="fa fa-book i-tag">
+			<!--
+	Thec counter of post number  for archive.ejs.  
+-->
 
-    <!-- footer container -->
-<footer id="footer" class="footer">
-  <div class="footer-container">
-    
-    <div class="social-icons">
-      
-        
-      
-        
-      
-        
-      
-        
-          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
-</svg>
-          </a>
-        
-      
-        
-          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
-</svg>
-          </a>
-        
-      
+	
+	
+	代码集合 1 
+		
+
+		</i>
     </div>
-     
-    <p>&copy; 2024 <a href="/" target="_blank">zdx</a></p>
+
+    <!-- Archive by year, display in page( archive ) -->
+    <div id="layout-archive-year" style="display: 
+        
+        
+        <ul>
+            
+                <li>
+                    <a href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/">
+            			<em year="2024">
+                            02-27
+                        </em>
+        			    <span itemprop="name">
+                            顺序表
+                        </span>
+        			    
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/">
+            			<em year="2024">
+                            02-27
+                        </em>
+        			    <span itemprop="name">
+                            排序示例代码
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            组合数学
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            简单数论
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            图论入门
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            动态规划
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            贪心算法
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            工具函数模板
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            二分算法
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            并查集
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            差分与前缀和
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E6%9E%9A%E4%B8%BE%E5%92%8C%E5%B0%BA%E5%8F%96%E6%B3%95/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            枚举和尺取法
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            搜索算法
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E9%80%92%E5%BD%92%E4%B8%8E%E9%80%92%E6%8E%A8/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            递归与递推
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E6%89%8B%E7%AE%97%E4%B8%8E%E6%80%9D%E7%BB%B4%E9%A2%98/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            手算与思维题
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E8%87%AA%E4%B8%8A%E8%80%8C%E4%B8%8B%E6%A0%91%E5%BD%A2DP/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            自上而下树形DP
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E4%BA%8C%E7%BB%B4%E8%B4%B9%E7%94%A8%E8%83%8C%E5%8C%85-%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            二维费用背包&amp;分组背包
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%BC%98%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            单调队列优多重背包
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            完全背包
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/01%E8%83%8C%E5%8C%85/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            01背包
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/LCS/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            LCS
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/LIS/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            LIS
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E4%BA%8C%E7%BB%B4DP/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            二维DP
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/%E7%BA%BF%E6%80%A7DP/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            线性DP
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/DFS-%E5%89%AA%E6%9E%9D/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            DFS-剪枝
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/DFS-%E5%9B%9E%E6%BA%AF/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            DFS-回溯
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/22/DFS-%E5%9F%BA%E7%A1%80/">
+            			<em year="2024">
+                            02-22
+                        </em>
+        			    <span itemprop="name">
+                            DFS-基础
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E4%BD%8D%E8%BF%90%E7%AE%97/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            位运算
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%9E%84%E9%80%A0/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            构造
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%80%8D%E5%A2%9E/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            倍增
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E4%BA%8C%E5%88%86/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            二分
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%8F%8C%E6%8C%87%E9%92%88/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            双指针
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E8%B4%AA%E5%BF%83/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            贪心
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E7%A6%BB%E6%95%A3%E5%8C%96/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            离散化
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%B7%AE%E5%88%86/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            差分
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%89%8D%E7%BC%80%E5%92%8C/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            前缀和
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            进制转换
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E9%80%92%E5%BD%92/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            递归
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%A8%A1%E6%8B%9F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            模拟
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%9E%9A%E4%B8%BE/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            枚举
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            基础算法
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%A1%B6%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            桶排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            归并排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            快速排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            插入排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            选择排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            冒泡排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            二分查找
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            自定义排序
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%B8%B8%E7%94%A8%E5%BA%93%E5%87%BD%E6%95%B0/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            常用库函数
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            类的定义和使用
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/itertools/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            itertools
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/functool/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            functool
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/heapq/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            heapq
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/collections/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            collections
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/math/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            math
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            函数定义与使用
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            日期和时间
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E9%9B%86%E5%90%88/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            集合
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%AD%97%E5%85%B8/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            字典
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            字符串
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            列表和元组
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            循环嵌套
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/while%E8%AF%AD%E5%8F%A5/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            while语句
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/for%E8%AF%AD%E5%8F%A5/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            for语句
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/if%E8%AF%AD%E5%8F%A5/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            if语句
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            条件表达式和逻辑表达式
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            常量、变量与运算符
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            Python输入输出
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            Python开发环境与基础知识
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                				蓝桥杯备赛
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9F%A5%E8%AF%86%E8%AE%B0%E5%BD%95/">
+            			<em year="2024">
+                            02-21
+                        </em>
+        			    <span itemprop="name">
+                            蓝桥杯知识记录
+                        </span>
+        			    
+                			<a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="tag">
+                				蓝桥杯学习路线
+                			</a>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/2024/02/20/hello-world/">
+            			<em year="2024">
+                            02-20
+                        </em>
+        			    <span itemprop="name">
+                            Hello World
+                        </span>
+        			    
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+     <!-- Archive by month, called by page( categories, tags... ) -->
+    <div id="layout-archive-month" style="display: 
+         
+            block"> 
+        
+
+        
+        
+            
+
+            
+                
+                <h3 class="archive-year">
+                    <!-- <a href="/archives/2024/02"> -->
+                    <a>
+                        2024 - 02
+                    </a>
+                </h3>
+            
+
+            <ul>
+                <li>
+                    <a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/">
+                        <em>
+                            02-27
+                        </em>
+                        <span itemprop="name">
+                            排序示例代码
+                        </span>
+                        
+                            <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" class="tag">
+                                蓝桥杯备赛
+                            </a>
+                               
+                    </a>
+                </li>
+            </ul>
+        
+    </div>
 
     
+        
+	
 
-    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+	
 
-    <p>
-      <a href="javascript:;" id="theme-light">🌞 浅色</a>
-      <a href="javascript:;" id="theme-dark">🌛 深色</a>
-      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
-    </p>
-  </div>
+    
+</div>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
 </footer>
-  </div>
+		
+	<!-- Local or hitokoto! -->
 
-  <div class="back-to-top-fixed soft-size--round soft-style--box">
-    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
-      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
-      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
-    </svg>
-  </div>
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
 
   
-  <!-- aplayer -->
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
 
 
-<!-- dplayer -->
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
 
 
-<!-- copy button  -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
 
-<!-- https://clipboardjs.com/ -->
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-  
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
 
 
 
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
 
-<script src="/js/script.js"></script>
-
-
-  
-  <!-- 尾部用户自定义相关内容 -->
-</body>
+	</body>	
 </html>

@@ -1,530 +1,789 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html class="html-loading">
+		
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#3367D6"/>
-  <link rel="apple-touch-icon" href="/icons-192.png">
-  <link rel="manifest" href="/manifest.json">
-  
-  <meta name="generator" content="Hexo 7.1.1">
-
-  
-
-  
-
-  
-    <meta name="author" content="zdx">
-  
-
-  
-
-  
-
-  <title>Actz</title>
-
-  
-
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-
-  <!--mathjax latex数学公式显示支持-->
-  
-  
-
-  
-
-  
-
-  
-<link rel="stylesheet" href="/css/style.css">
-
-</head>
-<body>
-  <div class="root-container">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
     
-<!-- header container -->
-<header class="header-container">
-  
-    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
-  
+      Actz
+    
+  </title>
+  <meta name="author" content="zdx">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
 
-  <!-- navbar -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <!-- logo -->
-    <div class="navbar-logo">
-      <a href="/">
-        
-          Actz
-        
-      </a>
-    </div>
-    <!-- link -->
-    <div class="navbar-link">
-      <div class="navbar-btn">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul class="navbar-list">
-        
-          <li class="navbar-list-item"><a href="/">首页</a></li>
-        
-          <li class="navbar-list-item"><a href="/links">友链</a></li>
-        
-          <li class="navbar-list-item"><a href="/about">关于</a></li>
-        
-          <li class="navbar-list-item"><a href="/">主页</a></li>
-        
-          <li class="navbar-list-item"><a href="/archives">归档</a></li>
-        
-          <li class="navbar-list-item"><a href="/about">关于我</a></li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
 
   
-  
-    <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">Actz</h1>
-        
-      </div>
-    </div>
-  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
 
-  
-  
 
-  
-  
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 7.1.1"></head>
+	<body>
+		<!-- Preloader -->
 
-  
-  
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
 
-  
-  
 
-  
-  
-  
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
 </header>
 
-    <!-- 首页 -->
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
 
-<!-- post list container -->
-<div class="body-container">
-  <div class="content-container layout-block article-list">
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
 
-          <div class="card-text">
-            
-              <a href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/" itemprop="url">
-                <h2 class="card-text--title">顺序表</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-27T07:12:07.000Z" itemprop="datePublished">2024-02-27</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-</ul>
-            <ul class="wrap-list light">
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
 
-          <div class="card-text">
-            
-              <a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" itemprop="url">
-                <h2 class="card-text--title">排序示例代码</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-27T06:47:13.000Z" itemprop="datePublished">2024-02-27</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">📒 蓝桥杯</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/">📒 代码集合</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
+	<!-- Page title -->
+	<p>
+		
+			主页
+		
+	</p>
 
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" itemprop="url">
-                <h2 class="card-text--title">组合数学</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:42:43.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/13-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">📒 13.组合数学</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
+	
+	
 
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/" itemprop="url">
-                <h2 class="card-text--title">简单数论</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:41:40.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/12-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/">📒 12.简单数论</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
-
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" itemprop="url">
-                <h2 class="card-text--title">图论入门</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:40:17.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/11-%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/">📒 11.图论入门</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
-
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url">
-                <h2 class="card-text--title">动态规划</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:39:09.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/10-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">📒 10.动态规划</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
-
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" itemprop="url">
-                <h2 class="card-text--title">贪心算法</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:38:20.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/9-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">📒 9.贪心算法</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
-
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" itemprop="url">
-                <h2 class="card-text--title">工具函数模板</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:36:51.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/8-%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/">📒 8.工具函数模板</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
-
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" itemprop="url">
-                <h2 class="card-text--title">二分算法</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:35:12.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/7-%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/">📒 7.二分算法</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-      <div class="article-item layout-padding">
-        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
-          
-
-          <div class="card-text">
-            
-              <a href="/2024/02/22/%E5%B9%B6%E6%9F%A5%E9%9B%86/" itemprop="url">
-                <h2 class="card-text--title">并查集</h2>
-              </a>
-            
-            <div class="card-text--row">
-              <span>发布于</span>
-              <time  class="article-date" datetime="2024-02-22T09:34:10.000Z" itemprop="datePublished">2024-02-22</time>
-            </div>
-            
-            <ul class="wrap-list light">
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">📒 蓝桥杯冲刺营</a></li>
-  
-    <li><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/6-%E5%B9%B6%E6%9F%A5%E9%9B%86/">📒 6.并查集</a></li>
-  
-</ul>
-            <ul class="wrap-list light">
-  
-    <li><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">🏷️ 蓝桥杯备赛</a></li>
-  
-</ul>
-          </div>
-        </article>
-      </div>
-    
-  </div>
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
 </div>
 
-<!-- page container -->
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
 
-  <nav class="page-container">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">ɞ</a>
-  </nav>
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			
 
 
 
-    <!-- footer container -->
-<footer id="footer" class="footer">
-  <div class="footer-container">
-    
-    <div class="social-icons">
-      
-        
-      
-        
-      
-        
-      
-        
-          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
-</svg>
-          </a>
-        
-      
-        
-          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
-</svg>
-          </a>
-        
-      
-    </div>
-     
-    <p>&copy; 2024 <a href="/" target="_blank">zdx</a></p>
+	<!--cart style-->
+	<div class="layout-cart">
+	<div id="layout-cart">
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/" title=" 顺序表 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
 
-    
+				<div class="post-text">
+					<p class="post-time">
+						二月 27日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/" title="顺序表">							
+							
+	<a href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/" itemprop="url">
+		顺序表
+	</a>
 
-    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							<!--没有文章内容-->
+							没有文章内容...
+						
+					</p>
+					<p class="post-meta">
+						
 
-    <p>
-      <a href="javascript:;" id="theme-light">🌞 浅色</a>
-      <a href="javascript:;" id="theme-dark">🌛 深色</a>
-      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
-    </p>
-  </div>
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" title=" 排序示例代码 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 27日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" title="排序示例代码">							
+							
+	<a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" itemprop="url">
+		排序示例代码
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							冒泡排序12345678#冒泡排序n=int(input())a=list(map(int,input().split()))for i in range...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" title=" 组合数学 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" title="组合数学">							
+							
+	<a href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" itemprop="url">
+		组合数学
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							组合数学计数原理：加法原理
+加法原理： 集合 (S) 被分成两两不相交的部分 (S_1, S_2, S_3, …, S_m)，那么 (S) 的对象数目等于...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/" title=" 简单数论 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/" title="简单数论">							
+							
+	<a href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/" itemprop="url">
+		简单数论
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							简单数论1 模运算
+定义：模运算为 a 除以 m 的余数，记为 a mod m，有 a mod m &#x3D; a % m。
+模运算是大数运算中的常用操...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" title=" 图论入门 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" title="图论入门">							
+							
+	<a href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" itemprop="url">
+		图论入门
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							图论本章节为图论最基本的内容，要求每位同学都要尽量掌握。
+图的基本概念图：由点(node，或者 vertex)和连接点的边(edge)组成。图是点和边构成...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title=" 动态规划 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">							
+							
+	<a href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url">
+		动态规划
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							动态规划（Dynamic Programming）实验介绍本节课我们进入动态规划课程的学习，动态规划是一种多阶段的决策过程最优化的问题。
+本课程对于算法学...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" title=" 贪心算法 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" title="贪心算法">							
+							
+	<a href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" itemprop="url">
+		贪心算法
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							贪心算法贪心算法（Greedy algorithm），又称贪婪算法。是一种在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择，从而使得问题得到全...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" title=" 工具函数模板 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" title="工具函数模板">							
+							
+	<a href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" itemprop="url">
+		工具函数模板
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							内置模板我们前面讲了很多数据结构相关的知识，本节课程，我们主要讲解怎么不自己定义，而是使用我们所使用的编程语言中，已经定义好的数据结构。
+之前我们在栈那一...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" title=" 二分算法 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" title="二分算法">							
+							
+	<a href="/2024/02/22/%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/" itemprop="url">
+		二分算法
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							二分查找算法知识点
+二分查找原理讲解
+在单调递增序列 a 中查找 x 或 x 的后继
+在单调递增序列 a 中查找 x 或 x 的前驱
+
+二分查找算法讲解枚...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+			<div class="post" id="post">
+				<a class="post-cover" href="/2024/02/22/%E5%B9%B6%E6%9F%A5%E9%9B%86/" title=" 并查集 " target="_blank">
+					
+					<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg"/>
+				</a>
+
+				<div class="post-text">
+					<p class="post-time">
+						二月 22日, 2024
+					</p>	
+					<h3 class="post-title" id="post-title-index">
+						<a href="/2024/02/22/%E5%B9%B6%E6%9F%A5%E9%9B%86/" title="并查集">							
+							
+	<a href="/2024/02/22/%E5%B9%B6%E6%9F%A5%E9%9B%86/" itemprop="url">
+		并查集
+	</a>
+
+						</a>
+					</h3>
+					<p class="post-content">
+						
+							并查集并查集是我认为最巧妙优雅的一种数据结构，他主要适用于解决元素分组和不相交集合的合并和查询问题。
+并查集也非常简单，但是，并查集在比赛中非常常用，能够...
+						
+					</p>
+					<p class="post-meta">
+						
+
+
+
+					</p>
+				</div>
+			</div>
+		
+	</div>
+	
+	
+	<div id="pagination">
+		
+			<a href="/page/2/" data-title="加载更多" data-status="没有了">加载更多</a>
+		
+	</div>
+
+	
+
+</div>
+	
+
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2024, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
 </footer>
-  </div>
+		
+	<!-- Local or hitokoto! -->
 
-  <div class="back-to-top-fixed soft-size--round soft-style--box">
-    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
-      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
-      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
-    </svg>
-  </div>
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
 
   
-  <!-- aplayer -->
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
 
 
-<!-- dplayer -->
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
 
 
-<!-- copy button  -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
 
-<!-- https://clipboardjs.com/ -->
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-  
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
 
 
 
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
 
-<script src="/js/script.js"></script>
-
-
-  
-  <!-- 尾部用户自定义相关内容 -->
-</body>
+	</body>	
 </html>
