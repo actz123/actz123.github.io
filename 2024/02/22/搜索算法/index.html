@@ -1,106 +1,209 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>搜索算法 | Actz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="深度优先搜索Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。 本章题目难度较大，请大家仔细研读讲解和代码。 知识点1.DFS 算法设计原理与实现方法 2.经典题型精讲 深度优先搜索基本概念作为搜索算法的一种，DFS 主要是用于解决 NP 完全问题。但是，深度优先搜索算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="搜索算法">
-<meta property="og:url" content="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/index.html">
-<meta property="og:site_name" content="Actz">
-<meta property="og:description" content="深度优先搜索Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。 本章题目难度较大，请大家仔细研读讲解和代码。 知识点1.DFS 算法设计原理与实现方法 2.经典题型精讲 深度优先搜索基本概念作为搜索算法的一种，DFS 主要是用于解决 NP 完全问题。但是，深度优先搜索算法">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://actz123.github.io/imgs/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/uid1580206-20210202-1612248935564.png">
-<meta property="article:published_time" content="2024-02-22T08:52:56.000Z">
-<meta property="article:modified_time" content="2024-02-22T08:54:22.687Z">
-<meta property="article:author" content="zdx">
-<meta property="article:tag" content="蓝桥杯备赛">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://actz123.github.io/imgs/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/uid1580206-20210202-1612248935564.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Actz" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>搜索算法 | Actz</title><meta name="keywords" content="蓝桥杯备赛"><meta name="author" content="zdx"><meta name="copyright" content="zdx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="搜索算法"><meta name="application-name" content="搜索算法"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="搜索算法"><meta property="og:url" content="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/index.html"><meta property="og:site_name" content="Actz"><meta property="og:description" content="深度优先搜索Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。 本章题目难度较大，请大家仔细研读讲解和代码。 知识点1.DFS 算法设计原理与实现方法 2.经典题型精讲 深"><meta property="og:locale" content="en"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="zdx"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="深度优先搜索Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。 本章题目难度较大，请大家仔细研读讲解和代码。 知识点1.DFS 算法设计原理与实现方法 2.经典题型精讲 深"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"Author: zdx","link":"Link: ","source":"Source: Actz","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.","copySuccess":"Copy success, copy and reprint please mark the address of this article"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Actz',
+  title: '搜索算法',
+  postAI: '',
+  pageFillDescription: '深度优先搜索, 知识点, 深度优先搜索基本概念, DFS 的设计步骤, DFS 题目讲解, 状态搜索代表： N 皇后问题, 图的路径搜索代表-路径之谜, 最大数字, 实验总结, 广度优先搜索, 知识点, 广度优先搜索基本概念, 广度优先搜索算法的设计步骤, 长草, 走迷宫, 迷宫, 实验总结深度优先搜索即意为深度优先搜索是所有的搜索手段之一它是从某个状态开始不断进行状态转移直到不能转移后向后回退一直到遍历完所有的状态本章题目难度较大请大家仔细研读讲解和代码知识点算法设计原理与实现方法经典题型精讲深度优先搜索基本概念作为搜索算法的一种主要是用于解决完全问题但是深度优先搜索算法的时间复杂度较高深度优先搜索是的阶乘级算法它的效率非常低在数据规模变大时此算法就难以解决当前的问题了所以搜索算法使用于状态节点较小规模的问题的设计步骤按照定义设计确定该题目的状态包括边界找到状态转移方式找到问题的出口计数或者某个状态设计搜索伪代码参数满足条件参数相应操作判断边界不在边界内即回溯尝试每一种可能满足条件标记继续下一步恢复初始状态回溯的时候要用到题目讲解状态搜索代表皇后问题题目链接难度简单标签题目描述在的方格棋盘放置了个皇后使得它们不相互攻击即任意个皇后不允许处在同一排同一列也不允许处在与棋盘边框成角的斜线上你的任务是对于给定的求出有多少种合法的放置方法输入描述输入中有一个正整数表示棋盘和皇后的数量输出描述为一个正整数表示对应输入行的皇后的不同放置数量输入输出样例示例输入输出运行限制最大运行时间最大运行内存解题思路下面是用递归的深度优先搜索求解皇后问题的算法描述这里用一个的矩阵来表示棋盘但是我们不需要定义这样的数组只要心中有的期盼即可算法开始当前行设为第一行当前列设为第一列从第一行第一列开始搜索即只能让皇后从第一行放到第行这样在每次判断是否满足情况时我们不用去判断是否皇后在相同行我们只用判断之前的到个皇后的位置和当前第个皇后的位置是否属于同一列或者斜线判断是否同一列判断边界在当前行当前列的位置上判断是否满足条件即保证经过这一点的行列与斜线上都没有两个皇后若不满足跳到第步即不符合边界条件首先说一下什么叫不符合边界条件不只是跳出了搜索范围剪枝也可以从这里开始比如这里不满足条件向下继续搜索也不会再有结果这可以理解为超出边界的剪枝我们的边界只得可能存在解的范围这里已经超出有解的范围必然要被踢出判断条件我们用数组来表示第个皇后的位置在第行第列我们不用考虑是否在同一行的问题你我们只用判断之前的到个皇后的位置和当前第个皇后的位置是否属于同一列或者斜线判断是否属于同一列就判断是否等于判断是否属于同一斜线等同于判断行之差是否等于列之差也即搜索过程调用函数如果边界条件就继续调用放下一个皇后的位置函数如果当搜索到第行的时候即代表前行已经搜索完了所以这个时候正好求出了一个解记录加一在当前位置上不满足条件的情形进行回溯语言描述即判断是否符合条件来放表示皇后所在的行数表示所在的列数所以前面那个条件用来判断两个皇后是否在对角线上后面用来判断是否在同一列上行数不需要判断因为他们本身的就代表的是行数第个皇后放的列数判断是否能放这步能的话进行下一个皇后的放置不能就下一列表示几个皇后每次都从第一个皇后开始语言描述即判断是否符合条件来放表示皇后所在的行数表示所在的列数所以前面那个条件用来判断两个皇后是否在对角线上后面用来判断是否在同一列上行数不需要判断因为他们本身的就代表的是行数第个皇后放的列数判断是否能放这步能的话进行下一个皇后的放置不能就下一列不能就下一列每次都从第一个皇后开始语言描述即判断是否符合条件来放表示皇后所在的行数表示所在的列数所以前面那个条件用来判断两个皇后是否在对角线上后面用来判断是否在同一列上行数不需要判断因为他们本身的就代表的是行数第个皇后放的列数判断是否能放这步能的话进行下一个皇后的放置不能就下一列表示几个皇后每次都从第一个皇后开始图的路径搜索代表路径之谜题目链接难度中等标签国赛题目描述小明冒充星球的骑士进入了一个奇怪的城堡城堡里边什么都没有只有方形石头铺成的地面假设城堡地面是个方格如下图所示按习俗骑士要从西北角走到东南角可以横向或纵向移动但不能斜着走也不能跳跃每走到一个新方格就要向正北方和正西方各射一箭城堡的西墙和北墙内各有个靶子同一个方格只允许经过一次但不必走完所有的方格如果只给出靶子上箭的数目你能推断出骑士的行走路线吗有时是可以的比如上图中的例子本题的要求就是已知箭靶数字求骑士的行走路径测试数据保证路径唯一输入第一行一个整数表示地面有个方格第二行个整数空格分开表示北边的箭靶上的数字自西向东第三行个整数空格分开表示西边的箭靶上的数字自北向南输出输出一行若干个整数表示骑士路径为了方便表示我们约定每个小格子用一个数字代表从西北角开始编号输入输出样例输入比如上图中的方块编号为箭靶输出运行限制最大运行时间最大运行内存解题思路这里用一个的矩阵来表示城堡的位置横向纵向标号我们采用逆推法既然原题目是走到哪里射一支箭那我们就走到那里之后拔一支箭如果最后得到所有的靶子上都没有箭了由于题目的路径唯一那就证明我们找到了题目所要求的路径算法开始当前行设为第一行当前列设为第一列从第一行第一列开始搜索然后从左上角初始位置按照题目意思进行寻路判断边界在当前行当前列的位置上判断是否满足条件若不满足跳到第步即不符合边界条件判断条件如下标记数组已经被标记已被走过不能再走超出边界从左侧走出方格从右侧走出方格从上侧走出方格从下侧走出方格没走到右下角箭用完了没走到右下角箭用完了搜索过程调用函数如果边界条件满足就继续调用搜索找到下一步的位置参数如果当搜索到时且靶子上的箭都没了按就找到了答案按照题目输出即可在当前位置上不满足条件的情形进行回溯并还原现场语言描述格子数长宽从到用来标记是否走过图的路径搜索常用方向移动表示两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向判断走过的路径的箭靶数是否与目标相同如果箭靶上的数目不为根据逆推我们通过当前路径得不到箭靶上的结果如果箭靶上的数目不为根据逆推我们通过当前路径得不到箭靶上的结果轴坐标轴坐标通过计算的到为题目要求的坐标系成功终止继续搜索关于终止还是继续我们交给判定即可边界判断已被走过不能再走超出边界从左侧走出方格从右侧走出方格从上侧走出方格从下侧走出方格没走到右下角箭用完了没走到右下角箭用完了符合边界条件可以继续执行搜索包含不符合规则的地方回溯用于剪枝不符合要求继续换方向搜索因为要进行位置转移我们给它起个名字叫作案现场比如向下移动搜索回溯后因为没有找到正确答案所以要回复作案现场返回到搜索之前语言描述图的路径搜索常用方向移动表示两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向如果箭靶上的数目不为根据逆推我们通过当前路径得不到箭靶上的结果轴坐标轴坐标通过计算的到为题目要求的坐标系成功终止继续搜索关于终止还是继续我们交给判定即可已被走过不能再走超出边界从左侧走出方格从右侧走出方格没走到右下角箭用完了从上侧走出方格从下侧走出方格没走到右下角箭用完了符合边界条件可以继续执行搜索包含不符合规则的地方回溯用于剪枝不符合要求继续换方向搜索因为要进行位置转移我们给它起个名字叫作案现场比如向下移动搜索回溯后因为没有找到正确答案所以要回复作案现场返回到搜索之前然而需要注意的是上面代码会超时我们要对其进行优化因为同样的计算运行时间相比要长很多这里给和相同的时间确实是难为了因为上面是为了给大家系统的将一个框架而这道题目的时间复杂度相对较高的运行时间是倍甚至几十倍这个题目同样的复杂度给的时间是不好通过这个题目的我优化了十几遍确实通过不了语言描述格子数长宽从到用来标记是否走过图的路径搜索常用方向移动表示两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向判断走过的路径的箭靶数是否与目标相同如果箭靶上的数目不为根据逆推我们通过当前路径得不到箭靶上的结果如果箭靶上的数目不为根据逆推我们通过当前路径得不到箭靶上的结果轴坐标轴坐标通过计算的到为题目要求的坐标系成功终止继续搜索关于终止还是继续我们交给判定即可边界判断已被走过不能再走超出边界从左侧走出方格从右侧走出方格从上侧走出方格从下侧走出方格没走到右下角箭用完了没走到右下角箭用完了符合边界条件可以继续执行搜索包含不符合规则的地方回溯用于剪枝不符合要求继续换方向搜索因为要进行位置转移我们给它起个名字叫作案现场比如向下移动搜索回溯后因为没有找到正确答案所以要回复作案现场返回到搜索之前最大数字给定一个正整数你可以对的任意一位数字执行任意次以下种操作将该位数字加如果该位数字已经是加之后变成将该位数字减如果该位数字已经是减之后变成你现在总共可以执行号操作不超过次号操作不超过次请问你最大可以将变成多少解题思路看上去的范围貌似很大达到了的范围但其实我们最多只需要考虑这最多位数所以可以想到爆搜得到答案一个数的大小是从左到右依次判断所以我们从最左边开始枚举我们无需关注后面的数要利用自己的号操作和号操作保证当前这个数位的数一定要尽可能最大然后分别考虑两种操作首先两种操作不可能混用因为它们是抵消的效果所以要么对这个数全使用操作要么操作假设某个数位的值为首先考虑号操作使用后可以让该数位变大出于贪心考虑我们想让它变成那么需要进行次号操作当然可能此时号操作并不足以让我们将变成但我们还是使用剩余的全部的次数将其变大所以每次考虑号操作应该使用的操作数应该为此时将变为然后进行下一位的判断其次我们考虑号操作这个的判断比较简单它是让某个值减小唯一能让某个数变大的机会就是将其减到后再减就会变成那么这样操作需要的次数就是如果操作次数不够那我们宁愿不使用因为这只会让这个数位变得更小在深搜的过程中参数记录遍历到第几个数位以及此时累计的和当搜索完所有数位后将此时的和与答案进行一个取最后的值则为答案语言描述号操作剩余次数号操作剩余次数应该使用的操作次数回溯考虑操作是否能够使用回溯答案取语言描述表示考虑到第位表示当前的值是多少考虑第一种使用回溯考虑第二种使用我一定要减到只有才能减到回溯语言描述考虑第一种使用回溯考虑第二种使用我一定要减到只有才能减到回溯实验总结是一种非常重要的回溯算法它是通过递归设计转移状态再加上边界判断与结果检查构成的基本搜索框架最重要的就是设计回溯所谓回溯就是还原现场保证在执行另一分支的时候能够确保所有的改变只受当前状态的影响所以在一条路走不通时就要修改特殊的修改可以达到特殊的回溯效果回溯时剪枝回溯时调整路线都是可以的是算法学习的基础工具很重要必须要学会广度优先搜索其英文全称是意为广度优先搜索是所有的搜索手段之一它是从某个状态开始将所有节点加入一个先进先出的队列然后一层一层进行状态转移并且展开节点本章题目难度较大请大家仔细研读讲解和代码知识点算法设计原理与实现方法经典题型精讲广度优先搜索基本概念作为搜索算法的一种相较于而言是一层一层展开的那么对于有多个终态时最先找到的一定是最短的广度优先搜索算法的设计步骤按照定义设计确定该题目的状态包括边界找到状态转移方式找到问题的出口计数或者某个状态设计搜索会发现我们前期要找到的参数基本一致所以在一般情况下和可以相互转换伪代码参数满足条件参数相应操作把根节点放入队列尾端每次从队列中取出一个节点判断是不是答案如果是结束算法把当前取出的节点扩展如果扩展后的节点经后符合要求就放入队列不符合就不放转到步骤循环执行如果所有节点被扩展完了没有找到答案就无解长草题目链接难度简单标签模拟省模拟赛题目描述小明有一块空地他将这块空地划分为行列的小块每行和每列的长度都为小明选了其中的一些小块空地种上了草其他小块仍然保持是空地这些草长得很快每个月草都会向外长出一些如果一个小块种了草则它将向自己的上下左右四小块空地扩展这四小块空地都将变为有草的小块请告诉小明个月后空地上哪些地方有草输入描述输入的第一行包含两个整数接下来行每行包含个字母表示初始的空地状态字母之间没有空格如果为小数点表示为空地如果字母为表示种了草接下来包含一个整数其中输出描述输出行每行包含个字母表示个月后空地的状态如果为小数点表示为空地如果字母为表示长了草输入输出样例示例输入输出运行限制最大运行时间最大运行内存解题思路这个题目简直就是为了广度优先搜索设置模板题由于这个题目时输出广度优先搜索次扩展后的终态那我们就不用设置函数这里用一个的矩阵来表示草地算法开始将字母为的草地的位置加入队列然后向下执行判断边界判断是否已经长了草判断是否超出边界范围搜索过程不断从队列取出一个节点进行上下左右的扩展执行判断边界符合就放入队列不符合就跳过执行次扩展输出草地状态参数这里不需要进行语言描述有个数据类型叫上面的就可以定义为用起来比较方便临时结点图的路径搜索常用方向移动表示两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向行列次广度优先搜索所用的队列记录节点数量方便后续的计算轴坐标左侧越界轴坐标右侧越界轴坐标上侧越界轴坐标下侧越界已经长草了在范围内且没长草这两步是取出队首的节点横坐标纵坐标扩展后的横坐标扩展后的纵坐标符合要求执行扩展不符合要求忽略即可没取出一个节点当时代表当前层扩展完了那么就代表第一个月扩展完了所以当前层扩展完了那就该扩展下一层了所以又被赋值为下一层的节点数目的值将初始有树的结点加入队列记录第一层的节点数量方便后续的计算语言描述请在此输入您的代码两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向轴坐标左侧越界轴坐标右侧越界轴坐标上侧越界轴坐标下侧越界已经长草了在范围内且没长草横坐标纵坐标动态开数组会减少运行时间重点的非常耗费时间强烈建议大家使用进行模拟下面是用模拟使用耗时使用模拟仅消耗所以大家使用编写代码的时候还是使用尽量避免的使用请在此输入您的代码两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向轴坐标左侧越界轴坐标右侧越界轴坐标上侧越界轴坐标下侧越界已经长草了在范围内且没长草横坐标纵坐标扩展后的横坐标扩展后的纵坐标动态开数组会减少运行时间语言描述图的路径搜索常用方向移动表示两两组合形成上下左右四个方向那么代表向下的方向那么代表向右的方向那么代表向左的方向那么代表向上的方向行列次广度优先搜索所用的队列记录节点数量方便后续的计算轴坐标左侧越界轴坐标右侧越界轴坐标上侧越界轴坐标下侧越界已经长草了在范围内且没长草这两步是取出队首的节点横坐标纵坐标扩展后的横坐标扩展后的纵坐标临时结点符合要求执行扩展不符合要求忽略即可没取出一个节点当时代表当前层扩展完了那么就代表第一个月扩展完了所以当前层扩展完了那就该扩展下一层了所以又被赋值为下一层的节点数目的值临时结点将初始有草的结点加入队列记录第一层的节点数量方便后续的计算走迷宫题目链接难度简单标签题目描述给定一个的网格迷宫的每个格子要么是道路要么是障碍物道路用表示障碍物用表示已知迷宫的入口位置为出口位置为问从入口走到出口最少要走多少个格子输入输入第行包含两个正整数分别表示迷宫的大小接下来输入一个的矩阵若表示其为道路否则表示其为障碍物最后一行输入四个整数表示入口的位置和出口的位置输出输出仅一行包含一个整数表示答案若无法从入口到出口则输出输入输出样例输入输出运行限制最大运行时间最大运行内存解题思路算法开始我们以起点开始做将入口压入栈开始执行算法判断边界在当前行当前列的位置上判断是否满足条件若不满足跳到第步即不符合边界条件判断条件如下标记数组已经被标记已被走过不能再走超出边界从左侧走出方格从右侧走出方格从上侧走出方格从下侧走出方格没有路不能走搜索过程调用函数如果边界条件满足就继续调用搜索找到下一步的位置每次找到下一个位置的时候令其当前这样既能用数组标记又能使用数组存步数从开始即开始节点是所以最后要减去参数如果当搜索到终点终点终点终点时就找到了终点此时他的数组就存储了他的步数但是是从开始的语言描述用于存储是否访问过并且存储长度用于存储题目给出的地图上下左右移动不会的看前面的代码从左侧走出方格从右侧走出方格从上侧走出方格从下侧走出方格已经访问了不是路不能走找到终点把距离给他将起点压人队列中将队列最前面的弹出四个方向判断是否符合条件步数语言描述队列模拟队列模拟轴坐标左侧越界轴坐标右侧越界轴坐标上侧越界轴坐标下侧越界已经访问了已经访问了在范围内且没长草找到终点把距离给他横坐标纵坐标扩展后的横坐标扩展后的纵坐标动态开数组会减少运行时间动态开数组会减少运行时间语言描述用于存储是否访问过并且存储长度用于存储题目给出的地图图的路径搜索常用方向移动表示广度优先搜索所用的队列轴坐标左侧越界轴坐标右侧越界轴坐标上侧越界轴坐标下侧越界已经访问了不能走在范围内且没长草找到终点把距离给他这两步是取出队首的节点四个方向判断是否符合条件步数迷宫下图给出了一个迷宫的平面图其中标记为的为障碍标记为的为可以通行的地方迷宫的入口为左上角出口为右下角在迷宫中只能从一个位置走到这个它的上下左右四个方向之一对于上面的迷宫从入口开始可以按的顺序通过迷宫一共步其中分别表示向下向上向左向右走对于下面这个更复杂的迷宫行列请找出一种通过迷宫的方式其使用的步数最少在步数最少的前提下请找出字典序最小的一个作为答案请注意在字典序中解题思路本题是一道简单的搜索题需要注意的是要按照题目给定的字典序进行搜索最后输出路径我们使用搜索记录路径用打印路径语言描述标记存储当前节点的父节点指向当前和下一个位置递归打印找到起点开始正向打印路径走下左右上按字典序的四个方向判断是否超出范围是否用过是否为标记为用过压入队列存储父节点坐标存储路径打印路径语言描述保存经过的每一个点位置信息采用的公式表示从开始位置也是从来开始大于最长边的随便一个数起点终点广度优先遍历求每一个位置到终点的距离并存放在中广度优先遍历寻找所有从终点到起点的路线当前位置当前位置坐标不为空继续循环获取当前位置的坐标获取当前位置获取当前位置探索四个方向当前位置的距离等于本次探索位置的距离深度优先遍历从起点到终点起点语言描述实验总结是广度优先搜索是将某节点所有的枝蔓加入搜索队列然后去除队列的首部的节点重复进行该动作这样就能由开始状态一圈一圈的查找拥有一个性质那么就是先找到的节点所经过的步骤一定最短它一般用于寻找在近的状态也是一个非常基础的算法希望大家认真学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-02-22 16:54:22',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.1.1"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Actz</a>
-      </h1>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://actz123.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-搜索算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" class="article-date">
-  <time class="dt-published" datetime="2024-02-22T08:52:56.000Z" itemprop="datePublished">2024-02-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">蓝桥杯冲刺营</a>►<a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/3-%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">3.搜索算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      搜索算法
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
+        get: key => {
+          const itemStr = localStorage.getItem(key)
       
-        <h1 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h1><p>Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。</p>
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Actz</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" style="font-size: 1.05rem;">蓝桥杯备赛<sup>69</sup></a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" style="font-size: 1.05rem;">蓝桥杯学习路线<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">February 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">72</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/" itemprop="url">蓝桥杯冲刺营</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/3-%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" itemprop="url">3.搜索算法</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>蓝桥杯备赛</span></a></span></div></div><h1 class="post-title" itemprop="name headline">搜索算法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-02-22T08:52:56.000Z" title="Created 2024-02-22 16:52:56">2024-02-22</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-02-22T08:54:22.687Z" title="Updated 2024-02-22 16:54:22">2024-02-22</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"><header><a class="post-meta-categories" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/" itemprop="url">蓝桥杯冲刺营</a><a class="post-meta-categories" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/3-%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" itemprop="url">3.搜索算法</a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" tabindex="-1" itemprop="url">蓝桥杯备赛</a><h1 id="CrawlerTitle" itemprop="name headline">搜索算法</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">zdx</span><time itemprop="dateCreated datePublished" datetime="2024-02-22T08:52:56.000Z" title="Created 2024-02-22 16:52:56">2024-02-22</time><time itemprop="dateCreated datePublished" datetime="2024-02-22T08:54:22.687Z" title="Updated 2024-02-22 16:54:22">2024-02-22</time></header><h1 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h1><p>Depth First Search 即 DFS，意为深度优先搜索，是所有的搜索手段之一。它是从某个状态开始，不断进行状态转移，直到不能转移后，向后回退，一直到遍历完所有的状态。</p>
 <p>本章题目难度较大，请大家仔细研读讲解和代码。</p>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>1.DFS 算法设计原理与实现方法 2.经典题型精讲</p>
 <h2 id="深度优先搜索基本概念"><a href="#深度优先搜索基本概念" class="headerlink" title="深度优先搜索基本概念"></a>深度优先搜索基本概念</h2><p>作为搜索算法的一种，DFS 主要是用于解决 <code>NP</code> 完全问题。但是，深度优先搜索算法的时间复杂度较高，深度优先搜索是 (!)<em>O</em>(<em>n</em>!) 的阶乘级算法，它的效率非常低，在数据规模变大时，此算法就难以解决当前的问题了。</p>
@@ -178,7 +281,7 @@
 <p>小明冒充 <em>X</em> 星球的骑士，进入了一个奇怪的城堡。</p>
 <p>城堡里边什么都没有，只有方形石头铺成的地面。</p>
 <p>假设城堡地面是 ×<em>n</em>×<em>n</em> 个方格。如下图所示。</p>
-<p><img src="/./../imgs/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/uid1580206-20210202-1612248935564.png" alt="地图"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/./../imgs/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/uid1580206-20210202-1612248935564.png" alt="地图"></p>
 <p>按习俗，骑士要从西北角走到东南角。可以横向或纵向移动，但不能斜着走，也不能跳跃。每走到一个新方格，就要向正北方和正西方各射一箭。（城堡的西墙和北墙内各有 <em>n</em> 个靶子）同一个方格只允许经过一次。但不必走完所有的方格。如果只给出靶子上箭的数目，你能推断出骑士的行走路线吗？有时是可以的，比如上图中的例子。</p>
 <p>本题的要求就是已知箭靶数字，求骑士的行走路径（测试数据保证路径唯一）</p>
 <p><strong>输入:</strong></p>
@@ -469,158 +572,148 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line">n,m=<span class="number">30</span>,<span class="number">50</span></span><br><span class="line">M=[[<span class="built_in">int</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">input</span>()]<span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line">vis=[[<span class="number">0</span>]*m <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line">go=[[<span class="string">&#x27;&#x27;</span>]*m <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line">q=deque([(<span class="number">0</span>,<span class="number">0</span>)])</span><br><span class="line">vis[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> q:</span><br><span class="line">    x,y=q.popleft()</span><br><span class="line">    <span class="keyword">if</span> x==n-<span class="number">1</span> <span class="keyword">and</span> y==m-<span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(go[-<span class="number">1</span>][-<span class="number">1</span>])</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">for</span> i,j,k <span class="keyword">in</span> [[<span class="number">1</span>,<span class="number">0</span>,<span class="string">&#x27;D&#x27;</span>],[<span class="number">0</span>,-<span class="number">1</span>,<span class="string">&#x27;L&#x27;</span>],[<span class="number">0</span>,<span class="number">1</span>,<span class="string">&#x27;R&#x27;</span>],[-<span class="number">1</span>,<span class="number">0</span>,<span class="string">&#x27;U&#x27;</span>]]:</span><br><span class="line">        a,b=x+i,y+j</span><br><span class="line">        <span class="keyword">if</span> <span class="number">0</span>&lt;=a&lt;n <span class="keyword">and</span> <span class="number">0</span>&lt;=b&lt;m <span class="keyword">and</span> M[a][b]==<span class="number">0</span> <span class="keyword">and</span> vis[a][b]==<span class="number">0</span>:</span><br><span class="line">            vis[a][b]=<span class="number">1</span></span><br><span class="line">            q.append((a,b))</span><br><span class="line">            go[a][b]=go[x][y]+k</span><br></pre></td></tr></table></figure>
 
 <h2 id="实验总结-1"><a href="#实验总结-1" class="headerlink" title="实验总结"></a>实验总结</h2><p>BFS 是广度优先搜索，是将某节点所有的“枝蔓”加入搜索队列，然后去除队列的首部的节点，重复进行该动作，这样就能由开始状态“一圈一圈的查找”。 BFS 拥有一个性质，那么就是先找到的节点，所经过的步骤一定最短。它一般用于寻找在近的状态，也是一个非常基础的算法，希望大家认真学习。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" data-id="clt4av73o003zfoushrbu8l3c" data-title="搜索算法" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2024/02/22/%E6%9E%9A%E4%B8%BE%E5%92%8C%E5%B0%BA%E5%8F%96%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">zdx</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/')">搜索算法</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=搜索算法&amp;url=https://actz123.github.io/2024/02/22/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>蓝桥杯备赛<span class="tagsPageCount">69</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/02/22/%E9%80%92%E5%BD%92%E4%B8%8E%E9%80%92%E6%8E%A8/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">递归与递推</div></div></a></div><div class="next-post pull-right"><a href="/2024/02/22/%E6%9E%9A%E4%B8%BE%E5%92%8C%E5%B0%BA%E5%8F%96%E6%B3%95/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">枚举和尺取法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2024/02/22/01%E8%83%8C%E5%8C%85/" title="01背包"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-02-22</div><div class="title">01背包</div></div></a></div><div><a href="/2024/02/22/DFS-%E5%89%AA%E6%9E%9D/" title="DFS-剪枝"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-02-22</div><div class="title">DFS-剪枝</div></div></a></div><div><a href="/2024/02/22/DFS-%E5%9B%9E%E6%BA%AF/" title="DFS-回溯"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-02-22</div><div class="title">DFS-回溯</div></div></a></div><div><a href="/2024/02/22/DFS-%E5%9F%BA%E7%A1%80/" title="DFS-基础"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-02-22</div><div class="title">DFS-基础</div></div></a></div><div><a href="/2024/02/22/LCS/" title="LCS"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-02-22</div><div class="title">LCS</div></div></a></div><div><a href="/2024/02/22/LIS/" title="LIS"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-02-22</div><div class="title">LIS</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="toc-number">1.</span> <span class="toc-text">深度优先搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">深度优先搜索基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DFS-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.3.</span> <span class="toc-text">DFS 的设计步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DFS-%E9%A2%98%E7%9B%AE%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.4.</span> <span class="toc-text">DFS 题目讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%90%9C%E7%B4%A2%E4%BB%A3%E8%A1%A8%EF%BC%9A-N-%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98"><span class="toc-number">1.4.1.</span> <span class="toc-text">状态搜索代表： N 皇后问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E8%B7%AF%E5%BE%84%E6%90%9C%E7%B4%A2%E4%BB%A3%E8%A1%A8-%E8%B7%AF%E5%BE%84%E4%B9%8B%E8%B0%9C"><span class="toc-number">1.4.2.</span> <span class="toc-text">图的路径搜索代表-路径之谜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%95%B0%E5%AD%97"><span class="toc-number">1.4.3.</span> <span class="toc-text">最大数字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">1.5.</span> <span class="toc-text">实验总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="toc-number">2.</span> <span class="toc-text">广度优先搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-1"><span class="toc-number">2.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.2.</span> <span class="toc-text">广度优先搜索基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.3.</span> <span class="toc-text">广度优先搜索算法的设计步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%BF%E8%8D%89"><span class="toc-number">2.3.1.</span> <span class="toc-text">长草</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B0%E8%BF%B7%E5%AE%AB"><span class="toc-number">2.3.2.</span> <span class="toc-text">走迷宫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%B7%E5%AE%AB"><span class="toc-number">2.3.3.</span> <span class="toc-text">迷宫</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93-1"><span class="toc-number">2.4.</span> <span class="toc-text">实验总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/" title="顺序表">顺序表</a><time datetime="2024-02-27T07:12:07.000Z" title="Created 2024-02-27 15:12:07">2024-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" title="排序示例代码">排序示例代码</a><time datetime="2024-02-27T06:47:13.000Z" title="Created 2024-02-27 14:47:13">2024-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" title="组合数学">组合数学</a><time datetime="2024-02-22T09:42:43.000Z" title="Created 2024-02-22 17:42:43">2024-02-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/" title="简单数论">简单数论</a><time datetime="2024-02-22T09:41:40.000Z" title="Created 2024-02-22 17:41:40">2024-02-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" title="图论入门">图论入门</a><time datetime="2024-02-22T09:40:17.000Z" title="Created 2024-02-22 17:40:17">2024-02-22</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="zdx" target="_blank">zdx</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">Articles</div><div class="length-num">72</div></a><a href="/tags/" title="tag"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/" title="category"><div class="headline">Categories</div><div class="length-num">33</div></a></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="Display Mode"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>Display Mode</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" style="font-size: 0.88rem;">蓝桥杯备赛<sup>69</sup></a><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" style="font-size: 0.88rem;">蓝桥杯学习路线<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
         
-          枚举和尺取法
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
         
-      </div>
-    </a>
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 zdx 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
   
-  
-    <a href="/2024/02/22/%E9%80%92%E5%BD%92%E4%B8%8E%E9%80%92%E6%8E%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">递归与递推</div>
-    </a>
-  
-</nav>
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
 
-  
-</article>
+  typeof typed === 'object' && typed.destroy()
 
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/A%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">A学习路线</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/">代码集合</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%87%BD%E6%95%B0/">函数</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">基础数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%AE%9E%E8%B7%B5%E5%BA%94%E7%94%A8/">实践应用</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BD%BF%E7%94%A8/">类的定义和使用</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">选择结构</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%90%9C%E7%B4%A2/">第三章：搜索</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">第二章：基础算法</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/">基础算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/">排序</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">第四章：动态规划</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%9F%BA%E7%A1%80/">动态规划基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2DP/">树形DP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">背包问题</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">蓝桥杯冲刺营</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/1-%E6%89%8B%E7%AE%97%E5%92%8C%E6%80%9D%E7%BB%B4%E9%A2%98/">1.手算和思维题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/10-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">10.动态规划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/11-%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/">11.图论入门</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/12-%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/">12.简单数论</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/13-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">13.组合数学</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/2-%E9%80%92%E5%BD%92%E4%B8%8E%E9%80%92%E6%8E%A8/">2.递归与递推</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/3-%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/">3.搜索算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/4-%E6%9E%9A%E4%B8%BE%E5%92%8C%E5%B0%BA%E5%8F%96%E6%B3%95/">4.枚举和尺取法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/5-%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/">5.差分与前缀和</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/6-%E5%B9%B6%E6%9F%A5%E9%9B%86/">6.并查集</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/7-%E4%BA%8C%E5%88%86%E7%AE%97%E6%B3%95/">7.二分算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/8-%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/">8.工具函数模板</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/9-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">9.贪心算法</a></li></ul></li></ul>
-    </div>
-  </div>
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
 
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" rel="tag">蓝桥杯学习路线</a></li></ul>
-    </div>
-  </div>
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
 
+  typeof panguInit === 'function' && panguInit()
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" style="font-size: 20px;">蓝桥杯备赛</a> <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" style="font-size: 10px;">蓝桥杯学习路线</a>
-    </div>
-  </div>
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li></ul>
-    </div>
-  </div>
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/02/27/%E9%A1%BA%E5%BA%8F%E8%A1%A8/">顺序表</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/27/%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/">排序示例代码</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/22/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/">组合数学</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/22/%E7%AE%80%E5%8D%95%E6%95%B0%E8%AE%BA/">简单数论</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/22/%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/">图论入门</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 zdx<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
