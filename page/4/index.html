@@ -1,439 +1,831 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Actz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Actz" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-  
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
     
-<link rel="stylesheet" href="/css/highlight.css">
-
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Actz">
-<meta property="og:url" content="https://actz123.github.io/page/4/index.html">
-<meta property="og:site_name" content="Actz">
-<meta property="og:locale">
-<meta property="article:author" content="zdx">
-<meta name="twitter:card" content="summary"><meta name="generator" content="Hexo 7.1.1"></head>
-
-<body>
-  <div id="wrapper">
-    <header id="header">
-  <h1 id="title">
-    <a href="/">Actz</a>
-  </h1>
-  <nav>
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
     
     
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.json";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var cb = null;
+      var els = $(".post figure.highlight");
+      if (els.length) {
+        // Enabled Hexo highlight line number.
+        $(els).each(function (i, e) {
+          // $(e).before("<button class=\"copy button\">Copy</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"Copy\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
+          }
+        });
+      } else {
+        // Disabled Hexo highlight line number.
+        els = $(".post pre code");
+        $(els).each(function (i, e) {
+          // Add button before pre, not code.
+          // $(e).parent().before("<button class=\"copy button\">Copy</button>");
+          $(e).before([
+            "<div class=\"code-titlebar\">",
+              "<div class=\"titlebar-left\">",
+                "<button class=\"copy\" aria-label=\"Copy\"><i class=\"far fa-copy\"></i></button>",
+              "</div>",
+              "<div class=\"titlebar-center\">",
+                "code",
+              "</div>",
+              "<div class=\"titlebar-right\">",
+                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
+                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
+              "</div>",
+            "</div>"
+          ].join(""));
+        });
+        cb = new ClipboardJS("button.copy", {
+          "target": function (trigger) {
+              // Get target element by DOM API.
+              return trigger.parentNode.parentNode.nextElementSibling;
+          }
+        });
+      }
+      cb.on("success", function (e) {
+        e.clearSelection();
+        var trigger = e.trigger;
+        // Change button text as a user tip.
+        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
+        $(trigger).addClass("copied");
+        // Change button text back;
+        setTimeout(function () {
+          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
+          $(trigger).removeClass("copied");
+        }, 1500);
+      });
+    });
+    </script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Actz</title>
+  <meta name="generator" content="Hexo 7.1.1"></head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="en | zh-CN |zh-TW"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Actz</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
       
-      <a class="nav-link" href="/">Home</a>
-    
+      <div class="logo">
+        <img src="/images/logo.png" alt="logo">
+      </div>
       
-        <span class="nav-spacer">×</span>
-      
-      <a class="nav-link" href="/archives">Archives</a>
-    
-    
-  </nav>
+    </div>
+    <nav id="nav" class="nav">
+      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
+      <ul id="menu" role="menubar" aria-hidden="false">
+        
+        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">Home</span></a></li>
+        
+        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">Archives</span></a></li>
+        
+      </ul>
+    </nav>
+  </div>
 </header>
 
-    <div id="content">
-      
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+
+<div id="index" class="index page">
   
-    <article id="post-二分" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E4%BA%8C%E5%88%86/">二分</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:14:24.000Z" itemprop="datePublished">February 21, 2024, 11:14 PM</time>
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231437377.png" alt="image-20240221231437377"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231443219.png" alt="image-20240221231443219"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231447765.png" alt="image-20240221231447765"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231452303.png" alt="image-20240221231452303"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231458092.png" alt="image-20240221231458092"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231502178.png" alt="image-20240221231502178"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231506859.png" alt="image-20240221231506859"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231511234.png" alt="image-20240221231511234"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231518881.png" alt="image-20240221231518881"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231523253.png" alt="image-20240221231523253"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231528135.png" alt="image-20240221231528135"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231531987.png" alt="image-20240221231531987"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231536273.png" alt="image-20240221231536273"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231540455.png" alt="image-20240221231540455"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231551542.png" alt="image-20240221231551542"></p>
-
-      
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E4%BA%8C%E5%88%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
     </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-双指针" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E4%BA%8C%E5%88%86/" itemprop="url">二分</a>
+      </h1>
+      <div class="post-meta">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E5%8F%8C%E6%8C%87%E9%92%88/">双指针</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:12:32.000Z" itemprop="datePublished">February 21, 2024, 11:12 PM</time>
-
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:14:24+08:00">2024-02-21 23:14:24</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
           
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
       
-      
-        <p><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231249785.png" alt="image-20240221231249785"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231254077.png" alt="image-20240221231254077"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231257699.png" alt="image-20240221231257699"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231301782.png" alt="image-20240221231301782"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231305981.png" alt="image-20240221231305981"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231309946.png" alt="image-20240221231309946"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231314924.png" alt="image-20240221231314924"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231319111.png" alt="image-20240221231319111">  <img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231331577.png" alt="image-20240221231331577">  <img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231346490.png" alt="image-20240221231346490"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231351321.png" alt="image-20240221231351321"></p>
+      <p><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231437377.png" alt="image-20240221231437377"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231443219.png" alt="image-20240221231443219"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231447765.png" alt="image-20240221231447765"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231452303.png" alt="image-20240221231452303"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231458092.png" alt="image-20240221231458092"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231502178.png" alt="image-20240221231502178"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231506859.png" alt="image-20240221231506859"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231511234.png" alt="image-20240221231511234"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231518881.png" alt="image-20240221231518881"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231523253.png" alt="image-20240221231523253"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231528135.png" alt="image-20240221231528135"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231531987.png" alt="image-20240221231531987"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231536273.png" alt="image-20240221231536273"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231540455.png" alt="image-20240221231540455"><img src="/./../imgs/%E4%BA%8C%E5%88%86/image-20240221231551542.png" alt="image-20240221231551542"></p>
 
       
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E5%8F%8C%E6%8C%87%E9%92%88/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
     </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-贪心" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E5%8F%8C%E6%8C%87%E9%92%88/" itemprop="url">双指针</a>
+      </h1>
+      <div class="post-meta">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E8%B4%AA%E5%BF%83/">贪心</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:10:38.000Z" itemprop="datePublished">February 21, 2024, 11:10 PM</time>
-
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:12:32+08:00">2024-02-21 23:12:32</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
           
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
       
-      
-        <p><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231105941.png" alt="image-20240221231105941"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231111146.png" alt="image-20240221231111146"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231115510.png" alt="image-20240221231115510"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231119591.png" alt="image-20240221231119591"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231124495.png" alt="image-20240221231124495"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231128186.png" alt="image-20240221231128186"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231131857.png" alt="image-20240221231131857"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231135198.png" alt="image-20240221231135198"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231141344.png" alt="image-20240221231141344"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231145742.png" alt="image-20240221231145742">         <img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231152759.png" alt="image-20240221231152759">  <img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231207419.png" alt="image-20240221231207419"></p>
+      <p><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231249785.png" alt="image-20240221231249785"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231254077.png" alt="image-20240221231254077"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231257699.png" alt="image-20240221231257699"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231301782.png" alt="image-20240221231301782"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231305981.png" alt="image-20240221231305981"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231309946.png" alt="image-20240221231309946"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231314924.png" alt="image-20240221231314924"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231319111.png" alt="image-20240221231319111">  <img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231331577.png" alt="image-20240221231331577">  <img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231346490.png" alt="image-20240221231346490"><img src="/./../imgs/%E5%8F%8C%E6%8C%87%E9%92%88/image-20240221231351321.png" alt="image-20240221231351321"></p>
 
       
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E8%B4%AA%E5%BF%83/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
     </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-离散化" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E8%B4%AA%E5%BF%83/" itemprop="url">贪心</a>
+      </h1>
+      <div class="post-meta">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E7%A6%BB%E6%95%A3%E5%8C%96/">离散化</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:09:45.000Z" itemprop="datePublished">February 21, 2024, 11:09 PM</time>
-
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:10:38+08:00">2024-02-21 23:10:38</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
           
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
       
+      <p><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231105941.png" alt="image-20240221231105941"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231111146.png" alt="image-20240221231111146"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231115510.png" alt="image-20240221231115510"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231119591.png" alt="image-20240221231119591"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231124495.png" alt="image-20240221231124495"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231128186.png" alt="image-20240221231128186"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231131857.png" alt="image-20240221231131857"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231135198.png" alt="image-20240221231135198"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231141344.png" alt="image-20240221231141344"><img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231145742.png" alt="image-20240221231145742">         <img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231152759.png" alt="image-20240221231152759">  <img src="/./../imgs/%E8%B4%AA%E5%BF%83/image-20240221231207419.png" alt="image-20240221231207419"></p>
+
       
-        <p><img src="/./../imgs/%E7%A6%BB%E6%95%A3%E5%8C%96/image-20240221231005259.png" alt="image-20240221231005259"></p>
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E7%A6%BB%E6%95%A3%E5%8C%96/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E7%A6%BB%E6%95%A3%E5%8C%96/" itemprop="url">离散化</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:09:45+08:00">2024-02-21 23:09:45</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p><img src="/./../imgs/%E7%A6%BB%E6%95%A3%E5%8C%96/image-20240221231005259.png" alt="image-20240221231005259"></p>
 <p><img src="/./../imgs/%E7%A6%BB%E6%95%A3%E5%8C%96/image-20240221231015772.png" alt="image-20240221231015772"><img src="/./../imgs/%E7%A6%BB%E6%95%A3%E5%8C%96/image-20240221231020473.png" alt="image-20240221231020473"><img src="/./../imgs/%E7%A6%BB%E6%95%A3%E5%8C%96/image-20240221231024651.png" alt="image-20240221231024651"></p>
 
       
-    </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-差分" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E5%B7%AE%E5%88%86/">差分</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:08:31.000Z" itemprop="datePublished">February 21, 2024, 11:08 PM</time>
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230846735.png" alt="image-20240221230846735"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230850787.png" alt="image-20240221230850787"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230853819.png" alt="image-20240221230853819"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230859239.png" alt="image-20240221230859239"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230902898.png" alt="image-20240221230902898"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230906987.png" alt="image-20240221230906987"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230910327.png" alt="image-20240221230910327"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230914034.png" alt="image-20240221230914034"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230917410.png" alt="image-20240221230917410"></p>
-
-      
-    </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-前缀和" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
         
+      </div>
+      
+    </footer>
+  </article>
   
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E5%89%8D%E7%BC%80%E5%92%8C/">前缀和</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:06:32.000Z" itemprop="datePublished">February 21, 2024, 11:06 PM</time>
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230643240.png" alt="image-20240221230643240"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230646984.png" alt="image-20240221230646984"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230650381.png" alt="image-20240221230650381"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230653707.png" alt="image-20240221230653707"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230658009.png" alt="image-20240221230658009"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230701367.png" alt="image-20240221230701367"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230704843.png" alt="image-20240221230704843"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230713537.png" alt="image-20240221230713537"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230717558.png" alt="image-20240221230717558"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230720730.png" alt="image-20240221230720730"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230724012.png" alt="image-20240221230724012"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230735025.png" alt="image-20240221230735025"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230739508.png" alt="image-20240221230739508"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230742844.png" alt="image-20240221230742844"></p>
-
-      
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E5%B7%AE%E5%88%86/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
     </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-进制转换" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E5%B7%AE%E5%88%86/" itemprop="url">差分</a>
+      </h1>
+      <div class="post-meta">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">进制转换</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:04:53.000Z" itemprop="datePublished">February 21, 2024, 11:04 PM</time>
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230520575.png" alt="image-20240221230520575"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230524404.png" alt="image-20240221230524404"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230527911.png" alt="image-20240221230527911"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230531369.png" alt="image-20240221230531369"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230534525.png" alt="image-20240221230534525"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230538824.png" alt="image-20240221230538824"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230541976.png" alt="image-20240221230541976"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230545088.png" alt="image-20240221230545088"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230548483.png" alt="image-20240221230548483"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230554787.png" alt="image-20240221230554787"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230557974.png" alt="image-20240221230557974"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230601706.png" alt="image-20240221230601706"></p>
-
-      
-    </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-递归" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:08:31+08:00">2024-02-21 23:08:31</time></span>
+        </span>
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E9%80%92%E5%BD%92/">递归</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:03:03.000Z" itemprop="datePublished">February 21, 2024, 11:03 PM</time>
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230319996.png" alt="image-20240221230319996"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230326745.png" alt="image-20240221230326745"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230330609.png" alt="image-20240221230330609"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230334716.png" alt="image-20240221230334716"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230338902.png" alt="image-20240221230338902"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230342790.png" alt="image-20240221230342790"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230346311.png" alt="image-20240221230346311"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230352241.png" alt="image-20240221230352241"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230357000.png" alt="image-20240221230357000"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230401685.png" alt="image-20240221230401685"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230421883.png" alt="image-20240221230421883"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230426028.png" alt="image-20240221230426028"></p>
-
-      
-    </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-模拟" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E6%A8%A1%E6%8B%9F/">模拟</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:01:43.000Z" itemprop="datePublished">February 21, 2024, 11:01 PM</time>
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230203001.png" alt="image-20240221230203001"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230207880.png" alt="image-20240221230207880"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230213716.png" alt="image-20240221230213716"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230217450.png" alt="image-20240221230217450"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230221651.png" alt="image-20240221230221651"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230225216.png" alt="image-20240221230225216"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230231815.png" alt="image-20240221230231815"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230237070.png" alt="image-20240221230237070"></p>
-
-      
-    </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
-  
-    <article id="post-枚举" class="article article-type-post" itemprop="blogPost" itemscope>
-  <div class="article-inner">
-    
-      <header class="article-header">
         
-  
-    <h2 class="article-title" itemprop="name">
-      <a href="/2024/02/21/%E6%9E%9A%E4%B8%BE/">枚举</a>
-      
-    </h2>
-  
-
-
-        <div class="article-meta">
-          <time class="article-date" datetime="2024-02-21T15:01:00.000Z" itemprop="datePublished">February 21, 2024, 11:01 PM</time>
-
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
           
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
       
-      
-        <p><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230115927.png" alt="image-20240221230115927"><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230120545.png" alt="image-20240221230120545"><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230125716.png" alt="image-20240221230125716"><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230130289.png" alt="image-20240221230130289"></p>
+      <p><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230846735.png" alt="image-20240221230846735"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230850787.png" alt="image-20240221230850787"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230853819.png" alt="image-20240221230853819"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230859239.png" alt="image-20240221230859239"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230902898.png" alt="image-20240221230902898"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230906987.png" alt="image-20240221230906987"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230910327.png" alt="image-20240221230910327"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230914034.png" alt="image-20240221230914034"><img src="/./../imgs/%E5%B7%AE%E5%88%86/image-20240221230917410.png" alt="image-20240221230917410"></p>
 
       
-    </div>
-    
-    
-    
-  </div>
-</article>
-
-
-
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
   
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E5%89%8D%E7%BC%80%E5%92%8C/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E5%89%8D%E7%BC%80%E5%92%8C/" itemprop="url">前缀和</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:06:32+08:00">2024-02-21 23:06:32</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230643240.png" alt="image-20240221230643240"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230646984.png" alt="image-20240221230646984"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230650381.png" alt="image-20240221230650381"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230653707.png" alt="image-20240221230653707"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230658009.png" alt="image-20240221230658009"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230701367.png" alt="image-20240221230701367"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230704843.png" alt="image-20240221230704843"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230713537.png" alt="image-20240221230713537"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230717558.png" alt="image-20240221230717558"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230720730.png" alt="image-20240221230720730"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230724012.png" alt="image-20240221230724012"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230735025.png" alt="image-20240221230735025"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230739508.png" alt="image-20240221230739508"><img src="/./../imgs/%E5%89%8D%E7%BC%80%E5%92%8C/image-20240221230742844.png" alt="image-20240221230742844"></p>
 
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" itemprop="url">进制转换</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:04:53+08:00">2024-02-21 23:04:53</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230520575.png" alt="image-20240221230520575"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230524404.png" alt="image-20240221230524404"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230527911.png" alt="image-20240221230527911"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230531369.png" alt="image-20240221230531369"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230534525.png" alt="image-20240221230534525"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230538824.png" alt="image-20240221230538824"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230541976.png" alt="image-20240221230541976"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230545088.png" alt="image-20240221230545088"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230548483.png" alt="image-20240221230548483"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230554787.png" alt="image-20240221230554787"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230557974.png" alt="image-20240221230557974"><img src="/./../imgs/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/image-20240221230601706.png" alt="image-20240221230601706"></p>
 
-  <nav id="page-nav" class="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/3/">« Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/">Next »</a>
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E9%80%92%E5%BD%92/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E9%80%92%E5%BD%92/" itemprop="url">递归</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:03:03+08:00">2024-02-21 23:03:03</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230319996.png" alt="image-20240221230319996"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230326745.png" alt="image-20240221230326745"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230330609.png" alt="image-20240221230330609"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230334716.png" alt="image-20240221230334716"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230338902.png" alt="image-20240221230338902"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230342790.png" alt="image-20240221230342790"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230346311.png" alt="image-20240221230346311"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230352241.png" alt="image-20240221230352241"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230357000.png" alt="image-20240221230357000"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230401685.png" alt="image-20240221230401685"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230421883.png" alt="image-20240221230421883"><img src="/./../imgs/%E9%80%92%E5%BD%92/image-20240221230426028.png" alt="image-20240221230426028"></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E6%A8%A1%E6%8B%9F/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E6%A8%A1%E6%8B%9F/" itemprop="url">模拟</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:01:43+08:00">2024-02-21 23:01:43</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230203001.png" alt="image-20240221230203001"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230207880.png" alt="image-20240221230207880"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230213716.png" alt="image-20240221230213716"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230217450.png" alt="image-20240221230217450"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230221651.png" alt="image-20240221230221651"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230225216.png" alt="image-20240221230225216"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230231815.png" alt="image-20240221230231815"><img src="/./../imgs/%E6%A8%A1%E6%8B%9F/image-20240221230237070.png" alt="image-20240221230237070"></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="article post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/21/%E6%9E%9A%E4%B8%BE/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="zdx">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Actz">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2024/02/21/%E6%9E%9A%E4%B8%BE/" itemprop="url">枚举</a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-21T23:01:00+08:00">2024-02-21 23:01:00</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">第二章：基础算法</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础算法</span></a></span>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230115927.png" alt="image-20240221230115927"><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230120545.png" alt="image-20240221230120545"><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230125716.png" alt="image-20240221230125716"><img src="/./../imgs/%E6%9E%9A%E4%B8%BE/image-20240221230130289.png" alt="image-20240221230130289"></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-angle-left" aria-label="Previous Page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-angle-right" aria-label="Next Page"></i></a>
   </nav>
+  
+  
+</div>
 
-
-
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
+  <div class="search-result-box" id="search-result"></div>
   
-
-
-
-
-<div id="settings-container">
-  <div id="dark-mode">dark</div>
-  <div id="sans-font">sans</div>
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.png" alt="zdx">
+  
+  <h1 class="author-name">zdx</h1>
+  <h2 class="author-description"></h2>
+  <div class="site-count">
+    
+    
+    
+    
+    <div class="archives-count count-block">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">72</a></div>
+    </div>
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
 </div>
-<script type="text/javascript">
-let d=document,r=d.documentElement.style,f=r.setProperty.bind(r),l=localStorage,s=l.getItem('s')||(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches),n=l.getItem('n'),m=d.getElementById("dark-mode"),b=()=>{f('--bg-color','#fafafa');f('--code-bg-color','#f4f4f4');f('--text-color','#212121');f('--secondary-color','#808080');f('--tertiary-color','#b0b0b0');f('--link-color','#b5c8cf');f('--link-hover-color','#618794');f('--link-bg-color','#dae4e7');f('--selection-color','#dae4e7');m.innerHTML="dark"},c=()=>{f('--bg-color','#212121');f('--code-bg-color','#292929');f('--text-color','#fff');f('--secondary-color','#c0c0c0');f('--tertiary-color','#6e6e6e');f('--link-color','#4d6b75');f('--link-hover-color','#96b1bb');f('--link-bg-color','#5d828e');f('--selection-color','#acc1c9');m.innerHTML="light"},o=d.getElementById("sans-font"),e=()=>{f('--body-stack','"Lora", "Georgia", "Times New Roman", serif');o.innerHTML="sans"},g=()=>{f('--body-stack','"Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif');o.innerHTML="serif"};m.onclick=()=>{if(s==2){s=1;l.setItem('s',s);c()}else{s=2;l.setItem('s',s);b()}};o.onclick=()=>{if(n==2){n=1;l.setItem('n',n);g()}else{n=2;l.setItem('n',n);e()}};if(!s){s=2;l.setItem('s',2)};if(s==1){c()};if(!n){n=2;l.setItem('n',2)};if(n==1){g()};
-</script>
 
 
+  <div class="sidebar-sticky">
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><i class="far fa-address-card"></i>Social Links</p></div>
+      <ul>
+        
+        <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
+        
+        <li><i class="fab fa-github"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><i class="fas fa-link"></i>Blogroll</div>
+      <ul>
+        
+        <li><i class="fas fa-link"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+        
+        <li><i class="fas fa-link"></i><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
 
 
-</body>
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">zdx</span><span class="year"><i class="far fa-copyright"></i>2024</span>
+        </div>
+        
+        <div class="busuanzi">
+          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
+        </div>
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
 </html>
