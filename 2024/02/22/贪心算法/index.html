@@ -1,238 +1,305 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     
-    <meta name="theme-color" content="#33363b">
-    <meta name="msapplication-TileColor" content="#33363b">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     
-    
-    
-    
-    <meta name="keywords" content="Life, ARIA, Hexo">
-    
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
     
     
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
     
     
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     
+        <link rel="shortcut icon" href="/icons/favicon.ico">
     
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    
-    
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
-    
-    
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    
-    
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    
-    
-    <link rel="alternate" href="/atom.xml" title="Actz" type="application/atom+xml" />
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
-    
-    
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    
-    
-<link rel="stylesheet" type="text/css" href="/css/page.css">
-<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-    <link rel="stylesheet" type="text/css" href="/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
-    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script defer type="text/javascript" src="/js/util.js"></script>
-    <script defer type="text/javascript" src="/js/clipboard.min.js"></script>
-    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
-    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
-    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
-    
-    <script defer src="/js/busuanzi.pure.mini.js"></script>
     
     
-    <script defer type="text/javascript" src="/js/search.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-      var searchPath = "search.xml";
-      if (searchPath.length === 0) {
-        searchPath = "search.xml";
-      }
-      var path = "/" + searchPath;
-      searchFunc(path, "search-input", "search-result");
-    });
-    </script>
-    
-    
-    <script defer type="text/javascript" src="/js/index.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-      var cb = null;
-      var els = $(".post figure.highlight");
-      if (els.length) {
-        // Enabled Hexo highlight line number.
-        $(els).each(function (i, e) {
-          // $(e).before("<button class=\"copy button\">Copy</button>");
-          $(e).before([
-            "<div class=\"code-titlebar\">",
-              "<div class=\"titlebar-left\">",
-                "<button class=\"copy\" aria-label=\"Copy\"><i class=\"far fa-copy\"></i></button>",
-              "</div>",
-              "<div class=\"titlebar-center\">",
-                "code",
-              "</div>",
-              "<div class=\"titlebar-right\">",
-                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
-                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
-                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
-              "</div>",
-            "</div>"
-          ].join(""));
-        });
-        cb = new ClipboardJS("button.copy", {
-          "target": function (trigger) {
-              // Get target element by DOM API.
-              return trigger.parentNode.parentNode.nextElementSibling.firstChild.firstChild.firstChild.lastChild.firstChild.firstChild;
-          }
-        });
-      } else {
-        // Disabled Hexo highlight line number.
-        els = $(".post pre code");
-        $(els).each(function (i, e) {
-          // Add button before pre, not code.
-          // $(e).parent().before("<button class=\"copy button\">Copy</button>");
-          $(e).before([
-            "<div class=\"code-titlebar\">",
-              "<div class=\"titlebar-left\">",
-                "<button class=\"copy\" aria-label=\"Copy\"><i class=\"far fa-copy\"></i></button>",
-              "</div>",
-              "<div class=\"titlebar-center\">",
-                "code",
-              "</div>",
-              "<div class=\"titlebar-right\">",
-                "<button class=\"button-dot dot-minimize\" aria-label=\"Decoration\"></button>",
-                "<button class=\"button-dot dot-maximize\" aria-label=\"Decoration\"></button>",
-                "<button class=\"button-dot dot-close\" aria-label=\"Decoration\"></button>",
-              "</div>",
-            "</div>"
-          ].join(""));
-        });
-        cb = new ClipboardJS("button.copy", {
-          "target": function (trigger) {
-              // Get target element by DOM API.
-              return trigger.parentNode.parentNode.nextElementSibling;
-          }
-        });
-      }
-      cb.on("success", function (e) {
-        e.clearSelection();
-        var trigger = e.trigger;
-        // Change button text as a user tip.
-        trigger.innerHTML = "<i class=\"far fa-check-square\"></i>";
-        $(trigger).addClass("copied");
-        // Change button text back;
-        setTimeout(function () {
-          trigger.innerHTML = "<i class=\"far fa-copy\"></i>";
-          $(trigger).removeClass("copied");
-        }, 1500);
-      });
-    });
-    </script>
-    
-    <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>贪心算法 | Actz</title>
-  <meta name="generator" content="Hexo 7.1.1"></head>
-  <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN"  data-spy="scroll" data-target=".list-group">
-    
-<header id="header" class="header" style="background: #33363b;">
-  <div class="container">
-    <div class="header-container">
-      <div class="header-title">
-        <h1 class="title"><a href="/">Actz</a></h1>
-        <h2 class="subtitle"></h2>
-      </div>
-      
-      <div class="logo">
-        <img src="/images/logo.png" alt="logo">
-      </div>
-      
-    </div>
-    <nav id="nav" class="nav">
-      <a id="nav-toggle" class="nav-toggle" aria-hidden="true"><i class="fas fa-bars" aria-label="Toggle Navbar"></i></a>
-      <ul id="menu" role="menubar" aria-hidden="false">
         
-        <li role="menuitem"><a href="/"><i class="fas fa-home"></i><span class="menu-text">首页</span></a></li>
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
         
-        <li role="menuitem"><a href="/archives/"><i class="fas fa-archive"></i><span class="menu-text">归档</span></a></li>
+            贪心算法 | Actz
         
-        <li role="menuitem"><a href="/categories/"><i class="fas fa-th-list"></i><span class="menu-text">分类</span></a></li>
-        
-        <li role="menuitem"><a href="/tags/"><i class="fas fa-tags"></i><span class="menu-text">标签</span></a></li>
-        
-        <li role="menuitem"><a href="/about/"><i class="fas fa-user-edit"></i><span class="menu-text">关于</span></a></li>
-        
-      </ul>
-    </nav>
+    </title>
+    
+    
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Actz" type="application/atom+xml">
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">Actz</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
   </div>
 </header>
 
-
-    <main id="main" class="main">
-      <div class="container">
-        <div class="main-container">
-          <div class="content">
-            
-<div id="post" class="page">
+<div class="mdui-dialog" id="search">
   
-  <article class="article post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-       <meta itemprop="name" content="zdx">
-       <meta itemprop="description" content="">
-       <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-       <meta itemprop="name" content="Actz">
-      </span>
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">贪心算法</h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2024-02-22T17:38:20+08:00">2024-02-22 17:38:20</time></span>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider divider">|</span>
-        
-        <span class="post-categories">
-          
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">蓝桥杯冲刺营</span></a></span><i class="fas fa-angle-right"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/9-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">9.贪心算法</span></a></span>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-main" itemprop="articleBody">
-      <h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><p>贪心算法（Greedy algorithm），又称贪婪算法。是一种在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择，从而使得问题得到全局最优解。</p>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">zdx</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:xxx@xxx.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://your.url" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2024-02-22
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2024-02-22
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/">蓝桥杯冲刺营</a> > <a class="category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%86%B2%E5%88%BA%E8%90%A5/9-%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">9.贪心算法</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=贪心算法&url=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/&pic=https://actz123.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=贪心算法&url=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/&via=zdx" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/&title=贪心算法" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Actz&title=贪心算法&summary=&pics=https://actz123.github.io/null&url=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://actz123.github.io/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/&text=贪心算法" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/ >蓝桥杯备赛</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h1 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h1><p>贪心算法（Greedy algorithm），又称贪婪算法。是一种在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择，从而使得问题得到全局最优解。</p>
 <p>贪心的算法的设计就是要遵循某种规则，不断地选取当前最优解的算法设计方法。这节实验将会通过多个问题的来讲解贪心算法。</p>
 <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
 <li>贪心算法的基本概念</li>
@@ -257,7 +324,7 @@
 </ol>
 <p><strong>伪代码：</strong></p>
 <p>关于 Question Q：</p>
-<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(Q.hasNextStep)</span><br><span class="line">&#123;</span><br><span class="line">    Select(Q.nowBestSelect);</span><br><span class="line">    Q.NextStep</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Select(Q.nowBestSelect);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(Q.hasNextStep)</span><br><span class="line">&#123;</span><br><span class="line">    Select(Q.nowBestSelect);</span><br><span class="line">    Q.NextStep</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Select(Q.nowBestSelect);</span><br></pre></td></tr></table></figure>
 
 <h3 id="贪心相关题目讲解"><a href="#贪心相关题目讲解" class="headerlink" title="贪心相关题目讲解"></a>贪心相关题目讲解</h3><p>我们在正式将题目前，聊一个大家都懂的常见的知识，也是一个常见的题目。</p>
 <h4 id="找零问题"><a href="#找零问题" class="headerlink" title="找零问题"></a>找零问题</h4><p>题目如下：</p>
@@ -269,16 +336,16 @@
 <p>在第一行给出测试例个数 �<em>N</em>。</p>
 <p>代表需要找零的钱数。</p>
 <p>输入样例：</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">365</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">365</span><br></pre></td></tr></table></figure>
 
 <p><strong>输出：</strong></p>
 <p>输出解法</p>
 <p>有 55 行输出数据，每一行输出数据输出找零的金额与数量，详情看样例。</p>
 <p>输出样例：</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">100:3</span><br><span class="line">50:1</span><br><span class="line">20:0</span><br><span class="line">5:3</span><br><span class="line">1:0</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">100:3</span><br><span class="line">50:1</span><br><span class="line">20:0</span><br><span class="line">5:3</span><br><span class="line">1:0</span><br></pre></td></tr></table></figure>
 
 <p><strong>运行限制:</strong></p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最大运行时间：1s</span><br><span class="line">最大运行内存：128M</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最大运行时间：1s</span><br><span class="line">最大运行内存：128M</span><br></pre></td></tr></table></figure>
 
 <p><strong>题目解析：</strong></p>
 <p>关于这个题，如果是正常人都知道从大的钱开始找钱。这就是一种贪心的思想，将大问题转化为一个个小的子问题，每次选择最大的钱数使得总量最小。</p>
@@ -286,18 +353,18 @@
 <p>我们先看一下上一道题目的代码题解是什么。</p>
 <p><strong>答案解析：</strong></p>
 <p>C++ 解法：</p>
-<figure class="hljs highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//面值</span></span><br><span class="line"><span class="type">int</span> t[<span class="number">5</span>]=&#123;<span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//张数</span></span><br><span class="line"><span class="type">int</span> m[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        m[i]=n/t[i];</span><br><span class="line"></span><br><span class="line">        n=n%t[i];</span><br><span class="line"></span><br><span class="line">        <span class="comment">//print(&quot;%d&quot;,n);</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> N;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;N;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">change</span>(N);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d:%d\n&quot;</span>,t[i],m[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//面值</span></span><br><span class="line"><span class="type">int</span> t[<span class="number">5</span>]=&#123;<span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//张数</span></span><br><span class="line"><span class="type">int</span> m[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">change</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        m[i]=n/t[i];</span><br><span class="line"></span><br><span class="line">        n=n%t[i];</span><br><span class="line"></span><br><span class="line">        <span class="comment">//print(&quot;%d&quot;,n);</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> N;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;N;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">change</span>(N);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d:%d\n&quot;</span>,t[i],m[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Python 解法</strong></p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">t = [<span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 钱的面值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">change</span>(<span class="params">t, n</span>):</span><br><span class="line">  <span class="comment"># m是张数</span></span><br><span class="line">  m = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(t))]</span><br><span class="line">  <span class="comment"># print(m) #[0, 0, 0, 0]</span></span><br><span class="line">  <span class="keyword">for</span> i, money <span class="keyword">in</span> <span class="built_in">enumerate</span>(t):</span><br><span class="line">      <span class="comment"># print(i) #0 1 2 3</span></span><br><span class="line">      <span class="comment"># print(money)</span></span><br><span class="line">      <span class="comment"># i是当前的编号  举个例子 n是376 money是100</span></span><br><span class="line">      m[i] = n // money  <span class="comment"># 商3</span></span><br><span class="line">      <span class="comment"># n还剩多少取余</span></span><br><span class="line">      n = n % money  <span class="comment"># 取余76 76不够100的</span></span><br><span class="line">      <span class="comment"># print(m)</span></span><br><span class="line">      <span class="comment"># print(n)</span></span><br><span class="line">  <span class="keyword">return</span> m</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line">  m = change(t,N)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(m)):</span><br><span class="line">      <span class="built_in">print</span>(t[i], end=<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line"></span><br><span class="line">      <span class="built_in">print</span>(m[i])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">t = [<span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 钱的面值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">change</span>(<span class="params">t, n</span>):</span><br><span class="line">  <span class="comment"># m是张数</span></span><br><span class="line">  m = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(t))]</span><br><span class="line">  <span class="comment"># print(m) #[0, 0, 0, 0]</span></span><br><span class="line">  <span class="keyword">for</span> i, money <span class="keyword">in</span> <span class="built_in">enumerate</span>(t):</span><br><span class="line">      <span class="comment"># print(i) #0 1 2 3</span></span><br><span class="line">      <span class="comment"># print(money)</span></span><br><span class="line">      <span class="comment"># i是当前的编号  举个例子 n是376 money是100</span></span><br><span class="line">      m[i] = n // money  <span class="comment"># 商3</span></span><br><span class="line">      <span class="comment"># n还剩多少取余</span></span><br><span class="line">      n = n % money  <span class="comment"># 取余76 76不够100的</span></span><br><span class="line">      <span class="comment"># print(m)</span></span><br><span class="line">      <span class="comment"># print(n)</span></span><br><span class="line">  <span class="keyword">return</span> m</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line">  m = change(t,N)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(m)):</span><br><span class="line">      <span class="built_in">print</span>(t[i], end=<span class="string">&#x27;:&#x27;</span>)</span><br><span class="line"></span><br><span class="line">      <span class="built_in">print</span>(m[i])</span><br></pre></td></tr></table></figure>
 
 <p><strong>Java 解法</strong></p>
-<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Integer.max;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//面值</span></span><br><span class="line">  <span class="keyword">static</span>  <span class="type">int</span> t[] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//张数</span></span><br><span class="line">  <span class="keyword">static</span> <span class="type">int</span> m[] = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">change</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">          m[i] = n / t[i];</span><br><span class="line"></span><br><span class="line">          n = n % t[i];</span><br><span class="line"></span><br><span class="line">          <span class="comment">//print(&quot;%d&quot;,n);</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="type">int</span> N;</span><br><span class="line"></span><br><span class="line">      <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">      N = in.nextInt();</span><br><span class="line"></span><br><span class="line">      change(N);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">          System.out.println(String.format(<span class="string">&quot;%d:%d&quot;</span>, t[i], m[i]));</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Integer.max;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">//面值</span></span><br><span class="line">  <span class="keyword">static</span>  <span class="type">int</span> t[] = <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//张数</span></span><br><span class="line">  <span class="keyword">static</span> <span class="type">int</span> m[] = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">change</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">          m[i] = n / t[i];</span><br><span class="line"></span><br><span class="line">          n = n % t[i];</span><br><span class="line"></span><br><span class="line">          <span class="comment">//print(&quot;%d&quot;,n);</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="type">int</span> N;</span><br><span class="line"></span><br><span class="line">      <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">      N = in.nextInt();</span><br><span class="line"></span><br><span class="line">      change(N);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">          System.out.println(String.format(<span class="string">&quot;%d:%d&quot;</span>, t[i], m[i]));</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="蓝桥大学的小-B-同学宿舍"><a href="#蓝桥大学的小-B-同学宿舍" class="headerlink" title="蓝桥大学的小 B 同学宿舍"></a>蓝桥大学的小 B 同学宿舍</h3><p><strong>题目如下:</strong></p>
 <p>小 <code>B</code> 的宿舍楼沿着走廊南北向的两边各有 200200 个房间。</p>
 <p>如图所示：</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[房间1][房间3][房间5][房间7][房间9 ]...[房间399]</span><br><span class="line">----------------------------------------------</span><br><span class="line">                   走廊</span><br><span class="line">----------------------------------------------</span><br><span class="line">[房间2][房间4][房间6][房间8][房间10]...[房间400]</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[房间1][房间3][房间5][房间7][房间9 ]...[房间399]</span><br><span class="line">----------------------------------------------</span><br><span class="line">                   走廊</span><br><span class="line">----------------------------------------------</span><br><span class="line">[房间2][房间4][房间6][房间8][房间10]...[房间400]</span><br></pre></td></tr></table></figure>
 
 <p>最近，由于转专业和专业分流的原因，宿舍将迎来新的调整，以便组成新的班级后方便管理。</p>
 <p>但是由于走廊狭窄，走廊里只能通过一个搬运的物品（可以同向也可以反向），因此必须指定高效的搬运计划。</p>
@@ -310,34 +377,34 @@
 <p>输入数据有 �<em>T</em> 组测试例，在第一行给出测试例个数 �<em>T</em>。</p>
 <p>每个测试例的第一行是一个整数 �<em>N</em>（1≤�≤2001≤<em>N</em>≤200)，表示要搬运行李的人数。接下来 �<em>N</em> 行，每行两个正整数 �<em>s</em> 和 �<em>t</em>，表示一个人，将行李是从房间号码 �<em>s</em> 移到到房间号码 �<em>t</em>。</p>
 <p>输入样例:</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4</span><br><span class="line">10 20</span><br><span class="line">30 40</span><br><span class="line">50 60</span><br><span class="line">70 80</span><br><span class="line">2</span><br><span class="line">1 3</span><br><span class="line">2 200</span><br><span class="line">3</span><br><span class="line">10 100</span><br><span class="line">20 80</span><br><span class="line">30 50</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">4</span><br><span class="line">10 20</span><br><span class="line">30 40</span><br><span class="line">50 60</span><br><span class="line">70 80</span><br><span class="line">2</span><br><span class="line">1 3</span><br><span class="line">2 200</span><br><span class="line">3</span><br><span class="line">10 100</span><br><span class="line">20 80</span><br><span class="line">30 50</span><br></pre></td></tr></table></figure>
 
 <p><strong>输出：</strong></p>
 <p>输出解法</p>
 <p>每组输入都有一行输出数据，为一整数 �<em>T</em>，表示完成任务所花费的最小时间。</p>
 <p>输出样例:</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">20</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">20</span><br><span class="line">30</span><br></pre></td></tr></table></figure>
 
 <p><strong>运行限制:</strong></p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最大运行时间：1s</span><br><span class="line">最大运行内存：128M</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最大运行时间：1s</span><br><span class="line">最大运行内存：128M</span><br></pre></td></tr></table></figure>
 
 <p><strong>题目解析：</strong></p>
 <p>不难发现，相对应的两个房间其实是占用一段走廊的，我们可以将将房间号映射为走廊号，然后再考虑上面的解析。</p>
 <p>该题属于贪心算法，因为它尽可能使搬运办公桌同时进行，以便使单独安排的搬运次数最少。这样用的时间最少，即所用最少时间为不能同时搬运桌子的次数，即某一段走廊使用次数最多（贪心标准）即为即为最少搬运时间。 <strong>答案解析：</strong></p>
 <p>C++ 解法：</p>
-<figure class="hljs highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> move[<span class="number">200</span>];</span><br><span class="line"><span class="comment">//搬运次数</span></span><br><span class="line">    <span class="type">int</span> N;</span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//每次搬运的起点和终点</span></span><br><span class="line">        <span class="type">int</span> from, to;</span><br><span class="line">        <span class="type">int</span> maxAns=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">        <span class="built_in">memset</span>(move, <span class="number">0</span>, <span class="built_in">sizeof</span>(move));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;from, &amp;to);</span><br><span class="line"><span class="comment">//将房间号映射为走廊号</span></span><br><span class="line">            from = (from - <span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">            to = (to - <span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line"><span class="comment">//确保from&lt;to，C++使用：swap(from, to)</span></span><br><span class="line">            <span class="keyword">if</span>(from &gt; to)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> temp = from;</span><br><span class="line">                from = to;</span><br><span class="line">                to = temp;</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//统计占用走廊情况，并统计最大值</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = from; j &lt;= to; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                move[j]++;</span><br><span class="line">                maxAns=<span class="built_in">max</span>(maxAns,move[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;maxAns*<span class="number">10</span>&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> move[<span class="number">200</span>];</span><br><span class="line"><span class="comment">//搬运次数</span></span><br><span class="line">    <span class="type">int</span> N;</span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//每次搬运的起点和终点</span></span><br><span class="line">        <span class="type">int</span> from, to;</span><br><span class="line">        <span class="type">int</span> maxAns=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">        <span class="built_in">memset</span>(move, <span class="number">0</span>, <span class="built_in">sizeof</span>(move));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;from, &amp;to);</span><br><span class="line"><span class="comment">//将房间号映射为走廊号</span></span><br><span class="line">            from = (from - <span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">            to = (to - <span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line"><span class="comment">//确保from&lt;to，C++使用：swap(from, to)</span></span><br><span class="line">            <span class="keyword">if</span>(from &gt; to)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> temp = from;</span><br><span class="line">                from = to;</span><br><span class="line">                to = temp;</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//统计占用走廊情况，并统计最大值</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = from; j &lt;= to; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                move[j]++;</span><br><span class="line">                maxAns=<span class="built_in">max</span>(maxAns,move[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;maxAns*<span class="number">10</span>&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Python 解法</strong></p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">T = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    T = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    <span class="keyword">while</span> (T &gt; <span class="number">0</span>):</span><br><span class="line">        <span class="comment"># 搬运次数</span></span><br><span class="line">        N = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 起点与终点</span></span><br><span class="line">        From = <span class="number">0</span></span><br><span class="line">        To = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 最大搬运次数</span></span><br><span class="line">        maxAns = <span class="number">0</span></span><br><span class="line">        T -= <span class="number">1</span></span><br><span class="line">        move = [<span class="number">0</span>] * <span class="number">205</span></span><br><span class="line">        N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line"></span><br><span class="line">            From, To = <span class="built_in">input</span>().split()</span><br><span class="line">            From = <span class="built_in">int</span>(From)</span><br><span class="line">            To = <span class="built_in">int</span>(To)</span><br><span class="line">            From = <span class="built_in">int</span>((From - <span class="number">1</span>) / <span class="number">2</span>)</span><br><span class="line">            To = <span class="built_in">int</span>((To - <span class="number">1</span>) / <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> From &gt; To:</span><br><span class="line">                temp = From</span><br><span class="line">                From = To</span><br><span class="line">                To = temp</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(From, To + <span class="number">1</span>):</span><br><span class="line">                move[j] += <span class="number">1</span></span><br><span class="line">                maxAns = <span class="built_in">max</span>(move[j], maxAns)</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(maxAns*<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">T = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    T = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    <span class="keyword">while</span> (T &gt; <span class="number">0</span>):</span><br><span class="line">        <span class="comment"># 搬运次数</span></span><br><span class="line">        N = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 起点与终点</span></span><br><span class="line">        From = <span class="number">0</span></span><br><span class="line">        To = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 最大搬运次数</span></span><br><span class="line">        maxAns = <span class="number">0</span></span><br><span class="line">        T -= <span class="number">1</span></span><br><span class="line">        move = [<span class="number">0</span>] * <span class="number">205</span></span><br><span class="line">        N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line"></span><br><span class="line">            From, To = <span class="built_in">input</span>().split()</span><br><span class="line">            From = <span class="built_in">int</span>(From)</span><br><span class="line">            To = <span class="built_in">int</span>(To)</span><br><span class="line">            From = <span class="built_in">int</span>((From - <span class="number">1</span>) / <span class="number">2</span>)</span><br><span class="line">            To = <span class="built_in">int</span>((To - <span class="number">1</span>) / <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> From &gt; To:</span><br><span class="line">                temp = From</span><br><span class="line">                From = To</span><br><span class="line">                To = temp</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(From, To + <span class="number">1</span>):</span><br><span class="line">                move[j] += <span class="number">1</span></span><br><span class="line">                maxAns = <span class="built_in">max</span>(move[j], maxAns)</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(maxAns*<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 
 <p><strong>Java 解法</strong></p>
-<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Integer.max;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">      <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="comment">//搬运次数</span></span><br><span class="line">      <span class="type">int</span> N;</span><br><span class="line">      <span class="type">int</span> T;</span><br><span class="line">      T = in.nextInt();</span><br><span class="line">      <span class="keyword">while</span> (T &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          T--;</span><br><span class="line"></span><br><span class="line">          <span class="comment">//每次搬运的起点和终点</span></span><br><span class="line">          <span class="type">int</span> from, to;</span><br><span class="line">          <span class="type">int</span> <span class="variable">maxAns</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">          N = in.nextInt();</span><br><span class="line">          <span class="type">int</span>[] move = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">205</span>];</span><br><span class="line"></span><br><span class="line">          <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">              from=in.nextInt();</span><br><span class="line">              to=in.nextInt();</span><br><span class="line"><span class="comment">//将房间号映射为走廊号</span></span><br><span class="line">              from = (from - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">              to = (to - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line"><span class="comment">//确保from&lt;to，C++使用：swap(from, to)</span></span><br><span class="line">              <span class="keyword">if</span> (from &gt; to) &#123;</span><br><span class="line">                  <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> from;</span><br><span class="line">                  from = to;</span><br><span class="line">                  to = temp;</span><br><span class="line">              &#125;</span><br><span class="line"><span class="comment">//统计占用走廊情况，并统计最大值</span></span><br><span class="line">              <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> from; j &lt;= to; j++) &#123;</span><br><span class="line">                  move[j]++;</span><br><span class="line">                  maxAns = max(maxAns, move[j]);</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          System.out.println( maxAns * <span class="number">10</span>);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Integer.max;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">      <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="comment">//搬运次数</span></span><br><span class="line">      <span class="type">int</span> N;</span><br><span class="line">      <span class="type">int</span> T;</span><br><span class="line">      T = in.nextInt();</span><br><span class="line">      <span class="keyword">while</span> (T &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          T--;</span><br><span class="line"></span><br><span class="line">          <span class="comment">//每次搬运的起点和终点</span></span><br><span class="line">          <span class="type">int</span> from, to;</span><br><span class="line">          <span class="type">int</span> <span class="variable">maxAns</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">          N = in.nextInt();</span><br><span class="line">          <span class="type">int</span>[] move = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">205</span>];</span><br><span class="line"></span><br><span class="line">          <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">              from=in.nextInt();</span><br><span class="line">              to=in.nextInt();</span><br><span class="line"><span class="comment">//将房间号映射为走廊号</span></span><br><span class="line">              from = (from - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">              to = (to - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line"><span class="comment">//确保from&lt;to，C++使用：swap(from, to)</span></span><br><span class="line">              <span class="keyword">if</span> (from &gt; to) &#123;</span><br><span class="line">                  <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> from;</span><br><span class="line">                  from = to;</span><br><span class="line">                  to = temp;</span><br><span class="line">              &#125;</span><br><span class="line"><span class="comment">//统计占用走廊情况，并统计最大值</span></span><br><span class="line">              <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> from; j &lt;= to; j++) &#123;</span><br><span class="line">                  move[j]++;</span><br><span class="line">                  maxAns = max(maxAns, move[j]);</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          System.out.println( maxAns * <span class="number">10</span>);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="可拆分背包问题之贪心的自助餐"><a href="#可拆分背包问题之贪心的自助餐" class="headerlink" title="可拆分背包问题之贪心的自助餐"></a>可拆分背包问题之贪心的自助餐</h3><p><strong>题目如下:</strong></p>
 <p>小 �<em>B</em> 同学呢，想去吃自助餐，但是他是那种比较节俭的的人，既不想浪费食物，又想尽可能吃的贵一点，他于是私下里做了调查。</p>
 <p>小蓝餐厅的自助餐有 �<em>n</em> 种食材，每种食材都有它的价格。</p>
 <p>而且也能估计出每一份的重量，所以他列了一个表格。</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">红烧牛肉  30元    300g</span><br><span class="line">油闷大虾  8元     5g</span><br><span class="line">四喜丸子  4元     8g</span><br><span class="line">三文鱼    5元     3g</span><br><span class="line">排骨      18元    200g</span><br><span class="line">麻辣兔头  20元    120g</span><br><span class="line">高汤海参  40元    70g</span><br><span class="line">扇贝粉丝  8元     32g</span><br><span class="line">牛排      79元    240g</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">红烧牛肉  30元    300g</span><br><span class="line">油闷大虾  8元     5g</span><br><span class="line">四喜丸子  4元     8g</span><br><span class="line">三文鱼    5元     3g</span><br><span class="line">排骨      18元    200g</span><br><span class="line">麻辣兔头  20元    120g</span><br><span class="line">高汤海参  40元    70g</span><br><span class="line">扇贝粉丝  8元     32g</span><br><span class="line">牛排      79元    240g</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
 <p>现在小 �<em>B</em> 想知道在他到底最多吃多少钱的菜品。</p>
 <p>假设自助餐厅的菜品供应同样的菜品每个人只能取一份。</p>
@@ -351,15 +418,15 @@
 <p>第一个数 �[�]<em>V</em>[<em>i</em>] 是第 �<em>i</em> 个菜品的价值（0&lt;&#x3D;�[�]&lt;&#x3D;10000）（0&lt;&#x3D;<em>v</em>[<em>i</em>]&lt;&#x3D;10000）</p>
 <p>第二个数 �[�]<em>V</em>[<em>i</em>] 是第 �<em>i</em> 个菜品的质量（0&lt;&#x3D;�[�]&lt;&#x3D;10000）（0&lt;&#x3D;<em>w</em>[<em>i</em>]&lt;&#x3D;10000）</p>
 <p>输入样例:</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">20 1000</span><br><span class="line">1 22</span><br><span class="line">2 43</span><br><span class="line">123 214</span><br><span class="line">12 2</span><br><span class="line">123 432</span><br><span class="line">21 223</span><br><span class="line">22 16</span><br><span class="line">77 49</span><br><span class="line">34 78</span><br><span class="line">34 9</span><br><span class="line">43 677</span><br><span class="line">21 34</span><br><span class="line">23 23</span><br><span class="line">12 56</span><br><span class="line">332 56</span><br><span class="line">21 99</span><br><span class="line">123 545</span><br><span class="line">389 33</span><br><span class="line">12 999</span><br><span class="line">23 88</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">20 1000</span><br><span class="line">1 22</span><br><span class="line">2 43</span><br><span class="line">123 214</span><br><span class="line">12 2</span><br><span class="line">123 432</span><br><span class="line">21 223</span><br><span class="line">22 16</span><br><span class="line">77 49</span><br><span class="line">34 78</span><br><span class="line">34 9</span><br><span class="line">43 677</span><br><span class="line">21 34</span><br><span class="line">23 23</span><br><span class="line">12 56</span><br><span class="line">332 56</span><br><span class="line">21 99</span><br><span class="line">123 545</span><br><span class="line">389 33</span><br><span class="line">12 999</span><br><span class="line">23 88</span><br></pre></td></tr></table></figure>
 
 <p><strong>输出：</strong></p>
 <p>输出一行数据，表示最大的价值，保留三位小数。</p>
 <p>输出样例：</p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1204.114</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1204.114</span><br></pre></td></tr></table></figure>
 
 <p><strong>运行限制:</strong></p>
-<figure class="hljs highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最大运行时间：1s</span><br><span class="line">最大运行内存：128M</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">最大运行时间：1s</span><br><span class="line">最大运行内存：128M</span><br></pre></td></tr></table></figure>
 
 <p><strong>题目解析：</strong></p>
 <p>可拆分背包的一般解法为：</p>
@@ -369,83 +436,166 @@
 <p>于是这个题，就要用的我们之前学的知识了。这里因为要整体排序，所以要先创建一个类，然后自定义 <code>cmp</code> 函数，在使用 <code>sort</code> 排序。</p>
 <p><strong>答案解析：</strong></p>
 <p>C++ 解法：</p>
-<figure class="hljs highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//需要一个结构体，通过性价比，能够查找到重量和价值。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//做一个排序，需要将性价比由高到底排序，排序的过程中重量和（价值）要对应上</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Food</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> w;</span><br><span class="line">    <span class="type">double</span> v;</span><br><span class="line">    <span class="type">double</span> aver;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//C++一般用 struct，因为默认都是public的</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Food a, Food b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.aver &gt; b.aver;</span><br><span class="line">    <span class="comment">//助记大于号就是从大到小排序，小于号就是从小到大排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Food foods[<span class="number">1009</span>];</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">double</span> C;</span><br><span class="line">    <span class="type">double</span> Value = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; C;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; foods[i].v&gt;&gt;foods[i].w;</span><br><span class="line">        <span class="comment">//求性价比</span></span><br><span class="line">        foods[i].aver = foods[i].v / foods[i].w;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; foods[i].aver &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//性价比排序</span></span><br><span class="line">    <span class="built_in">sort</span>(foods, foods + n, cmp);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//当背包（肚子）能装下所有物品（菜）时，直接输出所有的物品（菜品）价值之和</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        sum += foods[i].w;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sum &lt;= C)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">            Value += foods[j].v;</span><br><span class="line">        <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">        cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">3</span>) &lt;&lt;Value &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//当背包（肚子）不能装下所有物品时应该由性价比的顺序，选择装入的物品</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (foods[i].w &lt;= C)</span><br><span class="line">        &#123;</span><br><span class="line">            Value =Value + foods[i].v;</span><br><span class="line">            C = C - foods[i].w;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//直接将剩余的C加入即可</span></span><br><span class="line">            Value =Value + C * foods[i].aver;</span><br><span class="line">            C = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (C == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">    cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">3</span>) &lt;&lt;Value &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//需要一个结构体，通过性价比，能够查找到重量和价值。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//做一个排序，需要将性价比由高到底排序，排序的过程中重量和（价值）要对应上</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Food</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> w;</span><br><span class="line">    <span class="type">double</span> v;</span><br><span class="line">    <span class="type">double</span> aver;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//C++一般用 struct，因为默认都是public的</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Food a, Food b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.aver &gt; b.aver;</span><br><span class="line">    <span class="comment">//助记大于号就是从大到小排序，小于号就是从小到大排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Food foods[<span class="number">1009</span>];</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">double</span> C;</span><br><span class="line">    <span class="type">double</span> Value = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; C;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; foods[i].v&gt;&gt;foods[i].w;</span><br><span class="line">        <span class="comment">//求性价比</span></span><br><span class="line">        foods[i].aver = foods[i].v / foods[i].w;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; foods[i].aver &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//性价比排序</span></span><br><span class="line">    <span class="built_in">sort</span>(foods, foods + n, cmp);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//当背包（肚子）能装下所有物品（菜）时，直接输出所有的物品（菜品）价值之和</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        sum += foods[i].w;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sum &lt;= C)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">            Value += foods[j].v;</span><br><span class="line">        <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">        cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">3</span>) &lt;&lt;Value &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//当背包（肚子）不能装下所有物品时应该由性价比的顺序，选择装入的物品</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (foods[i].w &lt;= C)</span><br><span class="line">        &#123;</span><br><span class="line">            Value =Value + foods[i].v;</span><br><span class="line">            C = C - foods[i].w;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//直接将剩余的C加入即可</span></span><br><span class="line">            Value =Value + C * foods[i].aver;</span><br><span class="line">            C = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (C == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">    cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">3</span>) &lt;&lt;Value &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Python 解法</strong></p>
-<figure class="hljs highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Food</span>:</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, w, v, aver</span>):</span><br><span class="line">       self.w = w</span><br><span class="line">       self.v = v</span><br><span class="line">       self.aver = aver</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">       <span class="comment"># print(11)</span></span><br><span class="line">       <span class="keyword">return</span> <span class="built_in">repr</span>((self.w, self.v, self.aver))</span><br><span class="line"></span><br><span class="line"><span class="comment"># def cmp(foodA: Food, foodB: Food):</span></span><br><span class="line"><span class="comment">#     if foodA.aver &gt;= foodB.aver:</span></span><br><span class="line"><span class="comment">#         return True</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     else:</span></span><br><span class="line"><span class="comment">#         return False</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 当然 python 的 sort 是不需要写 cmp 函数的，这里我们使用 sorted 就不用 cmp 函数了</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">   foods = []</span><br><span class="line">   C = <span class="number">0.0</span></span><br><span class="line">   Value = <span class="number">0.0</span></span><br><span class="line">   n, C = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">       food = Food(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">       food.v, food.w = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())</span><br><span class="line">       food.aver = food.v / food.w</span><br><span class="line">       foods.append(food)</span><br><span class="line">       <span class="comment"># print(food.aver)</span></span><br><span class="line">       <span class="comment"># print(foods)</span></span><br><span class="line">   <span class="comment"># 性价比排序</span></span><br><span class="line">   foods.sort(key=<span class="keyword">lambda</span> f: f.aver, reverse=<span class="literal">True</span>)</span><br><span class="line">   <span class="comment"># for i in range(n):</span></span><br><span class="line">   <span class="comment">#     print(foods[i].aver)</span></span><br><span class="line">   <span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">       <span class="built_in">sum</span>+= foods[i].w</span><br><span class="line">   <span class="comment"># 当背包（肚子）能装下所有物品（菜）时，直接输出所有的物品（菜品）价值之和</span></span><br><span class="line">   <span class="keyword">if</span> <span class="built_in">sum</span>&lt;=C :</span><br><span class="line">       <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">           Value+=foods[i].v;</span><br><span class="line">       <span class="built_in">print</span>(Value)</span><br><span class="line">   <span class="comment"># 当背包（肚子）不能装下所有物品时应该由性价比的顺序，选择装入的物品</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> foods[i].w&lt;=C:</span><br><span class="line">               Value=Value+foods[i].v</span><br><span class="line">               C=C-foods[i].w</span><br><span class="line">           <span class="comment">#     直接将剩余的C加入即可</span></span><br><span class="line">           <span class="keyword">else</span>:</span><br><span class="line">               Value+=C*foods[i].aver</span><br><span class="line">               C=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> C==<span class="number">0</span>:</span><br><span class="line">               <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;%.3f&quot;</span> % Value)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Food</span>:</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, w, v, aver</span>):</span><br><span class="line">       self.w = w</span><br><span class="line">       self.v = v</span><br><span class="line">       self.aver = aver</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">       <span class="comment"># print(11)</span></span><br><span class="line">       <span class="keyword">return</span> <span class="built_in">repr</span>((self.w, self.v, self.aver))</span><br><span class="line"></span><br><span class="line"><span class="comment"># def cmp(foodA: Food, foodB: Food):</span></span><br><span class="line"><span class="comment">#     if foodA.aver &gt;= foodB.aver:</span></span><br><span class="line"><span class="comment">#         return True</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     else:</span></span><br><span class="line"><span class="comment">#         return False</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 当然 python 的 sort 是不需要写 cmp 函数的，这里我们使用 sorted 就不用 cmp 函数了</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">   foods = []</span><br><span class="line">   C = <span class="number">0.0</span></span><br><span class="line">   Value = <span class="number">0.0</span></span><br><span class="line">   n, C = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">       food = Food(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">       food.v, food.w = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())</span><br><span class="line">       food.aver = food.v / food.w</span><br><span class="line">       foods.append(food)</span><br><span class="line">       <span class="comment"># print(food.aver)</span></span><br><span class="line">       <span class="comment"># print(foods)</span></span><br><span class="line">   <span class="comment"># 性价比排序</span></span><br><span class="line">   foods.sort(key=<span class="keyword">lambda</span> f: f.aver, reverse=<span class="literal">True</span>)</span><br><span class="line">   <span class="comment"># for i in range(n):</span></span><br><span class="line">   <span class="comment">#     print(foods[i].aver)</span></span><br><span class="line">   <span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">       <span class="built_in">sum</span>+= foods[i].w</span><br><span class="line">   <span class="comment"># 当背包（肚子）能装下所有物品（菜）时，直接输出所有的物品（菜品）价值之和</span></span><br><span class="line">   <span class="keyword">if</span> <span class="built_in">sum</span>&lt;=C :</span><br><span class="line">       <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">           Value+=foods[i].v;</span><br><span class="line">       <span class="built_in">print</span>(Value)</span><br><span class="line">   <span class="comment"># 当背包（肚子）不能装下所有物品时应该由性价比的顺序，选择装入的物品</span></span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> foods[i].w&lt;=C:</span><br><span class="line">               Value=Value+foods[i].v</span><br><span class="line">               C=C-foods[i].w</span><br><span class="line">           <span class="comment">#     直接将剩余的C加入即可</span></span><br><span class="line">           <span class="keyword">else</span>:</span><br><span class="line">               Value+=C*foods[i].aver</span><br><span class="line">               C=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> C==<span class="number">0</span>:</span><br><span class="line">               <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;%.3f&quot;</span> % Value)</span><br></pre></td></tr></table></figure>
 
 <p><strong>Java 解法</strong></p>
-<figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Integer.max;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Food</span> &#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">public</span> <span class="type">double</span> w;</span><br><span class="line">       <span class="keyword">public</span> <span class="type">double</span> v;</span><br><span class="line">       <span class="keyword">public</span> <span class="type">double</span> aver;</span><br><span class="line"></span><br><span class="line">       Food()&#123;</span><br><span class="line">           w=<span class="number">0</span>;</span><br><span class="line">           v=<span class="number">0</span>;</span><br><span class="line">           aver=<span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">MyCmp</span> <span class="keyword">implements</span> <span class="title class_">Comparator</span>&lt;Food&gt; &#123;</span><br><span class="line"></span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">       <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Food a, Food b)</span> &#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> (a.aver &gt; b.aver)&#123;</span><br><span class="line">               <span class="keyword">return</span>  -<span class="number">1</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">           <span class="comment">//助记大于号就是从大到小排序，小于号就是从小到大排序</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">static</span> Food foods[]=<span class="keyword">new</span> <span class="title class_">Food</span>[ <span class="number">1009</span>];</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">       <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">       <span class="type">int</span> n;</span><br><span class="line">       <span class="type">double</span> C;</span><br><span class="line">       <span class="type">double</span> <span class="variable">Value</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">       n = in.nextInt();</span><br><span class="line">       C = in.nextDouble();</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">           foods[i]=<span class="keyword">new</span> <span class="title class_">Food</span>();</span><br><span class="line">           foods[i].v = in.nextDouble();</span><br><span class="line">           foods[i].w = in.nextDouble();</span><br><span class="line"></span><br><span class="line">           <span class="comment">//求性价比</span></span><br><span class="line">           foods[i].aver = foods[i].v / foods[i].w;</span><br><span class="line">           <span class="comment">//cout &lt;&lt; foods[i].aver &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//性价比排序</span></span><br><span class="line"></span><br><span class="line">       Comparator cmp=<span class="keyword">new</span> <span class="title class_">MyCmp</span>();</span><br><span class="line">       Arrays.sort(foods,<span class="number">0</span>,n,cmp);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment">//当背包（肚子）能装下所有物品（菜）时，直接输出所有的物品（菜品）价值之和</span></span><br><span class="line">       <span class="comment">//</span></span><br><span class="line">       <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">           sum += foods[i].w;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span> (sum &lt; C) &#123;</span><br><span class="line">           <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">               Value += foods[j].v;</span><br><span class="line">           <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">           System.out.print(String.format(<span class="string">&quot;%.3f&quot;</span>,Value));</span><br><span class="line">           <span class="keyword">return</span> ;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//当背包（肚子）不能装下所有物品时应该由性价比的顺序，选择装入的物品</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (foods[i].w &lt;= C) &#123;</span><br><span class="line">               Value = Value + foods[i].v;</span><br><span class="line">               C = C - foods[i].w;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="comment">//直接将剩余的C加入即可</span></span><br><span class="line">               Value = Value + C * foods[i].aver;</span><br><span class="line">               C = <span class="number">0</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span> (C == <span class="number">0</span>)</span><br><span class="line">               <span class="keyword">break</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">       System.out.print(String.format(<span class="string">&quot;%.3f&quot;</span>,Value));</span><br><span class="line">       <span class="keyword">return</span> ;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.company;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.Integer.max;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Food</span> &#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">public</span> <span class="type">double</span> w;</span><br><span class="line">       <span class="keyword">public</span> <span class="type">double</span> v;</span><br><span class="line">       <span class="keyword">public</span> <span class="type">double</span> aver;</span><br><span class="line"></span><br><span class="line">       Food()&#123;</span><br><span class="line">           w=<span class="number">0</span>;</span><br><span class="line">           v=<span class="number">0</span>;</span><br><span class="line">           aver=<span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">MyCmp</span> <span class="keyword">implements</span> <span class="title class_">Comparator</span>&lt;Food&gt; &#123;</span><br><span class="line"></span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">       <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Food a, Food b)</span> &#123;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span> (a.aver &gt; b.aver)&#123;</span><br><span class="line">               <span class="keyword">return</span>  -<span class="number">1</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">           <span class="comment">//助记大于号就是从大到小排序，小于号就是从小到大排序</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">static</span> Food foods[]=<span class="keyword">new</span> <span class="title class_">Food</span>[ <span class="number">1009</span>];</span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">       <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">       <span class="type">int</span> n;</span><br><span class="line">       <span class="type">double</span> C;</span><br><span class="line">       <span class="type">double</span> <span class="variable">Value</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">       n = in.nextInt();</span><br><span class="line">       C = in.nextDouble();</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">           foods[i]=<span class="keyword">new</span> <span class="title class_">Food</span>();</span><br><span class="line">           foods[i].v = in.nextDouble();</span><br><span class="line">           foods[i].w = in.nextDouble();</span><br><span class="line"></span><br><span class="line">           <span class="comment">//求性价比</span></span><br><span class="line">           foods[i].aver = foods[i].v / foods[i].w;</span><br><span class="line">           <span class="comment">//cout &lt;&lt; foods[i].aver &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//性价比排序</span></span><br><span class="line"></span><br><span class="line">       Comparator cmp=<span class="keyword">new</span> <span class="title class_">MyCmp</span>();</span><br><span class="line">       Arrays.sort(foods,<span class="number">0</span>,n,cmp);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment">//当背包（肚子）能装下所有物品（菜）时，直接输出所有的物品（菜品）价值之和</span></span><br><span class="line">       <span class="comment">//</span></span><br><span class="line">       <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">           sum += foods[i].w;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span> (sum &lt; C) &#123;</span><br><span class="line">           <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">               Value += foods[j].v;</span><br><span class="line">           <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">           System.out.print(String.format(<span class="string">&quot;%.3f&quot;</span>,Value));</span><br><span class="line">           <span class="keyword">return</span> ;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="comment">//当背包（肚子）不能装下所有物品时应该由性价比的顺序，选择装入的物品</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (foods[i].w &lt;= C) &#123;</span><br><span class="line">               Value = Value + foods[i].v;</span><br><span class="line">               C = C - foods[i].w;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="comment">//直接将剩余的C加入即可</span></span><br><span class="line">               Value = Value + C * foods[i].aver;</span><br><span class="line">               C = <span class="number">0</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span> (C == <span class="number">0</span>)</span><br><span class="line">               <span class="keyword">break</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">//V = floor(V * 1000.0) / 1000.0;</span></span><br><span class="line">       System.out.print(String.format(<span class="string">&quot;%.3f&quot;</span>,Value));</span><br><span class="line">       <span class="keyword">return</span> ;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h4><p>贪心算法的最主要的特征就是无后效性，就像是自助餐那个题目，如果说吃了某一样食物，就不能吃另一个食物了，那么这就有了后效性，那就不能使用贪心算法进行解决问题了。</p>
 <p>本节课举了三个贪心算法的例子进行讲解，贪心算法是算法竞赛中最入门的算法。没接触过感觉很深奥，接触过了也就那样，简单的贪心伸伸手就可以写出来，其实非常简单，大家也不要过分的担心</p>
 
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        <a class="post-tag button" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag"><i class="fas fa-tags"></i>蓝桥杯备赛</a>
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  
-  <nav class="page-nav">
-    <div class="page-nav-next page-nav-item">
-      
-      <a href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/" rel="next" title="工具函数模板"><i class="fas fa-angle-left"></i><span class="nav-title">工具函数模板</span></a>
-      
-    </div>
-    <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="prev" title="动态规划"><span class="nav-title">动态规划</span><i class="fas fa-angle-right"></i></a>
-      
-    </div>
-  </nav>
-  
-  
-</div>
-
-          </div>
-          
-          
-        </div>
-      </div>
-    </main>
-    
-<footer id="footer" class="footer" style="background: #33363b;">
-  <div class="container">
-    <div class="back-to-top">
-      <button id="back-to-top"><i class="fas fa-angle-double-up" aria-label="Back to Top"></i></button>
-    </div>
-    <div class="footer-container">
-      <div class="footer-left">
-        <div class="copyright">
-          <span class="author">zdx</span><span class="year"><i class="far fa-copyright"></i>2024</span>
-        </div>
-        
-        <div class="busuanzi">
-          <span id="busuanzi_container_site_pv"><i class="fas fa-eye" aria-label="Site Visit Count" aria-hidden="false"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user" aria-label="Site User Count" aria-hidden="false"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv" aria-label="Page Click Count" aria-hidden="false"></span></span>
-        </div>
-        
-      </div>
-      <div class="footer-right">
-        <div class="custom-info">
-          
-          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
-          
-        </div>
-        <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
-        </div>
-      </div>
-    </div>
   </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2024/02/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>动态规划</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2024/02/22/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF/">
+        <span>工具函数模板</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2024/02/22/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">贪心算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">贪心算法基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">1.1.1.</span> <span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.1.2.</span> <span class="toc-text">贪心算法的设计步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.1.3.</span> <span class="toc-text">贪心相关题目讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%BE%E9%9B%B6%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">找零问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%93%9D%E6%A1%A5%E5%A4%A7%E5%AD%A6%E7%9A%84%E5%B0%8F-B-%E5%90%8C%E5%AD%A6%E5%AE%BF%E8%88%8D"><span class="toc-number">1.1.4.</span> <span class="toc-text">蓝桥大学的小 B 同学宿舍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E6%8B%86%E5%88%86%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E4%B9%8B%E8%B4%AA%E5%BF%83%E7%9A%84%E8%87%AA%E5%8A%A9%E9%A4%90"><span class="toc-number">1.1.5.</span> <span class="toc-text">可拆分背包问题之贪心的自助餐</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">实验总结</span></a></li></ol></li></ol></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2024 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        zdx
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
 </footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-  </body>
-</html>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
