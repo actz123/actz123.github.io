@@ -1,40 +1,1167 @@
-<!DOCTYPE html><html lang="zh-CN" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Actz</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
-  font-family: Bender;
-  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
-}
-@font-face {
-  font-family: BenderLight;
-  src: local('BenderLight'), url("/font/BenderLight.ttf");
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}
-</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
- document.documentElement.setAttribute('theme-mode', 'light')
-if (window.localStorage.getItem('theme-mode') === 'dark')
- document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
- --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
- --light-background: url('/img/bk.jpg');
- --theme-encrypt-confirm: 'confirm'
-}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
-window.mermaid = mermaid;
-code.paintMermaid();
-</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
-lightGallery(document.getElementById('post-bg'), {
-  plugins: [lgZoom,lgThumbnail],
-  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
- cacheBust: false,
- selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
- switches: {'article': Pjax.switches.sideBySide},
- switchesOptions: {
-   'article': {
-     classNames: {
-       remove: "pjax-out",
-       add: "pjax-in"
-     }
-   }
- }
-});
-document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Actz" type="application/atom+xml">
-</head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div class="posts"><a class="recent-post" href="/2024/02/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">基础数据结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T14:14:01.000Z">2024-02-21</time></div><h1 class="recent-title">字符串</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">基础数据结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T14:05:06.000Z">2024-02-21</time></div><h1 class="recent-title">列表和元组</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T14:02:01.000Z">2024-02-21</time></div><h1 class="recent-title">循环嵌套</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/while%E8%AF%AD%E5%8F%A5/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T14:00:16.000Z">2024-02-21</time></div><h1 class="recent-title">while语句</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/for%E8%AF%AD%E5%8F%A5/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T13:55:17.000Z">2024-02-21</time></div><h1 class="recent-title">for语句</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/if%E8%AF%AD%E5%8F%A5/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">选择结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T13:52:28.000Z">2024-02-21</time></div><h1 class="recent-title">if语句</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">选择结构</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T13:45:26.000Z">2024-02-21</time></div><h1 class="recent-title">条件表达式和逻辑表达式</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T13:40:30.000Z">2024-02-21</time></div><h1 class="recent-title">常量、变量与运算符</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T13:38:17.000Z">2024-02-21</time></div><h1 class="recent-title">Python输入输出</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a><a class="recent-post" href="/2024/02/21/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"><object><div class="recent-info"><span class="categories"><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a></object><object><a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a></object></span><span class="tags"><object><a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/">蓝桥杯备赛</a></object></span><time datetime="2024-02-21T13:24:42.000Z">2024-02-21</time></div><h1 class="recent-title">Python开发环境与基础知识</h1><div class="recent-excerpt"></div><span class="read-more">READ MORE +</span></object></a></div><div id="paginator"><a class="extend prev" rel="prev" href="/page/6/">Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/">Next</a></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧ </a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">zdx</a></h1><div id="description"><p></p></div></div><div id="aside-block"><section id="total"><a id="total-archives" href="/archives"><span class="total-title">Archives Total:</span><span class="total-number">72</span></a><div id="total-tags"><span class="total-title">Tags:</span><span class="total-number">2</span></div><div id="total-categories"><span class="total-title">Categories:</span><span class="total-number">33</span></div></section></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> Actz</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Actz" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Actz</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+        <img
+          src="/images/ayer.svg"
+          class="cover-logo"
+          alt="Actz"
+        />
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-字符串"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/"
+    >字符串</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2024-02-21T14:14:01.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">基础数据结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221426266.png" alt="image-20240221221426266"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221431505.png" alt="image-20240221221431505"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221436593.png" alt="image-20240221221436593"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221441127.png" alt="image-20240221221441127"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221445585.png" alt="image-20240221221445585"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221449788.png" alt="image-20240221221449788"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221221456357.png" alt="image-20240221221456357"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222130526.png" alt="image-20240221222130526"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222136639.png" alt="image-20240221222136639"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222140218.png" alt="image-20240221222140218"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222143801.png" alt="image-20240221222143801"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222147579.png" alt="image-20240221222147579"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222151562.png" alt="image-20240221222151562"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222155712.png" alt="image-20240221222155712"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222200185.png" alt="image-20240221222200185"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222203657.png" alt="image-20240221222203657"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222206992.png" alt="image-20240221222206992"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222211491.png" alt="image-20240221222211491"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222216243.png" alt="image-20240221222216243"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222219995.png" alt="image-20240221222219995"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222224286.png" alt="image-20240221222224286"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222227854.png" alt="image-20240221222227854"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222233158.png" alt="image-20240221222233158"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222236617.png" alt="image-20240221222236617"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222241092.png" alt="image-20240221222241092"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222244639.png" alt="image-20240221222244639"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222248227.png" alt="image-20240221222248227"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222251528.png" alt="image-20240221222251528"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222255831.png" alt="image-20240221222255831"><img src="/./../imgs/%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240221222300550.png" alt="image-20240221222300550"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-列表和元组"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/"
+    >列表和元组</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/" class="article-date">
+  <time datetime="2024-02-21T14:05:06.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">基础数据结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220549989.png" alt="image-20240221220549989"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220803586.png" alt="image-20240221220803586"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220815992.png" alt="image-20240221220815992"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220820075.png" alt="image-20240221220820075"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220824239.png" alt="image-20240221220824239"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220828733.png" alt="image-20240221220828733"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220832816.png" alt="image-20240221220832816"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220836720.png" alt="image-20240221220836720"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220841249.png" alt="image-20240221220841249"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220845617.png" alt="image-20240221220845617"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220849199.png" alt="image-20240221220849199"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220852872.png" alt="image-20240221220852872"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220856306.png" alt="image-20240221220856306"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220859777.png" alt="image-20240221220859777"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220904199.png" alt="image-20240221220904199"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220908800.png" alt="image-20240221220908800"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220913599.png" alt="image-20240221220913599"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221220927749.png" alt="image-20240221220927749"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221228059.png" alt="image-20240221221228059"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221236243.png" alt="image-20240221221236243"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221240609.png" alt="image-20240221221240609"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221245011.png" alt="image-20240221221245011"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221249685.png" alt="image-20240221221249685"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221254515.png" alt="image-20240221221254515"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221257834.png" alt="image-20240221221257834"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221301606.png" alt="image-20240221221301606"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221306649.png" alt="image-20240221221306649"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221330471.png" alt="image-20240221221330471"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221334747.png" alt="image-20240221221334747"><img src="/./../imgs/%E5%88%97%E8%A1%A8%E5%92%8C%E5%85%83%E7%BB%84/image-20240221221340593.png" alt="image-20240221221340593"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-循环嵌套"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/"
+    >循环嵌套</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/" class="article-date">
+  <time datetime="2024-02-21T14:02:01.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220238457.png" alt="image-20240221220238457"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220245943.png" alt="image-20240221220245943"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220250308.png" alt="image-20240221220250308"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220254228.png" alt="image-20240221220254228"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220259111.png" alt="image-20240221220259111"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220303143.png" alt="image-20240221220303143"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220307403.png" alt="image-20240221220307403"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220311467.png" alt="image-20240221220311467"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220326367.png" alt="image-20240221220326367"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220332012.png" alt="image-20240221220332012"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220336543.png" alt="image-20240221220336543"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220340486.png" alt="image-20240221220340486"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220344459.png" alt="image-20240221220344459"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220348968.png" alt="image-20240221220348968"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220353388.png" alt="image-20240221220353388"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220357488.png" alt="image-20240221220357488"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220401435.png" alt="image-20240221220401435"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220405574.png" alt="image-20240221220405574"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220408987.png" alt="image-20240221220408987"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220412797.png" alt="image-20240221220412797"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220416120.png" alt="image-20240221220416120"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220420419.png" alt="image-20240221220420419"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220423689.png" alt="image-20240221220423689"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220427069.png" alt="image-20240221220427069"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220432954.png" alt="image-20240221220432954"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220436736.png" alt="image-20240221220436736"><img src="/./../imgs/%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97/image-20240221220440869.png" alt="image-20240221220440869"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-while语句"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/while%E8%AF%AD%E5%8F%A5/"
+    >while语句</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/while%E8%AF%AD%E5%8F%A5/" class="article-date">
+  <time datetime="2024-02-21T14:00:16.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220037419.png" alt="image-20240221220037419"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220042444.png" alt="image-20240221220042444"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220046800.png" alt="image-20240221220046800"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220052301.png" alt="image-20240221220052301"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220057306.png" alt="image-20240221220057306"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220102132.png" alt="image-20240221220102132"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220107177.png" alt="image-20240221220107177"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220111657.png" alt="image-20240221220111657"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220132922.png" alt="image-20240221220132922"><img src="/./../imgs/while%E8%AF%AD%E5%8F%A5/image-20240221220139888.png" alt="image-20240221220139888"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-for语句"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/for%E8%AF%AD%E5%8F%A5/"
+    >for语句</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/for%E8%AF%AD%E5%8F%A5/" class="article-date">
+  <time datetime="2024-02-21T13:55:17.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215544745.png" alt="image-20240221215544745"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215550340.png" alt="image-20240221215550340"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215556410.png" alt="image-20240221215556410"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215600726.png" alt="image-20240221215600726"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215605214.png" alt="image-20240221215605214"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215609988.png" alt="image-20240221215609988"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215616048.png" alt="image-20240221215616048"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215623189.png" alt="image-20240221215623189"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215629195.png" alt="image-20240221215629195"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215634954.png" alt="image-20240221215634954"><img src="/./../imgs/for%E8%AF%AD%E5%8F%A5/image-20240221215641036.png" alt="image-20240221215641036"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-if语句"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/if%E8%AF%AD%E5%8F%A5/"
+    >if语句</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/if%E8%AF%AD%E5%8F%A5/" class="article-date">
+  <time datetime="2024-02-21T13:52:28.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">选择结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215311297.png" alt="image-20240221215311297"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215317245.png" alt="image-20240221215317245"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215323353.png" alt="image-20240221215323353"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215328782.png" alt="image-20240221215328782"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215334767.png" alt="image-20240221215334767"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215340285.png" alt="image-20240221215340285"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215345522.png" alt="image-20240221215345522"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215351310.png" alt="image-20240221215351310"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215359903.png" alt="image-20240221215359903"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215405317.png" alt="image-20240221215405317"><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215411133.png" alt="image-20240221215411133"><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215426225.png" alt="image-20240221215426225"><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215432876.png" alt="image-20240221215432876"></p>
+<p><img src="/./../imgs/if%E8%AF%AD%E5%8F%A5/image-20240221215444985.png" alt="image-20240221215444985"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-条件表达式和逻辑表达式"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+    >条件表达式和逻辑表达式</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time datetime="2024-02-21T13:45:26.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">选择结构</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214552432.png" alt="image-20240221214552432"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214559882.png" alt="image-20240221214559882"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214610783.png" alt="image-20240221214610783"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214615485.png" alt="image-20240221214615485"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214620619.png" alt="image-20240221214620619"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214628337.png" alt="image-20240221214628337"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214633449.png" alt="image-20240221214633449"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214638568.png" alt="image-20240221214638568"></p>
+<p><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214945674.png" alt="image-20240221214945674"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214951805.png" alt="image-20240221214951805"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221214959435.png" alt="image-20240221214959435"><img src="/./../imgs/%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F/image-20240221215009459.png" alt="image-20240221215009459"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-常量、变量与运算符"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/"
+    >常量、变量与运算符</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
+  <time datetime="2024-02-21T13:40:30.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214110296.png" alt="image-20240221214110296"><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214126383.png" alt="image-20240221214126383"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214134728.png" alt="image-20240221214134728"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214200076.png" alt="image-20240221214200076"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214210558.png" alt="image-20240221214210558"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214219520.png" alt="image-20240221214219520"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214229793.png" alt="image-20240221214229793"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214237176.png" alt="image-20240221214237176"></p>
+<p><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214246396.png" alt="image-20240221214246396"><img src="/./../imgs/%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240221214254820.png" alt="image-20240221214254820"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-Python输入输出"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"
+    >Python输入输出</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" class="article-date">
+  <time datetime="2024-02-21T13:38:17.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213902685.png" alt="image-20240221213902685"></p>
+<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213915397.png" alt="image-20240221213915397"><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213925703.png" alt="image-20240221213925703"></p>
+<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213937602.png" alt="image-20240221213937602"><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213947577.png" alt="image-20240221213947577"><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221213957381.png" alt="image-20240221213957381"></p>
+<p><img src="/./../imgs/Python%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/image-20240221214008221.png" alt="image-20240221214008221"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-Python开发环境与基础知识"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/02/21/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
+    >Python开发环境与基础知识</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/02/21/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
+  <time datetime="2024-02-21T13:24:42.000Z" itemprop="datePublished">2024-02-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/">蓝桥杯</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">第一章：语言基础</a> / <a class="article-category-link" href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">编程基础</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212645001.png" alt="image-20240221212645001"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212703666.png" alt="image-20240221212703666"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212715849.png" alt="image-20240221212715849"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212728371.png" alt="image-20240221212728371"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212739932.png" alt="image-20240221212739932"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212759396.png" alt="image-20240221212759396"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212810735.png" alt="image-20240221212810735"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221212824944.png" alt="image-20240221212824944"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221213119364.png" alt="image-20240221213119364"></p>
+<p><img src="/./../imgs/Python%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image-20240221213130189.png" alt="image-20240221213130189"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%87%E8%B5%9B/" rel="tag">蓝桥杯备赛</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> zdx
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">浙公网安备01234567890123号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Actz"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+<script>
+  const password = "qwer";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>
